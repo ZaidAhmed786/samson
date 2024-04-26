@@ -6,7 +6,7 @@ const Popup = (props:any) => {
     const formattedNumber =  props.number? `tel:+${props.number}`: `tel:+18556268081`;
     const number = props.number? props.number :'1-888-626-8081'
     const Width =  props.logoWidth? props.logoWidth :'130px'
-    const text = props.text? props.text : 'Call to Pay Your Bill'
+    const text = props.text? props.text : 'Call to Pay Your Bill' 
     const handleClick = () => {
       window.location.href = formattedNumber;  
     };
