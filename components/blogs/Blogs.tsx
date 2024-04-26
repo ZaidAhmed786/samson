@@ -29,7 +29,7 @@ const Blogs = () => {
           </h3>
           <p className="card-text card-text font-italic font-weight-blod">
             Updating your home to be more chic - without looking cheap - is
-            completely doable on a budget. If you're looking to add more class
+            completely doable on a budget. If you are looking to add more class
             to your home…{" "}
           </p>{" "}
           <div className="text-center">
