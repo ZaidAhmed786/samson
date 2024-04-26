@@ -18,7 +18,7 @@ const Popup = (props:any) => {
             <div className={styles.popupHeader} style = {{background:props.color}}></div>
             <div className={styles.popupContent}>
                 <img src={`${props?.url}`} alt="Logo" className={styles.logo} style={{width: Width}} />
-                <h2 className={styles.heading}> {text} <br/> NOW!</h2>
+                <h2 className={styles.heading}> {text} NOW!</h2>
                 <p className={styles.phoneNumber} style = {{background:`${props.color}`}}>{number}</p>
             </div>
             <div className={styles.popupFooter} style = {{background:props.color}}> Order NOW!  {number}</div>
