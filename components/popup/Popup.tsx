@@ -5,11 +5,12 @@ const Popup = (props:any) => {
   const [isOpen, setIsOpen] = useState(true);
   
     const formattedNumber = formatPhoneNumber(props.number);
+    console.log(formattedNumber)
     const number = props.number
     const Width =  props.logoWidth? props.logoWidth :'130px'
     const text = props.text? props.text : 'Call for Free Quote'
     const handleClick = () => {
-      window.location.href = `tel:${formattedNumber}`;  
+      window.location.href = `tel:${props.tel}`;  
     };
   return (
     <>
