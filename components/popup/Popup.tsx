@@ -6,7 +6,7 @@ const Popup = (props:any) => {
     const formattedNumber = `tel:${props.number}`;
     const number = props.number? props.number :'1-888-626-8081'
     const Width =  props.logoWidth? props.logoWidth :'130px'
-    const text = props.text? props.text : 'Call & Order' 
+    const text = props.text? props.text : 'Order' 
     const handleClick = () => {
       window.location.href = formattedNumber;  
     };
@@ -21,7 +21,7 @@ const Popup = (props:any) => {
                 <h2 className={styles.heading}> {text} <br/> NOW!</h2>
                 <p className={styles.phoneNumber} style = {{background:`${props.color}`}}>{number}</p>
             </div>
-            <div className={styles.popupFooter} style = {{background:props.color}}>Call & Order NOW!  {number}</div>
+            <div className={styles.popupFooter} style = {{background:props.color}}> Order NOW!  {number}</div>
             </div>
         </div>
       )}
