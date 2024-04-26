@@ -39,7 +39,7 @@ const Footer = () => {
             </p>
           </div>
           <div className="col-3  d-flex justify-content-end align-items-end" style={{height: '35vh'}}>
-            <img src="/ml-logo-footer-white.WEBP" style={{height:'40px'}}/>
+            <img src="/ml-logo-footer-white.webp" style={{height:'40px'}}/>
           </div>
         </div>
       </footer>
