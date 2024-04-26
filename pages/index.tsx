@@ -28,7 +28,7 @@ export default function Home() {
         <Contact/>
         <Sales/>
         <TestimonialCarousel/>
-        <Popup url="/logo.jpg" color="rgb(190, 175, 135)" number="+1(225)-523-2569" logoWidth="300px !important"/>
+        <Popup url="/logo.jpg" color="rgb(190, 175, 135)" number="1(225)-523-2569" logoWidth="300px !important"/>
         <Footer/>
       </main>
     </>
