@@ -21,7 +21,7 @@ const Navbar = () => {
           >
             {links?.map((link) => {
               return (
-                <li className="nav-item active">
+                <li key={'links'} className="nav-item active">
                   <a href="#" className="nav-link">
                     {link}
                   </a>
