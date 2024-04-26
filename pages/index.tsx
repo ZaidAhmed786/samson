@@ -5,17 +5,18 @@ import PapaJhon from "@/components/papajhon/landingPage"
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const message = "Papa John's";
   return (
     <>
       <Head>
-        <title>Papa Jhon</title>
+        <title>{message}</title>
         <meta name="description" content="Papa Jhon" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/finalfavicon.ico" />
       </Head>
       <main>
         <PapaJhon/>
-        <Popup url="/papajhon/papajhonlogo.svg" color="red" number="+1(855)-977-1055" logoWidth="300px !important"/>
+        <Popup url="/papajhon/papajhonlogo.svg" color="red" number="+1(225)-523-2569" logoWidth="300px !important"/>
         
       </main>
     </>

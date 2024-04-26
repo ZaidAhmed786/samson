@@ -106,10 +106,10 @@
      
     .popup {
       position: fixed;
-      top: 5vh;
-      left: 5vw;
-      width: 30vw;
-      height: 50vh; 
+      top: 15vh;
+      left: 2vw;
+      width: 25vw;
+      height: 60vh; 
       box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6); 
       border-radius: 6px; 
       display: flex;
