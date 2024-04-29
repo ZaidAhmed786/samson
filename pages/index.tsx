@@ -21,14 +21,14 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
+        <Popup url="/logo.jpg" color="rgb(190, 175, 135)" number="1(225)-523-2569" tel = "+1 225 523 2569" logoWidth="300px !important"/>
         <Navbar/>
         <Header/>
         <Blogs/>
         <Services/>
         <Contact/>
         <Sales/>
-        <TestimonialCarousel/>
-        <Popup url="/logo.jpg" color="rgb(190, 175, 135)" number="1(225)-523-2569" tel = "+1 225 523 2569" logoWidth="300px !important"/>
+        {/* <TestimonialCarousel/> */}
         <Footer/>
       </main>
     </>

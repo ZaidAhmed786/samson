@@ -2,7 +2,7 @@ import React from "react";
 
 const TestimonialCarousel = () => {
   return (
-    <div className="row quote-container" style={{marginTop: '120px', marginBottom: '50px'}}>
+    <div className="row quote-container testimonial" style={{marginTop: '120px', marginBottom: '50px'}}>
       <div className="col-8 col-md-6 offset-md-3">
         <div className="d-flex justify-content-center mb-4">
           <img src="/user.avif" height={90} className="rounded-circle" />

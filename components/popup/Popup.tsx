@@ -4,8 +4,7 @@ import {formatPhoneNumber} from '../../utils/utils'
 const Popup = (props:any) => {
   const [isOpen, setIsOpen] = useState(true);
   
-    const formattedNumber = formatPhoneNumber(props.number);
-    console.log(formattedNumber)
+    const formattedNumber = formatPhoneNumber(props.number); 
     const number = props.number
     const Width =  props.logoWidth? props.logoWidth :'130px'
     const text = props.text? props.text : 'Call for Free Quote'
