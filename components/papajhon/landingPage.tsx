@@ -71,7 +71,7 @@ function App() {
     },
   ];
   return (
-    <section className="section">
+    <section className="section" style={{overflow: "hidden"}}>
         <div className={style.mainDiv}>
       <div className={style.header}>
         <img src="./papajhon/papajhonlogo.svg" alt="papajhonlogo" />
