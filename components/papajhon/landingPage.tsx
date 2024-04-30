@@ -70,6 +70,7 @@ function App() {
       description: "You love pizza, we love pizza - its a perfect fit",
     },
   ];
+  const johnword = "John's "
   return (
     <section className="section" style={{overflow: "hidden"}}>
         <div className={style.mainDiv}>
@@ -104,6 +105,16 @@ function App() {
             <button>LEARN MORE</button>
           </div>
         ))}
+      </div>
+      <div style={{width: '90%', margin: 'auto', textAlign: 'center', marginTop: '50px'}}>
+        <p><b style={{fontSize: '30px'}}>Disclaimer:</b></p>
+        <p>This website, papajohnsoffcial.com , is NOT an official website of Papa {johnword} International, Inc. Instead, it serves as the Official Site of papajohnsoffcial.com (Marketing Partner) for Papa {johnword} 
+
+ Please note that we may send updates to the mobile number/email ID registered with us. The content provided on this website is for information purposes only and does not constitute an offer to avail of any service. Prices mentioned are subject to change without notice, and properties mentioned are subject to availability.
+
+Furthermore, the images used on this website are for representation purposes only. The logos and images used belong to Papa {johnword} International, Inc., and are protected under applicable copyright laws. papajohnsoffcial.com does not claim any ownership or rights to these materials, and they are used on this website solely for informational purposes.
+
+Thank you for your understanding. If you have any questions or concerns, please do not hesitate to contact us.</p>
       </div>
       <div className={style.footer}>
         <p>
