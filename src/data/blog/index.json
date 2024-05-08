@@ -1,0 +1,730 @@
+[
+  {
+    "settings": {
+      "thumbNail": false,
+      "video": true,
+      "audio": false,
+      "gallery": false,
+      "backgroundImage": false,
+      "backgroundNoImage": false,
+      "blockquote": false,
+      "description": true,
+      "categories": true,
+      "author": true
+    },
+    "id": "1",
+    "admin": "Admin",
+    "title": "Top 7 Home Design Trends for 2024",
+    "type": "BUSINESS",
+    "featured": true,
+    "new": true,
+    "rent": true,
+    "category": ["buying", "selling", "design"],
+    "tag": ["Popular", "design", "trends"],
+    "thumbImg": "2.jpg",
+    "backgroundImage": "3.jpg",
+    "galleryImageList": [
+      {
+        "img": "1.jpg"
+      },
+      {
+        "img": "1.jpg"
+      },
+      {
+        "img": "1.jpg"
+      },
+      {
+        "img": "1.jpg"
+      }
+    ],
+    "views": 456,
+    "comments": 72,
+    "date": "May 8, 2024",
+    "fullDescription": "The year 2024 brings fresh design trends that redefine modern living spaces. From sustainable materials to minimalist aesthetics, discover the top 7 home design trends shaping houses this year. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Each pixel pulsates with the heartbeat of innovation dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "shortDescription": "Explore the latest home design trends of 2024, from sustainable materials to minimalist aesthetics.",
+    "extraInformation": [
+      {
+        "title": "Sustainable Living",
+        "description": "Embrace eco-friendly living with sustainable materials and energy-efficient design choices. From solar panels to recycled building materials, sustainable living is a key trend for environmentally conscious homeowners."
+      },
+      {
+        "title": "Smart Home Technology",
+        "description": "Transform your house into a smart home with the latest technology innovations. From automated lighting systems to voice-controlled appliances, smart home technology enhances convenience and comfort."
+      }
+    ],
+    "extraInformationList": [
+      {
+        "name": "Sustainable Living"
+      },
+      {
+        "name": "Smart Home Technology"
+      },
+      {
+        "name": "Minimalist Interiors"
+      },
+      {
+        "name": "Outdoor Living Spaces"
+      },
+      {
+        "name": "Multifunctional Furniture"
+      }
+    ],
+    "blockquote": {
+      "quoteTitle": "Design is not just what it looks like and feels like. Design is how it works.",
+      "name": "Steve Jobs"
+    },
+    "extraContent": {
+      "title": "Unlock Your Home's Potential",
+      "description1": "Transform your living space with the latest design trends and innovations. Whether you're buying or selling, Samson Properties Realty is here to help you achieve your real estate goals. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Each pixel pulsates with the heartbeat of innovation dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "caption": {
+        "img1": "31.jpg",
+        "img2": "32.jpg",
+        "imageCaption": "Unlock Your Home's Potential with Samson Properties Realty",
+        "imageCaptionDetails": "In the realm of Samson Properties, React state is the brushstroke, painting vibrant tales of user engagement. Each pixel pulsates with the heartbeat of innovation, sculpting a symphony of seamless experiences. Embark on a journey where elegance meets functionality, and every click sparks a dance of delight. Welcome to our digital canvas, where beauty transcends pixels.."
+      }
+    },
+    "author": {
+      "name": "Ethan",
+      "img": "author.jpg",
+      "description": "Ethan is a real estate expert passionate about helping people find their dream homes. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Each pixel pulsates with the heartbeat of innovation dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    }
+  }
+  ,
+  {
+    "settings": {
+      "thumbNail": false,
+      "video": true,
+      "audio": false,
+      "gallery": false,
+      "backgroundImage": false,
+      "backgroundNoImage": false,
+      "blockquote": false,
+      "description": true,
+      "categories": true,
+      "author": true
+    },
+    "id": "2",
+    "admin": "Admin",
+    "title": "Top 7 Home Design Trends for 2024",
+    "type": "BUSINESS",
+    "featured": true,
+    "new": true,
+    "rent": true,
+    "category": ["buying", "selling", "design"],
+    "tag": ["Popular", "design", "trends"],
+    "thumbImg": "2.jpg",
+    "backgroundImage": "3.jpg",
+    "galleryImageList": [
+      {
+        "img": "1.jpg"
+      },
+      {
+        "img": "1.jpg"
+      },
+      {
+        "img": "1.jpg"
+      },
+      {
+        "img": "1.jpg"
+      }
+    ],
+    "views": 456,
+    "comments": 72,
+    "date": "May 8, 2024",
+    "fullDescription": "The year 2024 brings fresh design trends that redefine modern living spaces. From sustainable materials to minimalist aesthetics, discover the top 7 home design trends shaping houses this year. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Each pixel pulsates with the heartbeat of innovation dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "shortDescription": "Explore the latest home design trends of 2024, from sustainable materials to minimalist aesthetics.",
+    "extraInformation": [
+      {
+        "title": "Sustainable Living",
+        "description": "Embrace eco-friendly living with sustainable materials and energy-efficient design choices. From solar panels to recycled building materials, sustainable living is a key trend for environmentally conscious homeowners."
+      },
+      {
+        "title": "Smart Home Technology",
+        "description": "Transform your house into a smart home with the latest technology innovations. From automated lighting systems to voice-controlled appliances, smart home technology enhances convenience and comfort."
+      }
+    ],
+    "extraInformationList": [
+      {
+        "name": "Sustainable Living"
+      },
+      {
+        "name": "Smart Home Technology"
+      },
+      {
+        "name": "Minimalist Interiors"
+      },
+      {
+        "name": "Outdoor Living Spaces"
+      },
+      {
+        "name": "Multifunctional Furniture"
+      }
+    ],
+    "blockquote": {
+      "quoteTitle": "Design is not just what it looks like and feels like. Design is how it works.",
+      "name": "Steve Jobs"
+    },
+    "extraContent": {
+      "title": "Unlock Your Home's Potential",
+      "description1": "Transform your living space with the latest design trends and innovations. Whether you're buying or selling, Samson Properties Realty is here to help you achieve your real estate goals. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Each pixel pulsates with the heartbeat of innovation dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "caption": {
+        "img1": "31.jpg",
+        "img2": "32.jpg",
+        "imageCaption": "Unlock Your Home's Potential with Samson Properties Realty",
+        "imageCaptionDetails": "In the realm of Samson Properties, React state is the brushstroke, painting vibrant tales of user engagement. Each pixel pulsates with the heartbeat of innovation, sculpting a symphony of seamless experiences. Embark on a journey where elegance meets functionality, and every click sparks a dance of delight. Welcome to our digital canvas, where beauty transcends pixels.."
+      }
+    },
+    "author": {
+      "name": "Ethan",
+      "img": "author.jpg",
+      "description": "Ethan is a real estate expert passionate about helping people find their dream homes. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Each pixel pulsates with the heartbeat of innovation dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    }
+  }
+  ,
+  {
+    "settings": {
+      "thumbNail": false,
+      "video": true,
+      "audio": false,
+      "gallery": false,
+      "backgroundImage": false,
+      "backgroundNoImage": false,
+      "blockquote": false,
+      "description": true,
+      "categories": true,
+      "author": true
+    },
+    "id": "3",
+    "admin": "Admin",
+    "title": "Top 7 Home Design Trends for 2024",
+    "type": "BUSINESS",
+    "featured": true,
+    "new": true,
+    "rent": true,
+    "category": ["buying", "selling", "design"],
+    "tag": ["Popular", "design", "trends"],
+    "thumbImg": "2.jpg",
+    "backgroundImage": "3.jpg",
+    "galleryImageList": [
+      {
+        "img": "1.jpg"
+      },
+      {
+        "img": "1.jpg"
+      },
+      {
+        "img": "1.jpg"
+      },
+      {
+        "img": "1.jpg"
+      }
+    ],
+    "views": 456,
+    "comments": 72,
+    "date": "May 8, 2024",
+    "fullDescription": "The year 2024 brings fresh design trends that redefine modern living spaces. From sustainable materials to minimalist aesthetics, discover the top 7 home design trends shaping houses this year. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Each pixel pulsates with the heartbeat of innovation dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "shortDescription": "Explore the latest home design trends of 2024, from sustainable materials to minimalist aesthetics.",
+    "extraInformation": [
+      {
+        "title": "Sustainable Living",
+        "description": "Embrace eco-friendly living with sustainable materials and energy-efficient design choices. From solar panels to recycled building materials, sustainable living is a key trend for environmentally conscious homeowners."
+      },
+      {
+        "title": "Smart Home Technology",
+        "description": "Transform your house into a smart home with the latest technology innovations. From automated lighting systems to voice-controlled appliances, smart home technology enhances convenience and comfort."
+      }
+    ],
+    "extraInformationList": [
+      {
+        "name": "Sustainable Living"
+      },
+      {
+        "name": "Smart Home Technology"
+      },
+      {
+        "name": "Minimalist Interiors"
+      },
+      {
+        "name": "Outdoor Living Spaces"
+      },
+      {
+        "name": "Multifunctional Furniture"
+      }
+    ],
+    "blockquote": {
+      "quoteTitle": "Design is not just what it looks like and feels like. Design is how it works.",
+      "name": "Steve Jobs"
+    },
+    "extraContent": {
+      "title": "Unlock Your Home's Potential",
+      "description1": "Transform your living space with the latest design trends and innovations. Whether you're buying or selling, Samson Properties Realty is here to help you achieve your real estate goals. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Each pixel pulsates with the heartbeat of innovation dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "caption": {
+        "img1": "31.jpg",
+        "img2": "32.jpg",
+        "imageCaption": "Unlock Your Home's Potential with Samson Properties Realty",
+        "imageCaptionDetails": "In the realm of Samson Properties, React state is the brushstroke, painting vibrant tales of user engagement. Each pixel pulsates with the heartbeat of innovation, sculpting a symphony of seamless experiences. Embark on a journey where elegance meets functionality, and every click sparks a dance of delight. Welcome to our digital canvas, where beauty transcends pixels.."
+      }
+    },
+    "author": {
+      "name": "Ethan",
+      "img": "author.jpg",
+      "description": "Ethan is a real estate expert passionate about helping people find their dream homes. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Each pixel pulsates with the heartbeat of innovation dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    }
+  }
+  ,
+  {
+    "settings": {
+      "thumbNail": false,
+      "video": true,
+      "audio": false,
+      "gallery": false,
+      "backgroundImage": false,
+      "backgroundNoImage": false,
+      "blockquote": false,
+      "description": true,
+      "categories": true,
+      "author": true
+    },
+    "id": "4",
+    "admin": "Admin",
+    "title": "Top 7 Home Design Trends for 2024",
+    "type": "BUSINESS",
+    "featured": true,
+    "new": true,
+    "rent": true,
+    "category": ["buying", "selling", "design"],
+    "tag": ["Popular", "design", "trends"],
+    "thumbImg": "2.jpg",
+    "backgroundImage": "3.jpg",
+    "galleryImageList": [
+      {
+        "img": "1.jpg"
+      },
+      {
+        "img": "1.jpg"
+      },
+      {
+        "img": "1.jpg"
+      },
+      {
+        "img": "1.jpg"
+      }
+    ],
+    "views": 456,
+    "comments": 72,
+    "date": "May 8, 2024",
+    "fullDescription": "The year 2024 brings fresh design trends that redefine modern living spaces. From sustainable materials to minimalist aesthetics, discover the top 7 home design trends shaping houses this year. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Each pixel pulsates with the heartbeat of innovation dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "shortDescription": "Explore the latest home design trends of 2024, from sustainable materials to minimalist aesthetics.",
+    "extraInformation": [
+      {
+        "title": "Sustainable Living",
+        "description": "Embrace eco-friendly living with sustainable materials and energy-efficient design choices. From solar panels to recycled building materials, sustainable living is a key trend for environmentally conscious homeowners."
+      },
+      {
+        "title": "Smart Home Technology",
+        "description": "Transform your house into a smart home with the latest technology innovations. From automated lighting systems to voice-controlled appliances, smart home technology enhances convenience and comfort."
+      }
+    ],
+    "extraInformationList": [
+      {
+        "name": "Sustainable Living"
+      },
+      {
+        "name": "Smart Home Technology"
+      },
+      {
+        "name": "Minimalist Interiors"
+      },
+      {
+        "name": "Outdoor Living Spaces"
+      },
+      {
+        "name": "Multifunctional Furniture"
+      }
+    ],
+    "blockquote": {
+      "quoteTitle": "Design is not just what it looks like and feels like. Design is how it works.",
+      "name": "Steve Jobs"
+    },
+    "extraContent": {
+      "title": "Unlock Your Home's Potential",
+      "description1": "Transform your living space with the latest design trends and innovations. Whether you're buying or selling, Samson Properties Realty is here to help you achieve your real estate goals. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Each pixel pulsates with the heartbeat of innovation dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "caption": {
+        "img1": "31.jpg",
+        "img2": "32.jpg",
+        "imageCaption": "Unlock Your Home's Potential with Samson Properties Realty",
+        "imageCaptionDetails": "In the realm of Samson Properties, React state is the brushstroke, painting vibrant tales of user engagement. Each pixel pulsates with the heartbeat of innovation, sculpting a symphony of seamless experiences. Embark on a journey where elegance meets functionality, and every click sparks a dance of delight. Welcome to our digital canvas, where beauty transcends pixels.."
+      }
+    },
+    "author": {
+      "name": "Ethan",
+      "img": "author.jpg",
+      "description": "Ethan is a real estate expert passionate about helping people find their dream homes. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Each pixel pulsates with the heartbeat of innovation dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    }
+  }
+  ,
+  {
+    "settings": {
+      "thumbNail": false,
+      "video": true,
+      "audio": false,
+      "gallery": false,
+      "backgroundImage": false,
+      "backgroundNoImage": false,
+      "blockquote": false,
+      "description": true,
+      "categories": true,
+      "author": true
+    },
+    "id": "5",
+    "admin": "Admin",
+    "title": "Top 7 Home Design Trends for 2024",
+    "type": "BUSINESS",
+    "featured": true,
+    "new": true,
+    "rent": true,
+    "category": ["buying", "selling", "design"],
+    "tag": ["Popular", "design", "trends"],
+    "thumbImg": "2.jpg",
+    "backgroundImage": "3.jpg",
+    "galleryImageList": [
+      {
+        "img": "1.jpg"
+      },
+      {
+        "img": "1.jpg"
+      },
+      {
+        "img": "1.jpg"
+      },
+      {
+        "img": "1.jpg"
+      }
+    ],
+    "views": 456,
+    "comments": 72,
+    "date": "May 8, 2024",
+    "fullDescription": "The year 2024 brings fresh design trends that redefine modern living spaces. From sustainable materials to minimalist aesthetics, discover the top 7 home design trends shaping houses this year. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Each pixel pulsates with the heartbeat of innovation dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "shortDescription": "Explore the latest home design trends of 2024, from sustainable materials to minimalist aesthetics.",
+    "extraInformation": [
+      {
+        "title": "Sustainable Living",
+        "description": "Embrace eco-friendly living with sustainable materials and energy-efficient design choices. From solar panels to recycled building materials, sustainable living is a key trend for environmentally conscious homeowners."
+      },
+      {
+        "title": "Smart Home Technology",
+        "description": "Transform your house into a smart home with the latest technology innovations. From automated lighting systems to voice-controlled appliances, smart home technology enhances convenience and comfort."
+      }
+    ],
+    "extraInformationList": [
+      {
+        "name": "Sustainable Living"
+      },
+      {
+        "name": "Smart Home Technology"
+      },
+      {
+        "name": "Minimalist Interiors"
+      },
+      {
+        "name": "Outdoor Living Spaces"
+      },
+      {
+        "name": "Multifunctional Furniture"
+      }
+    ],
+    "blockquote": {
+      "quoteTitle": "Design is not just what it looks like and feels like. Design is how it works.",
+      "name": "Steve Jobs"
+    },
+    "extraContent": {
+      "title": "Unlock Your Home's Potential",
+      "description1": "Transform your living space with the latest design trends and innovations. Whether you're buying or selling, Samson Properties Realty is here to help you achieve your real estate goals. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Each pixel pulsates with the heartbeat of innovation dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "caption": {
+        "img1": "31.jpg",
+        "img2": "32.jpg",
+        "imageCaption": "Unlock Your Home's Potential with Samson Properties Realty",
+        "imageCaptionDetails": "In the realm of Samson Properties, React state is the brushstroke, painting vibrant tales of user engagement. Each pixel pulsates with the heartbeat of innovation, sculpting a symphony of seamless experiences. Embark on a journey where elegance meets functionality, and every click sparks a dance of delight. Welcome to our digital canvas, where beauty transcends pixels.."
+      }
+    },
+    "author": {
+      "name": "Ethan",
+      "img": "author.jpg",
+      "description": "Ethan is a real estate expert passionate about helping people find their dream homes. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Each pixel pulsates with the heartbeat of innovation dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    }
+  }
+  ,
+  {
+    "settings": {
+      "thumbNail": false,
+      "video": true,
+      "audio": false,
+      "gallery": false,
+      "backgroundImage": false,
+      "backgroundNoImage": false,
+      "blockquote": false,
+      "description": true,
+      "categories": true,
+      "author": true
+    },
+    "id": "6",
+    "admin": "Admin",
+    "title": "Top 7 Home Design Trends for 2024",
+    "type": "BUSINESS",
+    "featured": true,
+    "new": true,
+    "rent": true,
+    "category": ["buying", "selling", "design"],
+    "tag": ["Popular", "design", "trends"],
+    "thumbImg": "2.jpg",
+    "backgroundImage": "3.jpg",
+    "galleryImageList": [
+      {
+        "img": "1.jpg"
+      },
+      {
+        "img": "1.jpg"
+      },
+      {
+        "img": "1.jpg"
+      },
+      {
+        "img": "1.jpg"
+      }
+    ],
+    "views": 456,
+    "comments": 72,
+    "date": "May 8, 2024",
+    "fullDescription": "The year 2024 brings fresh design trends that redefine modern living spaces. From sustainable materials to minimalist aesthetics, discover the top 7 home design trends shaping houses this year. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Each pixel pulsates with the heartbeat of innovation dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "shortDescription": "Explore the latest home design trends of 2024, from sustainable materials to minimalist aesthetics.",
+    "extraInformation": [
+      {
+        "title": "Sustainable Living",
+        "description": "Embrace eco-friendly living with sustainable materials and energy-efficient design choices. From solar panels to recycled building materials, sustainable living is a key trend for environmentally conscious homeowners."
+      },
+      {
+        "title": "Smart Home Technology",
+        "description": "Transform your house into a smart home with the latest technology innovations. From automated lighting systems to voice-controlled appliances, smart home technology enhances convenience and comfort."
+      }
+    ],
+    "extraInformationList": [
+      {
+        "name": "Sustainable Living"
+      },
+      {
+        "name": "Smart Home Technology"
+      },
+      {
+        "name": "Minimalist Interiors"
+      },
+      {
+        "name": "Outdoor Living Spaces"
+      },
+      {
+        "name": "Multifunctional Furniture"
+      }
+    ],
+    "blockquote": {
+      "quoteTitle": "Design is not just what it looks like and feels like. Design is how it works.",
+      "name": "Steve Jobs"
+    },
+    "extraContent": {
+      "title": "Unlock Your Home's Potential",
+      "description1": "Transform your living space with the latest design trends and innovations. Whether you're buying or selling, Samson Properties Realty is here to help you achieve your real estate goals. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Each pixel pulsates with the heartbeat of innovation dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "caption": {
+        "img1": "31.jpg",
+        "img2": "32.jpg",
+        "imageCaption": "Unlock Your Home's Potential with Samson Properties Realty",
+        "imageCaptionDetails": "In the realm of Samson Properties, React state is the brushstroke, painting vibrant tales of user engagement. Each pixel pulsates with the heartbeat of innovation, sculpting a symphony of seamless experiences. Embark on a journey where elegance meets functionality, and every click sparks a dance of delight. Welcome to our digital canvas, where beauty transcends pixels.."
+      }
+    },
+    "author": {
+      "name": "Ethan",
+      "img": "author.jpg",
+      "description": "Ethan is a real estate expert passionate about helping people find their dream homes. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Each pixel pulsates with the heartbeat of innovation dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    }
+  }
+  ,
+  {
+    "settings": {
+      "thumbNail": false,
+      "video": true,
+      "audio": false,
+      "gallery": false,
+      "backgroundImage": false,
+      "backgroundNoImage": false,
+      "blockquote": false,
+      "description": true,
+      "categories": true,
+      "author": true
+    },
+    "id": "7",
+    "admin": "Admin",
+    "title": "Top 7 Home Design Trends for 2024",
+    "type": "BUSINESS",
+    "featured": true,
+    "new": true,
+    "rent": true,
+    "category": ["buying", "selling", "design"],
+    "tag": ["Popular", "design", "trends"],
+    "thumbImg": "2.jpg",
+    "backgroundImage": "3.jpg",
+    "galleryImageList": [
+      {
+        "img": "1.jpg"
+      },
+      {
+        "img": "1.jpg"
+      },
+      {
+        "img": "1.jpg"
+      },
+      {
+        "img": "1.jpg"
+      }
+    ],
+    "views": 456,
+    "comments": 72,
+    "date": "May 8, 2024",
+    "fullDescription": "The year 2024 brings fresh design trends that redefine modern living spaces. From sustainable materials to minimalist aesthetics, discover the top 7 home design trends shaping houses this year. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Each pixel pulsates with the heartbeat of innovation dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "shortDescription": "Explore the latest home design trends of 2024, from sustainable materials to minimalist aesthetics.",
+    "extraInformation": [
+      {
+        "title": "Sustainable Living",
+        "description": "Embrace eco-friendly living with sustainable materials and energy-efficient design choices. From solar panels to recycled building materials, sustainable living is a key trend for environmentally conscious homeowners."
+      },
+      {
+        "title": "Smart Home Technology",
+        "description": "Transform your house into a smart home with the latest technology innovations. From automated lighting systems to voice-controlled appliances, smart home technology enhances convenience and comfort."
+      }
+    ],
+    "extraInformationList": [
+      {
+        "name": "Sustainable Living"
+      },
+      {
+        "name": "Smart Home Technology"
+      },
+      {
+        "name": "Minimalist Interiors"
+      },
+      {
+        "name": "Outdoor Living Spaces"
+      },
+      {
+        "name": "Multifunctional Furniture"
+      }
+    ],
+    "blockquote": {
+      "quoteTitle": "Design is not just what it looks like and feels like. Design is how it works.",
+      "name": "Steve Jobs"
+    },
+    "extraContent": {
+      "title": "Unlock Your Home's Potential",
+      "description1": "Transform your living space with the latest design trends and innovations. Whether you're buying or selling, Samson Properties Realty is here to help you achieve your real estate goals. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Each pixel pulsates with the heartbeat of innovation dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "caption": {
+        "img1": "31.jpg",
+        "img2": "32.jpg",
+        "imageCaption": "Unlock Your Home's Potential with Samson Properties Realty",
+        "imageCaptionDetails": "In the realm of Samson Properties, React state is the brushstroke, painting vibrant tales of user engagement. Each pixel pulsates with the heartbeat of innovation, sculpting a symphony of seamless experiences. Embark on a journey where elegance meets functionality, and every click sparks a dance of delight. Welcome to our digital canvas, where beauty transcends pixels.."
+      }
+    },
+    "author": {
+      "name": "Ethan",
+      "img": "author.jpg",
+      "description": "Ethan is a real estate expert passionate about helping people find their dream homes. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Each pixel pulsates with the heartbeat of innovation dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    }
+  }
+  , 
+  {
+    "settings": {
+      "thumbNail": false,
+      "video": true,
+      "audio": false,
+      "gallery": false,
+      "backgroundImage": false,
+      "backgroundNoImage": false,
+      "blockquote": false,
+      "description": true,
+      "categories": true,
+      "author": true
+    },
+    "id": "8",
+    "admin": "Admin",
+    "title": "Top 7 Home Design Trends for 2024",
+    "type": "BUSINESS",
+    "featured": true,
+    "new": true,
+    "rent": true,
+    "category": ["buying", "selling", "design"],
+    "tag": ["Popular", "design", "trends"],
+    "thumbImg": "2.jpg",
+    "backgroundImage": "3.jpg",
+    "galleryImageList": [
+      {
+        "img": "1.jpg"
+      },
+      {
+        "img": "1.jpg"
+      },
+      {
+        "img": "1.jpg"
+      },
+      {
+        "img": "1.jpg"
+      }
+    ],
+    "views": 456,
+    "comments": 72,
+    "date": "May 8, 2024",
+    "fullDescription": "The year 2024 brings fresh design trends that redefine modern living spaces. From sustainable materials to minimalist aesthetics, discover the top 7 home design trends shaping houses this year. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Each pixel pulsates with the heartbeat of innovation dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "shortDescription": "Explore the latest home design trends of 2024, from sustainable materials to minimalist aesthetics.",
+    "extraInformation": [
+      {
+        "title": "Sustainable Living",
+        "description": "Embrace eco-friendly living with sustainable materials and energy-efficient design choices. From solar panels to recycled building materials, sustainable living is a key trend for environmentally conscious homeowners."
+      },
+      {
+        "title": "Smart Home Technology",
+        "description": "Transform your house into a smart home with the latest technology innovations. From automated lighting systems to voice-controlled appliances, smart home technology enhances convenience and comfort."
+      }
+    ],
+    "extraInformationList": [
+      {
+        "name": "Sustainable Living"
+      },
+      {
+        "name": "Smart Home Technology"
+      },
+      {
+        "name": "Minimalist Interiors"
+      },
+      {
+        "name": "Outdoor Living Spaces"
+      },
+      {
+        "name": "Multifunctional Furniture"
+      }
+    ],
+    "blockquote": {
+      "quoteTitle": "Design is not just what it looks like and feels like. Design is how it works.",
+      "name": "Steve Jobs"
+    },
+    "extraContent": {
+      "title": "Unlock Your Home's Potential",
+      "description1": "Transform your living space with the latest design trends and innovations. Whether you're buying or selling, Samson Properties Realty is here to help you achieve your real estate goals. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Each pixel pulsates with the heartbeat of innovation dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "caption": {
+        "img1": "3.jpg",
+        "img2": "4.jpg",
+        "imageCaption": "Unlock Your Home's Potential with Samson Properties Realty",
+        "imageCaptionDetails": "Transform your living space with the latest design trends and innovations. Whether you're buying or selling, Samson Properties Realty is here to help you achieve your real estate goals. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Each pixel pulsates with the heartbeat of innovation dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      }
+    },
+    "author": {
+      "name": "Ethan",
+      "img": "author.jpg",
+      "description": "Ethan is a real estate expert passionate about helping people find their dream homes. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Each pixel pulsates with the heartbeat of innovation dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    }
+  }
+  
+]

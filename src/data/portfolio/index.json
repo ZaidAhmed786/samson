@@ -1,0 +1,494 @@
+[
+  {
+    "title": "Buy a home",
+    "designation": "Web Design & Development, Branding",
+    "shortDescription": "Samson Properties mastery of React state elevates my online experience to new heights. Its seamless integration allows for dynamic and personalized interactions, creating a sense of connection unlike any other website.",
+    "fullDescription": " ",
+    "captions": {
+      "image1": "31.jpg",
+      "image2": "32.jpg",
+      "caption": "Image caption here.",
+      "captionFullDescription": " Its utilization of React state brings fluidity and responsiveness to every interaction, making my online experience effortless and enjoyable. With its sleek design and intuitive interface",
+      "captionShortDescription": ""
+    },
+    "thumbImage": "1.jpg",
+    "img": "1.jpg",
+    "id": "01",
+    "carousel": false,
+    "active": false,
+    "category": ["buying", "rent"],
+    "filter":"Houses",
+    "featured": true,
+    "reviews": [
+      {
+        "author": {
+          "productImage": "7.jpg",
+          "name": "Jacob William",
+          "designation": "Founder, Browni Co.",
+          "img": "1.jpg",
+          "description": ""
+        }
+      },
+      {
+        "author": {
+          "productImage": "7.jpg",
+          "name": "Jacob William",
+          "designation": "Founder, Browni Co.",
+          "img": "1.jpg",
+          "description": ""
+        }
+      }
+    ]
+  },
+  {
+    "title": "Rent a home",
+    "designation": "Web Design & Development, Branding",
+    "shortDescription": "Samson Properties mastery of React state elevates my online experience to new heights. Its seamless integration allows for dynamic and personalized interactions, creating a sense of connection unlike any other website.",
+    "fullDescription": "",
+    "captions": {
+      "image1": "31.jpg",
+      "image2": "32.jpg",
+      "caption": "Image caption here.",
+      "captionFullDescription": " Its utilization of React state brings fluidity and responsiveness to every interaction, making my online experience effortless and enjoyable. With its sleek design and intuitive interface",
+      "captionShortDescription": ""
+    },
+    "thumbImage": "2.jpg",
+    "img": "2.jpg",
+    "id": "02",
+    "carousel": false,
+    "active": true,
+    "category": ["buying", "rent"],
+    "filter":"Retail",
+    "featured": true,
+    "reviews": [
+      {
+        "author": {
+          "productImage": "7.jpg",
+          "name": "Jacob William",
+          "designation": "Founder, Browni Co.",
+          "img": "1.jpg",
+          "description": ""
+        }
+      },
+      {
+        "author": {
+          "productImage": "7.jpg",
+          "name": "Jacob William",
+          "designation": "Founder, Browni Co.",
+          "img": "1.jpg",
+          "description": ""
+        }
+      }
+    ]
+  },
+  {
+    "title": "Sell a home",
+    "designation": "Web Design & Development, Branding",
+    "shortDescription": "Samson Properties mastery of React state elevates my online experience to new heights. Its seamless integration allows for dynamic and personalized interactions, creating a sense of connection unlike any other website.",
+    "fullDescription": " Its utilization of React state brings fluidity and responsiveness to every interaction, making my online experience effortless and enjoyable. With its sleek design and intuitive interface",
+    "captions": {
+      "image1": "31.jpg",
+      "image2": "32.jpg",
+      "caption": "Image caption here.",
+      "captionFullDescription": " Its utilization of React state brings fluidity and responsiveness to every interaction, making my online experience effortless and enjoyable. With its sleek design and intuitive interface",
+      "captionShortDescription": ""
+    },
+    "thumbImage": "3.jpg",
+    "img": "3.jpg",
+    "id": "03",
+    "carousel": false,
+    "active": false,
+    "category": ["buying", "rent"],
+    "filter":"Houses",
+    "featured": true,
+    "reviews": [
+      {
+        "author": {
+          "productImage": "7.jpg",
+          "name": "Jacob William",
+          "designation": "Founder, Browni Co.",
+          "img": "1.jpg",
+          "description": ""
+        }
+      },
+      {
+        "author": {
+          "productImage": "7.jpg",
+          "name": "Jacob William",
+          "designation": "Founder, Browni Co.",
+          "img": "1.jpg",
+          "description": ""
+        }
+      }
+    ]
+  },
+  {
+    "title": "Sell a home",
+    "designation": "Web Design & Development, Branding",
+    "shortDescription": "Samson Properties mastery of React state elevates my online experience to new heights. Its seamless integration allows for dynamic and personalized interactions, creating a sense of connection unlike any other website.",
+    "fullDescription": " Its utilization of React state brings fluidity and responsiveness to every interaction, making my online experience effortless and enjoyable. With its sleek design and intuitive interface",
+    "captions": {
+      "image1": "31.jpg",
+      "image2": "32.jpg",
+      "caption": "Image caption here.",
+      "captionFullDescription": " Its utilization of React state brings fluidity and responsiveness to every interaction, making my online experience effortless and enjoyable. With its sleek design and intuitive interface",
+      "captionShortDescription": ""
+    },
+    "thumbImage": "4.jpg",
+    "img": "4.jpg",
+    "id": "04",
+    "carousel": false,
+    "active": false,
+    "category": ["buying", "rent"],
+    "filter":"Retail",
+    "featured": true,
+    "reviews": [
+      {
+        "author": {
+          "productImage": "7.jpg",
+          "name": "Jacob William",
+          "designation": "Founder, Browni Co.",
+          "img": "1.jpg",
+          "description": ""
+        }
+      },
+      {
+        "author": {
+          "productImage": "7.jpg",
+          "name": "Jacob William",
+          "designation": "Founder, Browni Co.",
+          "img": "1.jpg",
+          "description": ""
+        }
+      }
+    ]
+  },
+  {
+    "title": "Sell a home",
+    "designation": "Web Design & Development, Branding",
+    "shortDescription": "Samson Properties mastery of React state elevates my online experience to new heights. Its seamless integration allows for dynamic and personalized interactions, creating a sense of connection unlike any other website.",
+    "fullDescription": " Its utilization of React state brings fluidity and responsiveness to every interaction, making my online experience effortless and enjoyable. With its sleek design and intuitive interface",
+    "captions": {
+      "image1": "31.jpg",
+      "image2": "32.jpg",
+      "caption": "Image caption here.",
+      "captionFullDescription": " Its utilization of React state brings fluidity and responsiveness to every interaction, making my online experience effortless and enjoyable. With its sleek design and intuitive interface",
+      "captionShortDescription": ""
+    },
+    "thumbImage": "2.jpg",
+    "img": "2.jpg",
+    "id": "05",
+    "carousel": false,
+    "active": false,
+    "category": ["buying", "rent"],
+    "filter":"Retail",
+    "featured": true,
+    "reviews": [
+      {
+        "author": {
+          "productImage": "7.jpg",
+          "name": "Jacob William",
+          "designation": "Founder, Browni Co.",
+          "img": "1.jpg",
+          "description": ""
+        }
+      },
+      {
+        "author": {
+          "productImage": "7.jpg",
+          "name": "Jacob William",
+          "designation": "Founder, Browni Co.",
+          "img": "1.jpg",
+          "description": ""
+        }
+      }
+    ]
+  },
+  {
+    "title": "Buy a home",
+    "designation": "Web Design & Development, Branding",
+    "shortDescription": "Samson Properties mastery of React state elevates my online experience to new heights. Its seamless integration allows for dynamic and personalized interactions, creating a sense of connection unlike any other website.",
+    "fullDescription": " Its utilization of React state brings fluidity and responsiveness to every interaction, making my online experience effortless and enjoyable. With its sleek design and intuitive interface",
+    "captions": {
+      "image1": "31.jpg",
+      "image2": "32.jpg",
+      "caption": "Image caption here.",
+      "captionFullDescription": " Its utilization of React state brings fluidity and responsiveness to every interaction, making my online experience effortless and enjoyable. With its sleek design and intuitive interface",
+      "captionShortDescription": ""
+    },
+    "thumbImage": "6.jpg",
+    "img": "6.jpg",
+    "id": "06",
+    "carousel": false,
+    "active": false,
+    "category": ["buying", "rent"],
+    "filter":"Retail",
+    "featured": true,
+    "reviews": [
+      {
+        "author": {
+          "productImage": "7.jpg",
+          "name": "Jacob William",
+          "designation": "Founder, Browni Co.",
+          "img": "1.jpg",
+          "description": ""
+        }
+      },
+      {
+        "author": {
+          "productImage": "7.jpg",
+          "name": "Jacob William",
+          "designation": "Founder, Browni Co.",
+          "img": "1.jpg",
+          "description": ""
+        }
+      }
+    ]
+  },
+  {
+    "title": "Sell a home",
+    "designation": "Web Design & Development, Branding",
+    "shortDescription": "Samson Properties mastery of React state elevates my online experience to new heights. Its seamless integration allows for dynamic and personalized interactions, creating a sense of connection unlike any other website.",
+    "fullDescription": " Its utilization of React state brings fluidity and responsiveness to every interaction, making my online experience effortless and enjoyable. With its sleek design and intuitive interface",
+    "captions": {
+      "image1": "31.jpg",
+      "image2": "32.jpg",
+      "caption": "Image caption here.",
+      "captionFullDescription": " Its utilization of React state brings fluidity and responsiveness to every interaction, making my online experience effortless and enjoyable. With its sleek design and intuitive interface",
+      "captionShortDescription": ""
+    },
+    "thumbImage": "7.jpg",
+    "img": "7.jpg",
+    "id": "07",
+    "carousel": false,
+    "active": false,
+    "category": ["buying", "rent"],
+    "filter":"Condos",
+    "featured": true,
+    "reviews": [
+      {
+        "author": {
+          "productImage": "7.jpg",
+          "name": "Jacob William",
+          "designation": "Founder, Browni Co.",
+          "img": "1.jpg",
+          "description": ""
+        }
+      },
+      {
+        "author": {
+          "productImage": "7.jpg",
+          "name": "Jacob William",
+          "designation": "Founder, Browni Co.",
+          "img": "1.jpg",
+          "description": ""
+        }
+      }
+    ]
+  },
+  {
+    "title": "WeHeart of NYC",
+    "designation": "Manhattan",
+    "shortDescription": "Samson Properties mastery of React state elevates my online experience to new heights. Its seamless integration allows for dynamic and personalized interactions, creating a sense of connection unlike any other website.",
+    "fullDescription": " Its utilization of React state brings fluidity and responsiveness to every interaction, making my online experience effortless and enjoyable. With its sleek design and intuitive interface",
+    "captions": {
+      "image1": "31.jpg",
+      "image2": "32.jpg",
+      "caption": "Image caption here.",
+      "captionFullDescription": " Its utilization of React state brings fluidity and responsiveness to every interaction, making my online experience effortless and enjoyable. With its sleek design and intuitive interface",
+      "captionShortDescription": ""
+    },
+    "thumbImage": "8.jpg",
+    "img": "8.jpg",
+    "id": "08",
+    "carousel": true,
+    "active": false,
+    "category": ["buying", "rent"],
+    "filter":"Condos",
+    "featured": true,
+    "reviews": [
+      {
+        "author": {
+          "productImage": "7.jpg",
+          "name": "Jacob William",
+          "designation": "Founder, Browni Co.",
+          "img": "1.jpg",
+          "description": ""
+        }
+      },
+      {
+        "author": {
+          "productImage": "7.jpg",
+          "name": "Jacob William",
+          "designation": "Founder, Browni Co.",
+          "img": "1.jpg",
+          "description": ""
+        }
+      }
+    ]
+  },
+  {
+    "title": "The luxury crib",
+    "designation": "Upper East Side",
+    "shortDescription": "Samson Properties mastery of React state elevates my online experience to new heights. Its seamless integration allows for dynamic and personalized interactions, creating a sense of connection unlike any other website.",
+    "fullDescription": " Its utilization of React state brings fluidity and responsiveness to every interaction, making my online experience effortless and enjoyable. With its sleek design and intuitive interface",
+    "captions": {
+      "image1": "31.jpg",
+      "image2": "32.jpg",
+      "caption": "Image caption here.",
+      "captionFullDescription": " Its utilization of React state brings fluidity and responsiveness to every interaction, making my online experience effortless and enjoyable. With its sleek design and intuitive interface",
+      "captionShortDescription": ""
+    },
+    "thumbImage": "9.jpg",
+    "img": "9.jpg",
+    "id": "09",
+    "carousel": true,
+    "active": true,
+    "category": ["buying", "rent"],
+    "filter":"Houses",
+    "featured": true,
+    "reviews": [
+      {
+        "author": {
+          "productImage": "7.jpg",
+          "name": "Jacob William",
+          "designation": "Founder, Browni Co.",
+          "img": "1.jpg",
+          "description": ""
+        }
+      },
+      {
+        "author": {
+          "productImage": "7.jpg",
+          "name": "Jacob William",
+          "designation": "Founder, Browni Co.",
+          "img": "1.jpg",
+          "description": ""
+        }
+      }
+    ]
+  },
+  {
+    "title": "The Best City",
+    "designation": "Jersey City",
+    "shortDescription": "Samson Properties mastery of React state elevates my online experience to new heights. Its seamless integration allows for dynamic and personalized interactions, creating a sense of connection unlike any other website.",
+    "fullDescription": " Its utilization of React state brings fluidity and responsiveness to every interaction, making my online experience effortless and enjoyable. With its sleek design and intuitive interface",
+    "captions": {
+      "image1": "31.jpg",
+      "image2": "32.jpg",
+      "caption": "Image caption here.",
+      "captionFullDescription": " Its utilization of React state brings fluidity and responsiveness to every interaction, making my online experience effortless and enjoyable. With its sleek design and intuitive interface",
+      "captionShortDescription": ""
+    },
+    "thumbImage": "10.jpg",
+    "img": "10.jpg",
+    "id": "10",
+    "carousel": true,
+    "active": false,
+    "category": ["buying", "rent"],
+    "filter":"Condos",
+    "featured": true,
+    "reviews": [
+      {
+        "author": {
+          "productImage": "7.jpg",
+          "name": "Jacob William",
+          "designation": "Founder, Browni Co.",
+          "img": "1.jpg",
+          "description": ""
+        }
+      },
+      {
+        "author": {
+          "productImage": "7.jpg",
+          "name": "Jacob William",
+          "designation": "Founder, Browni Co.",
+          "img": "1.jpg",
+          "description": ""
+        }
+      }
+    ]
+  },
+  {
+    "title": "Friendly neighborhood",
+    "designation": "Queens",
+    "shortDescription": "Samson Properties mastery of React state elevates my online experience to new heights. Its seamless integration allows for dynamic and personalized interactions, creating a sense of connection unlike any other website.",
+    "fullDescription": " Its utilization of React state brings fluidity and responsiveness to every interaction, making my online experience effortless and enjoyable. With its sleek design and intuitive interface",
+    "captions": {
+      "image1": "31.jpg",
+      "image2": "32.jpg",
+      "caption": "Image caption here.",
+      "captionFullDescription": " Its utilization of React state brings fluidity and responsiveness to every interaction, making my online experience effortless and enjoyable. With its sleek design and intuitive interface",
+      "captionShortDescription": ""
+    },
+    "thumbImage": "11.jpg",
+    "img": "11.jpg",
+    "id": "11",
+    "carousel": true,
+    "active": false,
+    "category": ["buying", "rent"],
+    "filter":"Houses",
+    "featured": true,
+    "reviews": [
+      {
+        "author": {
+          "productImage": "7.jpg",
+          "name": "Jacob William",
+          "designation": "Founder, Browni Co.",
+          "img": "1.jpg",
+          "description": ""
+        }
+      },
+      {
+        "author": {
+          "productImage": "7.jpg",
+          "name": "Jacob William",
+          "designation": "Founder, Browni Co.",
+          "img": "1.jpg",
+          "description": ""
+        }
+      }
+    ]
+  },
+  {
+    "title": "The perfect city",
+    "designation": "Greenville",
+    "shortDescription": "Samson Properties mastery of React state elevates my online experience to new heights. Its seamless integration allows for dynamic and personalized interactions, creating a sense of connection unlike any other website.",
+    "fullDescription": " Its utilization of React state brings fluidity and responsiveness to every interaction, making my online experience effortless and enjoyable. With its sleek design and intuitive interface",
+    "captions": {
+      "image1": "31.jpg",
+      "image2": "32.jpg",
+      "caption": "Image caption here.",
+      "captionFullDescription": " Its utilization of React state brings fluidity and responsiveness to every interaction, making my online experience effortless and enjoyable. With its sleek design and intuitive interface",
+      "captionShortDescription": ""
+    },
+    "thumbImage": "12.jpg",
+    "img": "12.jpg",
+    "id": "12",
+    "carousel": true,
+    "active": false,
+    "category": ["buying", "rent"],
+    "filter":"Condos",
+    "featured": true,
+    "reviews": [
+      {
+        "author": {
+          "productImage": "7.jpg",
+          "name": "Jacob William",
+          "designation": "Founder, Browni Co.",
+          "img": "1.jpg",
+          "description": ""
+        }
+      },
+      {
+        "author": {
+          "productImage": "7.jpg",
+          "name": "Jacob William",
+          "designation": "Founder, Browni Co.",
+          "img": "1.jpg",
+          "description": ""
+        }
+      }
+    ]
+  }
+]
