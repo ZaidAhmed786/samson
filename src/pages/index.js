@@ -341,7 +341,7 @@ function HomeVersionThree(props) {
 
       <Popup
         url="/img/logo.png"
-        color="rgb(190, 175, 135)"
+        color="#0b2c3d"
         number="1(225)-523-2569"
         tel="+1 225 523 2569"
         logoWidth="300px !important"

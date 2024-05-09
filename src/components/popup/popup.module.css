@@ -110,8 +110,8 @@
      
     .popup {
       position: fixed;
-      top: 22vh;
-      left: 2vw;
+      top: 26vh;
+      left: 1vw;
       width: 26vw;
       height: 50vh; 
       box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6); 
