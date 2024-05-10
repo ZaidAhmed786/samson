@@ -3,7 +3,7 @@ const PortfolioitemThree = ({ data, baseUrl, slug }) => {
   return (
     <div className="ltn__img-slide-item-4">
       <Link href={`${baseUrl}/${slug}`}>
-        <img src={`/img/img-slide/${data.img}`} alt="Image" />
+        <img  src={`/img/img-slide/${data.img}`} alt="Image" />
       </Link>
       <div className="ltn__img-slide-info">
         <div className="ltn__img-slide-info-brief">

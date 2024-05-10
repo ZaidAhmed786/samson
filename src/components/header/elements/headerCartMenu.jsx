@@ -35,7 +35,7 @@ const HeaderCartMenu = function ({ cartMenuOpener, closeSideBar }) {
                   <div key={key} className="mini-cart-item clearfix">
                     <div className="mini-cart-img">
                       <Link href={`/shop/${slug}`}>
-                        <img
+                        <img 
                           src={`/img/product/${imagecount}.png`}
                           alt="Image"
                         />

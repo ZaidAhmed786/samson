@@ -41,7 +41,7 @@ function Feature({
                           <i className={`${item.icon}`}></i>
                         </span>
                       ) : (
-                        <img
+                        <img 
                           src={`/img/icons/icon-img/${item.img}`}
                           alt={`${item.title}`}
                         />

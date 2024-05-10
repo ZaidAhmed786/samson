@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { IoArrowDownOutline } from "react-icons/io5";
 
 const LanguageDropDown = function () {
@@ -6,28 +7,28 @@ const LanguageDropDown = function () {
       <div className="ltn__drop-menu ltn__currency-menu ltn__language-menu">
         <ul>
           <li>
-            <a href="/" className="dropdown-toggle">
+            <Link href="/" className="dropdown-toggle">
               <span className="active-currency">English</span>
               <span>
                 <IoArrowDownOutline />
               </span>
-            </a>
+            </Link>
             <ul>
               <li>
-                <a href="/">Arabic</a>
+                <Link href="/">Arabic</Link>
               </li>
 
               <li>
-                <a href="/">Chinese</a>
+                <Link href="/">Chinese</Link>
               </li>
               <li>
-                <a href="/">English</a>
+                <Link href="/">English</Link>
               </li>
               <li>
-                <a href="/">French</a>
+                <Link href="/">French</Link>
               </li>
               <li>
-                <a href="/">Hindi</a>
+                <Link href="/">Hindi</Link>
               </li>
             </ul>
           </li>

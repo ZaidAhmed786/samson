@@ -36,7 +36,7 @@ function portfolioDetails({ portfolio }) {
               <Col xs={12} lg={8}>
                 <div className="ltn__page-details-inner ltn__portfolio-details-inner">
                   <div className="ltn__blog-img">
-                    <img
+                    <img 
                       src={`/img/service/${portfolio.thumbImage}`}
                       alt="Image"
                     />
@@ -55,7 +55,7 @@ function portfolioDetails({ portfolio }) {
                         <Col key={key} xs={12} lg={6}>
                           <div className="ltn__testimonial-item ltn__testimonial-item-3">
                             <div className="ltn__testimonial-img">
-                              <img
+                              <img 
                                 src={`/img/blog/${review.author.productImage}`}
                                 alt="Image"
                               />
@@ -64,7 +64,7 @@ function portfolioDetails({ portfolio }) {
                               <p>{review.author.description}</p>
                               <div className="ltn__testimoni-info-inner">
                                 <div className="ltn__testimoni-img">
-                                  <img
+                                  <img 
                                     src={`/img/testimonial/${review.author.img}`}
                                     alt="Image"
                                   />
@@ -89,14 +89,14 @@ function portfolioDetails({ portfolio }) {
                   <p>{portfolio.fullDescription}</p>
                   <Row>
                     <Col xs={12} lg={6}>
-                      <img
+                      <img 
                         src={`/img/service/${portfolio.captions.image1}`}
                         alt="image"
                       />
                       <label>{portfolio.captions.caption}</label>
                     </Col>
                     <Col xs={12} lg={6}>
-                      <img
+                      <img 
                         src={`/img/service/${portfolio.captions.image2}`}
                         alt="image"
                       />
@@ -178,7 +178,7 @@ function portfolioDetails({ portfolio }) {
                   {/* <!-- Banner Widget --> */}
                   <div className="widget ltn__banner-widget">
                     <Link href="/shop">
-                      <img src="/img/banner/banner-1.jpg" alt="Banner Image" />
+                      <img  src="/img/banner/banner-1.jpg" alt="Banner Image" />
                     </Link>
                   </div>
                 </aside>

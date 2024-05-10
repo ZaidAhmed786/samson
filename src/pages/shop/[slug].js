@@ -197,7 +197,7 @@ function ProductDetails({ product }) {
                 return (
                   <div className="ltn__img-slide-item-4" key={key}>
                     <Link href="/">
-                      <img
+                      <img 
                         src={`/img/img-slide/${single.img}`}
                         alt={`${single.title}`}
                       />
@@ -242,11 +242,11 @@ function ProductDetails({ product }) {
                         {product.date}
                       </li>
                       <li>
-                        <a href="/">
+                        <Link href="/">
                           <i className="far fa-comments"></i>
                           {product.comments}
                           Comments
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </div>
@@ -394,7 +394,7 @@ function ProductDetails({ product }) {
                           href={`/img/others/${product.gallery.img1}`}
                           data-rel="lightcase:myCollection"
                         >
-                          <img
+                          <img 
                             className="mb-30"
                             src={`/img/others/${product.gallery.img1}`}
                             alt={`${product.title}`}
@@ -404,7 +404,7 @@ function ProductDetails({ product }) {
                           href={`/img/others/${product.gallery.img2}`}
                           data-rel="lightcase:myCollection"
                         >
-                          <img
+                          <img 
                             className="mb-30"
                             src={`/img/others/${product.gallery.img2}`}
                             alt={`${product.title}`}
@@ -416,7 +416,7 @@ function ProductDetails({ product }) {
                           href={`/img/others/${product.gallery.img3}`}
                           data-rel="lightcase:myCollection"
                         >
-                          <img
+                          <img 
                             className="mb-30"
                             src={`/img/others/${product.gallery.img3}`}
                             alt={`${product.title}`}
@@ -523,7 +523,7 @@ function ProductDetails({ product }) {
                             <div className="row">
                               <div className="col-lg-7">
                                 <div className="apartments-plan-img">
-                                  <img src="/img/others/10.png" alt="/" />
+                                  <img  src="/img/others/10.png" alt="/" />
                                 </div>
                               </div>
                               <div className="col-lg-5">
@@ -580,7 +580,7 @@ function ProductDetails({ product }) {
                             <div className="row">
                               <div className="col-lg-7">
                                 <div className="apartments-plan-img">
-                                  <img src="/img/others/10.png" alt="/" />
+                                  <img  src="/img/others/10.png" alt="/" />
                                 </div>
                               </div>
                               <div className="col-lg-5">
@@ -637,7 +637,7 @@ function ProductDetails({ product }) {
                             <div className="row">
                               <div className="col-lg-7">
                                 <div className="apartments-plan-img">
-                                  <img src="/img/others/10.png" alt="/" />
+                                  <img  src="/img/others/10.png" alt="/" />
                                 </div>
                               </div>
                               <div className="col-lg-5">
@@ -694,7 +694,7 @@ function ProductDetails({ product }) {
                             <div className="row">
                               <div className="col-lg-7">
                                 <div className="apartments-plan-img">
-                                  <img src="/img/others/10.png" alt="/" />
+                                  <img  src="/img/others/10.png" alt="/" />
                                 </div>
                               </div>
                               <div className="col-lg-5">
@@ -770,32 +770,32 @@ function ProductDetails({ product }) {
                     <div className="product-ratting">
                       <ul>
                         <li>
-                          <a href="/">
+                          <Link href="/">
                             <FaStar />
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="/">
+                          <Link href="/">
                             <FaStar />
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="/">
+                          <Link href="/">
                             <FaStar />
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="/">
+                          <Link href="/">
                             <FaStar />
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="/">
+                          <Link href="/">
                             <FaRegStar />
-                          </a>
+                          </Link>
                         </li>
                         <li className="review-total">
-                          <a href="/"> ( 95 Reviews )</a>
+                          <Link href="/"> ( 95 Reviews )</Link>
                         </li>
                       </ul>
                     </div>
@@ -807,38 +807,38 @@ function ProductDetails({ product }) {
                           <li>
                             <div className="ltn__comment-item clearfix">
                               <div className="ltn__commenter-img">
-                                <img src="/img/testimonial/1.jpg" alt="Image" />
+                                <img  src="/img/testimonial/1.jpg" alt="Image" />
                               </div>
                               <div className="ltn__commenter-comment">
                                 <h6>
-                                  <a href="/">Adam Smit</a>
+                                  <Link href="/">Adam Smit</Link>
                                 </h6>
                                 <div className="product-ratting">
                                   <ul>
                                     <li>
-                                      <a href="/">
+                                      <Link href="/">
                                         <FaStar />
-                                      </a>
+                                      </Link>
                                     </li>
                                     <li>
-                                      <a href="/">
+                                      <Link href="/">
                                         <FaStar />
-                                      </a>
+                                      </Link>
                                     </li>
                                     <li>
-                                      <a href="/">
+                                      <Link href="/">
                                         <FaStar />
-                                      </a>
+                                      </Link>
                                     </li>
                                     <li>
-                                      <a href="/">
+                                      <Link href="/">
                                         <FaStar />
-                                      </a>
+                                      </Link>
                                     </li>
                                     <li>
-                                      <a href="/">
+                                      <Link href="/">
                                         <FaRegStar />
-                                      </a>
+                                      </Link>
                                     </li>
                                   </ul>
                                 </div>
@@ -854,38 +854,38 @@ function ProductDetails({ product }) {
                           <li>
                             <div className="ltn__comment-item clearfix">
                               <div className="ltn__commenter-img">
-                                <img src="/img/testimonial/3.jpg" alt="Image" />
+                                <img  src="/img/testimonial/3.jpg" alt="Image" />
                               </div>
                               <div className="ltn__commenter-comment">
                                 <h6>
-                                  <a href="/">Adam Smit</a>
+                                  <Link href="/">Adam Smit</Link>
                                 </h6>
                                 <div className="product-ratting">
                                   <ul>
                                     <li>
-                                      <a href="/">
+                                      <Link href="/">
                                         <FaStar />
-                                      </a>
+                                      </Link>
                                     </li>
                                     <li>
-                                      <a href="/">
+                                      <Link href="/">
                                         <FaStar />
-                                      </a>
+                                      </Link>
                                     </li>
                                     <li>
-                                      <a href="/">
+                                      <Link href="/">
                                         <FaStar />
-                                      </a>
+                                      </Link>
                                     </li>
                                     <li>
-                                      <a href="/">
+                                      <Link href="/">
                                         <FaStar />
-                                      </a>
+                                      </Link>
                                     </li>
                                     <li>
-                                      <a href="/">
+                                      <Link href="/">
                                         <FaRegStar />
-                                      </a>
+                                      </Link>
                                     </li>
                                   </ul>
                                 </div>
@@ -901,38 +901,38 @@ function ProductDetails({ product }) {
                           <li>
                             <div className="ltn__comment-item clearfix">
                               <div className="ltn__commenter-img">
-                                <img src="/img/testimonial/2.jpg" alt="Image" />
+                                <img  src="/img/testimonial/2.jpg" alt="Image" />
                               </div>
                               <div className="ltn__commenter-comment">
                                 <h6>
-                                  <a href="/">Adam Smit</a>
+                                  <Link href="/">Adam Smit</Link>
                                 </h6>
                                 <div className="product-ratting">
                                   <ul>
                                     <li>
-                                      <a href="/">
+                                      <Link href="/">
                                         <FaStar />
-                                      </a>
+                                      </Link>
                                     </li>
                                     <li>
-                                      <a href="/">
+                                      <Link href="/">
                                         <FaStar />
-                                      </a>
+                                      </Link>
                                     </li>
                                     <li>
-                                      <a href="/">
+                                      <Link href="/">
                                         <FaStar />
-                                      </a>
+                                      </Link>
                                     </li>
                                     <li>
-                                      <a href="/">
+                                      <Link href="/">
                                         <FaStar />
-                                      </a>
+                                      </Link>
                                     </li>
                                     <li>
-                                      <a href="/">
+                                      <Link href="/">
                                         <FaRegStar />
-                                      </a>
+                                      </Link>
                                     </li>
                                   </ul>
                                 </div>
@@ -958,29 +958,29 @@ function ProductDetails({ product }) {
                             <div className="product-ratting">
                               <ul>
                                 <li>
-                                  <a href="/">
+                                  <Link href="/">
                                     <FaStar />
-                                  </a>
+                                  </Link>
                                 </li>
                                 <li>
-                                  <a href="/">
+                                  <Link href="/">
                                     <FaStar />
-                                  </a>
+                                  </Link>
                                 </li>
                                 <li>
-                                  <a href="/">
+                                  <Link href="/">
                                     <FaStar />
-                                  </a>
+                                  </Link>
                                 </li>
                                 <li>
-                                  <a href="/">
+                                  <Link href="/">
                                     <FaStar />
-                                  </a>
+                                  </Link>
                                 </li>
                                 <li>
-                                  <a href="/">
+                                  <Link href="/">
                                     <FaStar />
-                                  </a>
+                                  </Link>
                                 </li>
                               </ul>
                             </div>
@@ -1076,7 +1076,7 @@ function ProductDetails({ product }) {
                   {/* <!-- Author Widget --> */}
                   <div className="widget ltn__author-widget">
                     <div className="ltn__author-widget-inner text-center">
-                      <img
+                      <img 
                         src={`/img/team/${product.agent.img}`}
                         alt={`${product.agent.fullName}`}
                       />
@@ -1085,29 +1085,29 @@ function ProductDetails({ product }) {
                       <div className="product-ratting">
                         <ul>
                           <li>
-                            <a href="/">
+                            <Link href="/">
                               <FaStar />
-                            </a>
+                            </Link>
                           </li>
                           <li>
-                            <a href="/">
+                            <Link href="/">
                               <FaStar />
-                            </a>
+                            </Link>
                           </li>
                           <li>
-                            <a href="/">
+                            <Link href="/">
                               <FaStar />
-                            </a>
+                            </Link>
                           </li>
                           <li>
-                            <a href="/">
+                            <Link href="/">
                               <FaStar />
-                            </a>
+                            </Link>
                           </li>
                           <li>
-                            <a href="/">
+                            <Link href="/">
                               <FaRegStar />
-                            </a>
+                            </Link>
                           </li>
                           <li className="review-total">
                             {" "}
@@ -1123,25 +1123,25 @@ function ProductDetails({ product }) {
                       <div className="ltn__social-media">
                         <ul>
                           <li>
-                            <a href="/" title="Facebook">
+                            <Link href="/" title="Facebook">
                               <FaFacebookF />
-                            </a>
+                            </Link>
                           </li>
                           <li>
-                            <a href="/" title="Twitter">
+                            <Link href="/" title="Twitter">
                               <FaTwitter />
-                            </a>
+                            </Link>
                           </li>
                           <li>
-                            <a href="/" title="Linkedin">
+                            <Link href="/" title="Linkedin">
                               <FaInstagram />
-                            </a>
+                            </Link>
                           </li>
 
                           <li>
-                            <a href="/" title="Youtube">
+                            <Link href="/" title="Youtube">
                               <FaDribbble />
-                            </a>
+                            </Link>
                           </li>
                         </ul>
                       </div>
@@ -1201,45 +1201,45 @@ function ProductDetails({ product }) {
                           <li key={product.id}>
                             <div className="top-rated-product-item clearfix">
                               <div className="top-rated-product-img">
-                                <a href={`/shop/${slug}`}>
-                                  <img
+                                <Link href={`/shop/${slug}`}>
+                                  <img 
                                     src={`/img/product/${key}.png`}
                                     alt={product.title}
                                   />
-                                </a>
+                                </Link>
                               </div>
                               <div className="top-rated-product-info">
                                 <div className="product-ratting">
                                   <ul>
                                     <li>
-                                      <a href="/">
+                                      <Link href="/">
                                         <FaStar />
-                                      </a>
+                                      </Link>
                                     </li>
                                     <li>
-                                      <a href="/">
+                                      <Link href="/">
                                         <FaStar />
-                                      </a>
+                                      </Link>
                                     </li>
                                     <li>
-                                      <a href="/">
+                                      <Link href="/">
                                         <FaStar />
-                                      </a>
+                                      </Link>
                                     </li>
                                     <li>
-                                      <a href="/">
+                                      <Link href="/">
                                         <FaStar />
-                                      </a>
+                                      </Link>
                                     </li>
                                     <li>
-                                      <a href="/">
+                                      <Link href="/">
                                         <FaStar />
-                                      </a>
+                                      </Link>
                                     </li>
                                   </ul>
                                 </div>
                                 <h6>
-                                  <a href={`/shop/${slug}`}>{product.title}</a>
+                                  <Link href={`/shop/${slug}`}>{product.title}</Link>
                                 </h6>
                                 <div className="product-price">
                                   <span>${product.price}</span>
@@ -1306,7 +1306,7 @@ function ProductDetails({ product }) {
                           >
                             <div className="product-img">
                               <Link href={`/shop/${slug}`}>
-                                <img
+                                <img 
                                   src={`/img/product-3/${product.productImg}`}
                                   alt={slug}
                                 />
@@ -1314,7 +1314,7 @@ function ProductDetails({ product }) {
                               <div className="real-estate-agent">
                                 <div className="agent-img">
                                   <Link href="/">
-                                    <img src={`/img/blog/author.jpg`} alt="/" />
+                                    <img  src={`/img/blog/author.jpg`} alt="/" />
                                   </Link>
                                 </div>
                               </div>
@@ -1378,7 +1378,7 @@ function ProductDetails({ product }) {
                             <div className="popular-post-widget-item clearfix">
                               <div className="popular-post-widget-img">
                                 <Link href={`/blog/${slug}`}>
-                                  <img
+                                  <img 
                                     src={`/img/team/${imagecount}.jpg`}
                                     alt="/"
                                   />

@@ -12,7 +12,7 @@ const PortfolioitemTwo = ({ data, baseUrl, slug }) => {
     >
       <div className="ltn__gallery-item-inner">
         <div className="ltn__gallery-item-img">
-          <img src={`/img/gallery/${data.thumbImage}`} alt="Image" />
+          <img  src={`/img/gallery/${data.thumbImage}`} alt="Image" />
           <span className="ltn__gallery-action-icon">
             <span>{<FaArrowRight />}</span>
           </span>

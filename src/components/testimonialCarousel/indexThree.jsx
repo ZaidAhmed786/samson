@@ -144,7 +144,7 @@ function TestimonialStyleThree({ data }) {
                     <FaRegComments/>
                 </div>
                 <div className="ltn__testimonial-image">
-                    <img src={`/img/testimonial/${item.img}`} alt="quote"/>
+                    <img  src={`/img/testimonial/${item.img}`} alt="quote"/>
                 </div>
                 <div className="ltn__testimonial-info">
                     <p>{item.description}</p>

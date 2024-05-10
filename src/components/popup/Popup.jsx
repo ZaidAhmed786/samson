@@ -34,7 +34,7 @@ const Popup = (props) => {
               style={{ background: props.color }}
             ></div>
             <div className={styles.popupContent}>
-              <img
+              <img 
                 src={`${props?.url}`}
                 alt="Logo"
                 className={styles.logo}

@@ -25,7 +25,7 @@ const Footer = function () {
                 <div className="footer-widget footer-about-widget">
                   <div className="footer-logo">
                     <div className="site-logo">
-                      <img src="/img/logo-2.png" alt="Logo" />
+                      <img  src="/img/logo-2.png" alt="Logo" />
                     </div>
                   </div>
                   <p>
@@ -180,7 +180,7 @@ const Footer = function () {
                     </form>
                   </div>
                   <h5 className="mt-30">We Accept</h5>
-                  <img src="/img/icons/payment-4.png" alt="Payment Image" />
+                  <img  src="/img/icons/payment-4.png" alt="Payment Image" />
                 </div>
               </Col>
             </Row>

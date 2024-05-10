@@ -108,7 +108,7 @@ function Faq() {
                       </Accordion.Header>
                       <Accordion.Body>
                         <div className="ltn__video-img alignleft">
-                          <img
+                          <img 
                             src="/img/bg/17.jpg"
                             alt="video popup bg image"
                           />
@@ -266,7 +266,7 @@ function Faq() {
                   {/* <!-- Banner Widget --> */}
                   <div className="widget ltn__banner-widget">
                     <Link href="/shop">
-                      <img src="/img/banner/banner-3.jpg" alt="Banner Image" />
+                      <img  src="/img/banner/banner-3.jpg" alt="Banner Image" />
                     </Link>
                   </div>
                 </aside>

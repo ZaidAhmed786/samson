@@ -56,7 +56,7 @@ const Wishlist = () => {
                                                                 </span>
                                                             </td>
                                                             <td class="cart-product-image">
-                                                                <Link href={`/shop/${slug}`}><img src={`/img/product/${imageCount}.png`} alt="/" /></Link>
+                                                                <Link href={`/shop/${slug}`}><img  src={`/img/product/${imageCount}.png`} alt="/" /></Link>
                                                             </td>
                                                             <td class="cart-product-info">
                                                                 <h4><Link href={`/shop/${slug}`}>{product.title}</Link></h4>

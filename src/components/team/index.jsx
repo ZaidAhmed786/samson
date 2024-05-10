@@ -5,7 +5,7 @@ const TeamItem = ({ data, baseUrl, slug, additionalClassname }) => {
     <>
       <div className={`ltn__team-item ${additionalClassname}`}>
         <div className="team-img">
-          <img src={`/img/team/${data.image}`} alt="Image" />
+          <img  src={`/img/team/${data.image}`} alt="Image" />
         </div>
         <div className="team-info">
           <h4>

@@ -62,7 +62,7 @@ const BlogItemTwo = ({ blogData, slug, baseUrl }) => {
       >
         {blogData.settings.video ? (
           <div className="ltn__video-img">
-            <img src={`/img/blog/${blogData.thumbImg}`} alt={blogData.title} />
+            <img  src={`/img/blog/${blogData.thumbImg}`} alt={blogData.title} />
             <button onClick={() => setOpen(true)} className="ltn__video-icon-2">
               <FaPlay />
             </button>
@@ -86,7 +86,7 @@ const BlogItemTwo = ({ blogData, slug, baseUrl }) => {
               return (
                 <div key={key} className="ltn__blog-gallery-item">
                   <Link href={`${baseUrl}/${slug}`}>
-                    <img src={`/img/blog/${gallery.img}`} alt="Image" />
+                    <img  src={`/img/blog/${gallery.img}`} alt="Image" />
                   </Link>
                 </div>
               );
@@ -98,7 +98,7 @@ const BlogItemTwo = ({ blogData, slug, baseUrl }) => {
         {blogData.settings.thumbNail ? (
           <div className="ltn__blog-img">
             <Link href={`${baseUrl}/${slug}`}>
-              <img
+              <img 
                 src={`/img/blog/${blogData.thumbImg}`}
                 alt={blogData.title}
               />
@@ -172,7 +172,7 @@ const BlogItemTwo = ({ blogData, slug, baseUrl }) => {
                 <ul>
                   <li className="ltn__blog-author">
                     <Link href="/">
-                      <img
+                      <img 
                         src={`/img/blog/${blogData.author.img}`}
                         alt={`${blogData.author.name}`}
                       />

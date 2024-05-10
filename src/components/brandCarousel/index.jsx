@@ -75,7 +75,7 @@ function BrandCarouselOne({ data }) {
         {data.map((item, key) => {
           return (
             <div key={key} className="ltn__brand-logo-item">
-              <img src={`/img/brand-logo/${item.image}`} alt="Brand Logo" />
+              <img  src={`/img/brand-logo/${item.image}`} alt="Brand Logo" />
             </div>
           );
         })}

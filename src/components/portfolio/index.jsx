@@ -9,7 +9,7 @@ const Portfolioitem = ({ data, baseUrl, slug, setBasicExampleOpen }) => {
           className="ltn__gallery-item-img"
           onClick={() => setBasicExampleOpen(true)}
         >
-          <img src={`/img/gallery/${data.thumbImage}`} alt="Image" />
+          <img  src={`/img/gallery/${data.thumbImage}`} alt="Image" />
           <span className="ltn__gallery-action-icon">
             <span>{<FaSearch />}</span>
           </span>

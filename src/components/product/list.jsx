@@ -49,7 +49,7 @@ const ProductList = ({
       <div className="ltn__product-item ltn__product-item-4 ltn__product-item-5">
         <div className="product-img">
           <Link href={`/${baseUrl}/${slug}`}>
-            <img
+            <img 
               src={`/img/product-3/${productData.productImg}`}
               alt={`${productData.title}`}
             />
@@ -110,7 +110,7 @@ const ProductList = ({
           <div className="real-estate-agent">
             <div className="agent-img">
               <Link href={`/${baseUrl}/${slug}`}>
-                <img
+                <img 
                   src={`/img/blog/author.jpg`}
                   alt={`${productData.title}`}
                 />

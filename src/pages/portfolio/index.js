@@ -160,7 +160,7 @@ function Portfolio() {
                   {brandLogoData.map((logo, key) => {
                     return (
                       <div key={key} className="ltn__brand-logo-item">
-                        <img
+                        <img 
                           src={`/img/brand-logo/${logo.image}`}
                           alt="Brand Logo"
                         />

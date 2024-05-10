@@ -15,6 +15,7 @@ import { productSlug } from "@/lib/product";
 import { Container, Row, Col, Form } from "react-bootstrap";
 import ShopBreadCrumb from "@/components/breadCrumbs/shop";
 import ServiceItemOne from "@/components/service/serviceItemOne";
+import Link from "next/link";
 
 function TeamDetails({ team }) {
   return (
@@ -37,7 +38,7 @@ function TeamDetails({ team }) {
               <Col xs={12} lg={4}>
                 <div className="ltn__team-details-member-info text-center mb-40">
                   <div className="team-details-img">
-                    <img
+                    <img 
                       src={`/img/team/${team.image}`}
                       alt="Team Member Image"
                     />
@@ -49,19 +50,19 @@ function TeamDetails({ team }) {
                   <div className="ltn__social-media-3">
                     <ul>
                       <li>
-                        <a href="/" title="Facebook">
+                        <Link href="/" title="Facebook">
                           <FaFacebookF />
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="/" title="Twitter">
+                        <Link href="/" title="Twitter">
                           <FaTwitter />
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="/" title="Linkedin">
+                        <Link href="/" title="Linkedin">
                           <FaInstagram />
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </div>

@@ -164,7 +164,7 @@ function PortFolioPageTwo() {
                             cursor: "pointer",
                           }}
                         >
-                          <img src={`/img/gallery/${item.img}`} alt="Image" />
+                          <img  src={`/img/gallery/${item.img}`} alt="Image" />
                           <span className="ltn__gallery-action-icon">
                             <span>
                               <FaSearch />
@@ -235,7 +235,7 @@ function PortFolioPageTwo() {
                   {brandLogoData.map((logo, key) => {
                     return (
                       <div key={key} className="ltn__brand-logo-item">
-                        <img
+                        <img 
                           src={`/img/brand-logo/${logo.image}`}
                           alt="Brand Logo"
                         />

@@ -67,7 +67,7 @@ function BlogtDetails({ blog }) {
                       <ul>
                         <li className="ltn__blog-author">
                           <Link href="/">
-                            <img src={`/img/blog/${blog.author.img}`} alt="/" />
+                            <img  src={`/img/blog/${blog.author.img}`} alt="/" />
                             By: {blog.author.name}
                           </Link>
                         </li>
@@ -85,7 +85,7 @@ function BlogtDetails({ blog }) {
                     </div>
                     <p>{blog.fullDescription}</p>
                     <p>{blog.shortDescription}</p>
-                    <img src={`/img/blog/${blog.thumbImg}`} alt="Image" />
+                    <img  src={`/img/blog/${blog.thumbImg}`} alt="Image" />
                     {blog.extraInformation.map((extra, key) => {
                       return (
                         <div key={key}>
@@ -121,7 +121,7 @@ function BlogtDetails({ blog }) {
                     </blockquote>
                     <p>{blog.extraContent.description1}</p>
 
-                    <img
+                    <img 
                       className="alignleft"
                       src="/img/blog/blog-details/1.jpg"
                       alt="Image"
@@ -134,14 +134,14 @@ function BlogtDetails({ blog }) {
 
                     <div className="row">
                       <div className="col-lg-6">
-                        <img
+                        <img 
                           src={`/img/service/${blog.extraContent.caption.img1}`}
                           alt="Image"
                         />
                         <label>{blog.extraContent.caption.imageCaption}</label>
                       </div>
                       <div className="col-lg-6">
-                        <img
+                        <img 
                           src={`/img/service/${blog.extraContent.caption.img2}`}
                           alt="Image"
                         />
@@ -221,7 +221,7 @@ function BlogtDetails({ blog }) {
                             <div className="ltn__blog-item ltn__blog-item-6">
                               <div className="ltn__blog-img">
                                 <Link href={`/blog/${slug}`}>
-                                  <img
+                                  <img 
                                     src={`/img/blog/${imageCount}.jpg`}
                                     alt="Image"
                                   />
@@ -251,7 +251,7 @@ function BlogtDetails({ blog }) {
                   <div className="ltn__comment-area mb-50">
                     <div className="ltn-author-introducing clearfix">
                       <div className="author-img">
-                        <img
+                        <img 
                           src={`/img/blog/${blog.author.img}`}
                           alt="Author Image"
                         />
@@ -268,7 +268,7 @@ function BlogtDetails({ blog }) {
                         <li>
                           <div className="ltn__comment-item clearfix">
                             <div className="ltn__commenter-img">
-                              <img src="/img/testimonial/1.jpg" alt="Image" />
+                              <img  src="/img/testimonial/1.jpg" alt="Image" />
                             </div>
                             <div className="ltn__commenter-comment">
                               <h6>
@@ -289,7 +289,7 @@ function BlogtDetails({ blog }) {
                             <li>
                               <div className="ltn__comment-item clearfix">
                                 <div className="ltn__commenter-img">
-                                  <img
+                                  <img 
                                     src="/img/testimonial/3.jpg"
                                     alt="Image"
                                   />
@@ -318,7 +318,7 @@ function BlogtDetails({ blog }) {
                         <li>
                           <div className="ltn__comment-item clearfix">
                             <div className="ltn__commenter-img">
-                              <img src="/img/testimonial/4.jpg" alt="Image" />
+                              <img  src="/img/testimonial/4.jpg" alt="Image" />
                             </div>
                             <div className="ltn__commenter-comment">
                               <h6>

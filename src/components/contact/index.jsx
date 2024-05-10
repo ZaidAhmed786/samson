@@ -25,7 +25,7 @@ const Contact = () => {
             <div className="col-lg-4">
               <div className="ltn__contact-address-item ltn__contact-address-item-3 box-shadow">
                 <div className="ltn__contact-address-icon">
-                  <img src="/img/icons/10.png" alt="Icon Image" />
+                  <img  src="/img/icons/10.png" alt="Icon Image" />
                 </div>
                 <h3>Email Address</h3>
                 <p>
@@ -37,7 +37,7 @@ const Contact = () => {
             <div className="col-lg-4">
               <div className="ltn__contact-address-item ltn__contact-address-item-3 box-shadow">
                 <div className="ltn__contact-address-icon">
-                  <img src="/img/icons/11.png" alt="Icon Image" />
+                  <img  src="/img/icons/11.png" alt="Icon Image" />
                 </div>
                 <h3>Phone Number</h3>
                 <p>
@@ -48,7 +48,7 @@ const Contact = () => {
             <div className="col-lg-4">
               <div className="ltn__contact-address-item ltn__contact-address-item-3 box-shadow">
                 <div className="ltn__contact-address-icon">
-                  <img src="/img/icons/12.png" alt="Icon Image" />
+                  <img  src="/img/icons/12.png" alt="Icon Image" />
                 </div>
                 <h3>Office Address</h3>
                 <p>

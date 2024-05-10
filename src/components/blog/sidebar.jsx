@@ -35,7 +35,7 @@ const BlogSideBar = ({ popularProducts, topRatedProducts, latestdBlogs }) => {
         {/* <!-- Author Widget --> */}
         <div className="widget ltn__author-widget">
           <div className="ltn__author-widget-inner text-center">
-            <img
+            <img 
               src={`/img/team/${product.agent.img}`}
               alt={`${product.agent.fullName}`}
             />
@@ -149,7 +149,7 @@ const BlogSideBar = ({ popularProducts, topRatedProducts, latestdBlogs }) => {
                   <div className="top-rated-product-item clearfix">
                     <div className="top-rated-product-img">
                       <Link href={`/shop/${slug}`}>
-                        <img
+                        <img 
                           src={`/img/product/${key}.png`}
                           alt={product.title}
                         />
@@ -253,7 +253,7 @@ const BlogSideBar = ({ popularProducts, topRatedProducts, latestdBlogs }) => {
                 >
                   <div className="product-img">
                     <Link href={`/shop/${slug}`}>
-                      <img
+                      <img 
                         src={`/img/product-3/${product.productImg}`}
                         alt={slug}
                       />
@@ -261,7 +261,7 @@ const BlogSideBar = ({ popularProducts, topRatedProducts, latestdBlogs }) => {
                     <div className="real-estate-agent">
                       <div className="agent-img">
                         <Link href="/">
-                          <img src={`/img/blog/author.jpg`} alt="/" />
+                          <img  src={`/img/blog/author.jpg`} alt="/" />
                         </Link>
                       </div>
                     </div>
@@ -321,7 +321,7 @@ const BlogSideBar = ({ popularProducts, topRatedProducts, latestdBlogs }) => {
                   <div className="popular-post-widget-item clearfix">
                     <div className="popular-post-widget-img">
                       <Link href={`/blog/${slug}`}>
-                        <img src={`/img/team/${imagecount}.jpg`} alt="/" />
+                        <img  src={`/img/team/${imagecount}.jpg`} alt="/" />
                       </Link>
                     </div>
                     <div className="popular-post-widget-brief">

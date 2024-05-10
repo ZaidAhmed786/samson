@@ -215,7 +215,7 @@ function HeroSectionStyleTwo({ data }) {
                             item.variationLeft ? "slide-img-left" : ""
                           }`}
                         >
-                          <img src={`/img/slider/${item.heroimage}`} alt="/" />
+                          <img  src={`/img/slider/${item.heroimage}`} alt="/" />
                         </div>
                       </Col>
                     </Row>
@@ -258,7 +258,7 @@ function HeroSectionStyleTwo({ data }) {
               {data.map((item, key) => {
                 return (
                   <div className="image-slide-item" key={key}>
-                    <img src={`/img/slider/${item.heroimage}`} alt="/" />
+                    <img  src={`/img/slider/${item.heroimage}`} alt="/" />
                   </div>
                 );
               })}
