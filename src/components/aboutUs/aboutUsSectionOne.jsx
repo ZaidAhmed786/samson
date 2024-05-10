@@ -73,7 +73,7 @@ function AboutUsSectionOne() {
                 <div className="ltn__feature-info">
                   <h4>
                     <Link href="/">
-                      Built-in Storage Cupboards
+                      Built-in Storage Cupboard
                     </Link>
                   </h4>
                   <p>
