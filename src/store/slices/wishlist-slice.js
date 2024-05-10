@@ -1,4 +1,4 @@
-import cogoToast from "@hasanm95/cogo-toast";
+ 
 const { createSlice } = require('@reduxjs/toolkit');
 import { HYDRATE } from "next-redux-wrapper";
 
@@ -10,17 +10,14 @@ const wishlistSlice = createSlice({
     reducers: {
         addToWishlist(state, action) {
             const isInWishlist = state.wishlistItems.findIndex(item => item.id === action.payload.id);
-            if(isInWishlist > -1){
-                cogoToast.info("Product already in wishlist", {position: "bottom-left"});
+            if(isInWishlist > -1){ 
             } else {
-                state.wishlistItems.push(action.payload);
-                cogoToast.success("Added To wishlist", {position: "bottom-left"});
+                state.wishlistItems.push(action.payload); 
             }
             
         },
         deleteFromWishlist(state, action){
-            state.wishlistItems = state.wishlistItems.filter(item => item.id !== action.payload);
-            cogoToast.error("Removed From Wishlist", {position: "bottom-left"});
+            state.wishlistItems = state.wishlistItems.filter(item => item.id !== action.payload); 
         },
         deleteAllFromWishlist(state){
             state.wishlistItems = []
