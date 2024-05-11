@@ -186,7 +186,7 @@ function HomeVersionThree(props) {
       </div>
 
       {/* <!-- SLIDER AREA END --> */}
-      <CarDealerSearchForm navMenuClass="d-none" customClasses="" />
+      {/* <CarDealerSearchForm navMenuClass="d-none" customClasses="" /> */}
       {/* <!-- CAR DEALER FORM AREA END --> */}
 
       {/* <!-- FEATURE AREA START ( Feature - 6) --> */}
@@ -291,12 +291,12 @@ function HomeVersionThree(props) {
                         key={product.id}
                         productData={product}
                         slug={slug}
-                        baseUrl="shop"
+                        baseUrl=""
                         discountedPrice={discountedPrice}
                         productPrice={productPrice}
                         cartItem={cartItem}
                         wishlistItem={wishlistItem}
-                        compareItem={compareItem}
+                        // compareItem={compareItem}
                       />
                     );
                   })}

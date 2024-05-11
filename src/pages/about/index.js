@@ -80,7 +80,7 @@ function AboutUs() {
 
         <AboutUsStyleOne sectionSpace="pb-90" />
 
-        <Feature
+        {/* <Feature
           classes="section-bg-1"
           servicebtn={true}
           iconTag={false}
@@ -90,7 +90,7 @@ function AboutUs() {
             subTitle: "Our Services",
             title: "Our Main Focus",
           }}
-        />
+        /> */}
 
 
 

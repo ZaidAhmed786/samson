@@ -54,12 +54,12 @@ const ProductItem = ({
     <>
       <div className="ltn__product-item ltn__product-item-4">
         <div className="product-img">
-          <Link href={`/${baseUrl}/${slug}`}>
+          {/* <Link href={`/${baseUrl}/${slug}`}> */}
             <img 
               src={`/img/product-3/${productData.productImg}`}
               alt={`${productData.title}`}
             />
-          </Link>
+          {/* </Link> */}
           <div className="product-badge">
             <ul>
               <li
@@ -73,22 +73,22 @@ const ProductItem = ({
             <div className="product-img-gallery">
               <ul>
                 <li>
-                  <Link
+                  {/* <Link
                     className="d-flex align-items-center justify-content-center"
                     href={`/${baseUrl}/${slug}`}
-                  >
+                  > */}
                     <FaCamera className="me-2" />
                     {productData.photo.length}
-                  </Link>
+                  {/* </Link> */}
                 </li>
                 <li>
-                  <Link
+                  {/* <Link
                     className="d-flex align-items-center justify-content-center"
                     href={`/${baseUrl}/${slug}`}
-                  >
+                  > */}
                     <FaFilm className="me-2" />
                     {productData.video.length}
-                  </Link>
+                  {/* </Link> */}
                 </li>
               </ul>
             </div>
@@ -102,7 +102,9 @@ const ProductItem = ({
             </span>
           </div>
           <h2 className="product-title">
-            <Link href={`/${baseUrl}/${slug}`}>{productData.title}</Link>
+            {/* <Link href={`/${baseUrl}/${slug}`}> */}
+              {productData.title}
+              {/* </Link> */}
           </h2>
           <div className="product-description">
             <p>{productData.fullDescription}</p>

@@ -9,13 +9,13 @@ function AboutUsStyleOne({ sectionSpace }) {
   const [isOpen, setOpen] = useState(false);
   return (
     <>
-      <ModalVideo
+      {/* <ModalVideo
         channel="youtube"
         autoplay
         isOpen={isOpen}
         videoId="X7R-q9rsrtU"
         onClose={() => setOpen(false)}
-      />
+      /> */}
       <div className={`ltn__about-us-area ${sectionSpace}`}>
         <Container>
           <Row>
@@ -25,12 +25,12 @@ function AboutUsStyleOne({ sectionSpace }) {
                 <div className="about-us-img-info about-us-img-info-2 about-us-img-info-3">
                   <div className="ltn__video-img ltn__animation-pulse1">
                     <img  src="/img/others/8.png" alt="video popup bg image" />
-                    <button
+                    {/* <button
                       onClick={() => setOpen(true)}
                       className="ltn__video-icon-2"
                     >
                       <FaPlay />
-                    </button>
+                    </button> */}
                   </div>
                 </div>
               </div>
@@ -75,12 +75,12 @@ function AboutUsStyleOne({ sectionSpace }) {
                   </p>
                 </div>
                 <div className="btn-wrapper animated">
-                  <Link
+                  {/* <Link
                     href="/service"
                     className="theme-btn-1 btn btn-effect-1"
-                  >
+                  > */}
                     OUR SERVICES
-                  </Link>
+                  {/* </Link> */}
                 </div>
               </div>
             </Col>

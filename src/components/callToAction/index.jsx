@@ -9,9 +9,9 @@ const CallToAction = () => {
           <p>We can help you realize your dream of a new home</p>
         </div>
         <div className="btn-wrapper">
-          <Link className="btn btn-effect-3 btn-white" href="contact">
+          {/* <Link className="btn btn-effect-3 btn-white" href="contact"> */}
             Explore Properties <i className="icon-next"></i>
-          </Link>
+          {/* </Link> */}
         </div>
       </div>
     </>

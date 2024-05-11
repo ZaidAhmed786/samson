@@ -36,13 +36,13 @@ const BlogItemTwo = ({ blogData, slug, baseUrl }) => {
 
   return (
     <>
-      <ModalVideo
+      {/* <ModalVideo
         channel="youtube"
         autoplay
         isOpen={isOpen}
         videoId="X7R-q9rsrtU"
         onClose={() => setOpen(false)}
-      />
+      /> */}
       <div
         className={`ltn__blog-item ltn__blog-item-5 ${
           blogData.settings.video
@@ -63,9 +63,9 @@ const BlogItemTwo = ({ blogData, slug, baseUrl }) => {
         {blogData.settings.video ? (
           <div className="ltn__video-img">
             <img  src={`/img/blog/${blogData.thumbImg}`} alt={blogData.title} />
-            <button onClick={() => setOpen(true)} className="ltn__video-icon-2">
+            {/* <button onClick={() => setOpen(true)} className="ltn__video-icon-2">
               <FaPlay />
-            </button>
+            </button> */}
           </div>
         ) : (
           ""

@@ -4,9 +4,9 @@ const PropertyItem = ({ product, slug,baseUrl }) => {
     <>
       <div className="ltn__search-by-place-item">
         <div className="search-by-place-img">
-          <Link href={`${baseUrl}/${slug}`}>
+          {/* <Link href={`${baseUrl}/${slug}`}> */}
             <img  src={`/img/product-3/${product.productImg}`} alt="/" />
-          </Link>
+          {/* </Link> */}
           <div className="search-by-place-badge">
             <ul>
               <li>{product.properties} Properties</li>
@@ -19,9 +19,9 @@ const PropertyItem = ({ product, slug,baseUrl }) => {
             <Link href={`${baseUrl}/${slug}`}>{product.district}</Link>
           </h4>
           <div className="search-by-place-btn">
-            <Link href={`${baseUrl}/${slug}`}>
+            {/* <Link href={`${baseUrl}/${slug}`}> */}
               View Property <i className="flaticon-right-arrow"></i>
-            </Link>
+            {/* </Link> */}
           </div>
         </div>
       </div>

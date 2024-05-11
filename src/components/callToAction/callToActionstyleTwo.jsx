@@ -23,12 +23,6 @@ const callToActionstyleTwo = () => {
                   >
                     MAKE A CALL
                   </Link>
-                  <Link
-                    href="/contact"
-                    className="btn btn-transparent btn-effect-3 white-color"
-                  >
-                    CONTACT US
-                  </Link>
                 </div>
               </div>
             </Col>

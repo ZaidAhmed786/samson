@@ -10,9 +10,6 @@ const MenuList = ({ addListing }) => {
         <Link href="/portfolio">Portfolio</Link>
       </li>
       <li>
-        <Link href="/shop">Property</Link>
-      </li>
-      <li>
         {" "}
         <Link href="/blog">Blog</Link>{" "}
       </li>

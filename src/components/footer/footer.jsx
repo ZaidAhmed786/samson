@@ -104,9 +104,10 @@ const Footer = function () {
                       <li>
                         <Link href="/faq">FAQ</Link>
                       </li>
-                      <li>
-                        <Link href="/contact">Contact us</Link>
-                      </li>
+                      {/* <li>
+                        <Link href="/contact">
+                          Contact us</Link>
+                      </li> */}
                     </ul>
                   </div>
                 </div>
@@ -157,6 +158,13 @@ const Footer = function () {
           </Container>
         </div>
         <div className="ltn__copyright-area ltn__copyright-2 section-bg-7  plr--5">
+          <h1 style={{width: 'fit-content', margin: 'auto', textAlign:'center'}} >DISCLAIMER</h1>
+        <p style={{width: '70%', margin: 'auto', textAlign:'center'}}>
+
+​
+
+This is the the an official website of Urbana Bueno DBA Vida Edgewater Hotel & Residences  Site of its Authorized Sales Partner (Urbana Bueno DBA Vida Edgewater Hotel & Residences We may send updates to the mobile number/email id registered with us.
+The content is for information purposes only and does not constitute an offer to avail of any service. Prices mentioned are subject to change without notice and properties mentioned are subject to availability. Images for representation purposes only. The logos and images used on this website are the exclusive property of Urbana Bueno DBA Vida Edgewater Hotel & Residences and are protected under applicable copyright laws. We do not claim any ownership or rights to these materials, and they are used on this website solely for informational purposes.</p>
           <div className="container-fluid ltn__border-top-2">
             <Row>
               <Col xs={12} md={6}>

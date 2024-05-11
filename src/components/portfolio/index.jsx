@@ -16,7 +16,9 @@ const Portfolioitem = ({ data, baseUrl, slug, setBasicExampleOpen }) => {
         </div>
         <div className="ltn__gallery-item-info">
           <h4>
-            <Link href={`${baseUrl}/${slug}`}>{data.title}</Link>
+            {/* <Link href={`${baseUrl}/${slug}`}> */}
+              {data.title}
+              {/* </Link> */}
           </h4>
           <p>{data.designation}</p>
         </div>
