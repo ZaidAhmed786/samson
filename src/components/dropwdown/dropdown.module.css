@@ -1,6 +1,6 @@
 .menu {
     position: relative;
-    width: 200px;
+    width: fit-content;
     z-index: 999;
   }
   
@@ -25,7 +25,8 @@
   .open {
     position: absolute;
     top: 100%;
-    width: 100%;
+    left: -3.5vw;
+    width: 200px;
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
     background-color: white;
     z-index: 99;

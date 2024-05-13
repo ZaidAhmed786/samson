@@ -23,7 +23,7 @@ const MenuList = ({ addListing }) => {
         <Link href="/contact">Contact Us</Link>
       </li>
       <li>
-       <div style={{marginTop: '20px', marginLeft: '-5vw'}}> <DropDown/></div>
+       <div style={{marginTop: '20px'}}> <DropDown/></div>
        
       </li>
       {addListing ? (
