@@ -200,13 +200,10 @@ const Footer = function () {
                 <div className="ltn__copyright-menu text-end">
                   <ul>
                     <li>
-                      <Link href="/">Terms & Conditions</Link>
+                      <Link href="/termsandCondition">Terms & Conditions</Link>
                     </li>
                     <li>
-                      <Link href="/">Claim</Link>
-                    </li>
-                    <li>
-                      <Link href="/">Privacy & Policy</Link>
+                      <Link href="/privacypolicy">Privacy & Policy</Link>
                     </li>
                   </ul>
                 </div>
