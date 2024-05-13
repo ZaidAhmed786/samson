@@ -167,29 +167,30 @@ const BlogItemTwo = ({ blogData, slug, baseUrl }) => {
           )}
 
           {blogData.settings.author ? (
-            <div className="ltn__blog-meta-btn">
-              <div className="ltn__blog-meta">
-                <ul>
-                  <li className="ltn__blog-author">
-                    <Link href="/">
-                      <img 
-                        src={`/img/blog/${blogData.author.img}`}
-                        alt={`${blogData.author.name}`}
-                      />
-                      By: {blogData.author.name}
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-              <div className="ltn__blog-btn">
-                <Link href={`${baseUrl}/${slug}`}>
-                  <span>
-                    <FaArrowRight />
-                  </span>
-                  Read more
-                </Link>
-              </div>
-            </div>
+            // <div className="ltn__blog-meta-btn">
+            //   <div className="ltn__blog-meta">
+            //     <ul>
+            //       <li className="ltn__blog-author">
+            //         <Link href="/">
+            //           <img 
+            //             src={`/img/blog/${blogData.author.img}`}
+            //             alt={`${blogData.author.name}`}
+            //           />
+            //           By: {blogData.author.name}
+            //         </Link>
+            //       </li>
+            //     </ul>
+            //   </div>
+            //   <div className="ltn__blog-btn">
+            //     <Link href={`${baseUrl}/${slug}`}>
+            //       <span>
+            //         <FaArrowRight />
+            //       </span>
+            //       Read more
+            //     </Link>
+            //   </div>
+            // </div>
+            null
           ) : (
             ""
           )}

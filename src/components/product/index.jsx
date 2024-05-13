@@ -135,20 +135,20 @@ const ProductItem = ({
         </div>
         <div className="product-info-bottom">
           <div className="real-estate-agent">
-            <div className="agent-img">
+            {/* <div className="agent-img">
               <Link href="/team-details">
                 <img 
                   src={`/img/blog/${productData.agent.img}`}
                   alt={`${productData.agent.fullName}`}
                 />
               </Link>
-            </div>
-            <div className="agent-brief">
+            </div> */}
+            {/* <div className="agent-brief">
               <h6>
                 <Link href="/team-details">{productData.agent.firstName}</Link>
               </h6>
               <small>{productData.agent.type}</small>
-            </div>
+            </div> */}
           </div>
           <div className="product-hover-action">
             <ul>

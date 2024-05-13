@@ -87,13 +87,13 @@ function Blog() {
               </Col>
 
 
-              <Col xs={12} lg={{ span: 4, order: 0 }}>
+              {/* <Col xs={12} lg={{ span: 4, order: 0 }}>
                 <BlogSideBar
                   latestdBlogs={latestdBlogs}
                   topRatedProducts={topRatedProducts}
                   popularProducts={popularProducts}
                 />
-              </Col>
+              </Col> */}
             </Row>
           </Container>
         </div>

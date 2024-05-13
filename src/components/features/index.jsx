@@ -56,11 +56,13 @@ function Feature({
                       {servicebtn ? (
                         <Link
                           className="ltn__service-btn"
-                          href={`/service/${slug}`}
+                          href={``}
                         >
+                          <>
                           {item.buttonText}
 
                           <i className="flaticon-right-arrow"></i>
+                          </>
                         </Link>
                       ) : (
                         ""

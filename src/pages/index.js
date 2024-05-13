@@ -232,8 +232,8 @@ function HomeVersionThree(props) {
                   <PropertyItem
                     key={key}
                     product={product}
-                    slug={slug}
-                    baseUrl="/shop"
+                    slug={''}
+                    baseUrl=""
                   />
                 );
               })}

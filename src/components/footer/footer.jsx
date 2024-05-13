@@ -26,7 +26,7 @@ const Footer = function () {
                   <div className="footer-logo">
                     <div className="site-logo">
                       {/* <img  src="/img/logo.png" alt="Logo" /> */}
-                      <img  src="/img/logo.png" alt="Logo"  height = {60}/>
+                      <img src="/img/logo.png" alt="Logo" height={60} />
                     </div>
                   </div>
                   <p>
@@ -114,18 +114,13 @@ const Footer = function () {
               </Col>
               <Col xs={12} sm={6} xl={3}>
                 <div className="footer-widget footer-menu-widget clearfix">
-                  <h4 className="footer-title">Privacy Police</h4>
                   <div className="footer-menu">
                     <ul>
                       <li>
-                        <Link href="/">Terms and Conditions</Link>
+                        <Link href="/termsandCondition">Terms and Conditions</Link>
                       </li>
                       <li>
-                        <Link href="/wishlist">Wish List</Link>
-                      </li>
-
-                      <li>
-                        <Link href="/about">Promotional Offers</Link>
+                        <Link href="/privacypolice">Privacy Police</Link>
                       </li>
                     </ul>
                   </div>
@@ -151,20 +146,36 @@ const Footer = function () {
                     </form>
                   </div>
                   <h5 className="mt-30">We Accept</h5>
-                  <img  src="/img/icons/payment-4.png" alt="Payment Image" />
+                  <img src="/img/icons/payment-4.png" alt="Payment Image" />
                 </div>
               </Col>
             </Row>
           </Container>
         </div>
         <div className="ltn__copyright-area ltn__copyright-2 section-bg-7  plr--5">
-          <h1 style={{width: 'fit-content', margin: 'auto', textAlign:'center'}} >DISCLAIMER</h1>
-        <p style={{width: '70%', margin: 'auto', textAlign:'center'}}>
-
-​
-
-This is the the an official website of Urbana Bueno DBA Vida Edgewater Hotel & Residences  Site of its Authorized Sales Partner (Urbana Bueno DBA Vida Edgewater Hotel & Residences We may send updates to the mobile number/email id registered with us.
-The content is for information purposes only and does not constitute an offer to avail of any service. Prices mentioned are subject to change without notice and properties mentioned are subject to availability. Images for representation purposes only. The logos and images used on this website are the exclusive property of Urbana Bueno DBA Vida Edgewater Hotel & Residences and are protected under applicable copyright laws. We do not claim any ownership or rights to these materials, and they are used on this website solely for informational purposes.</p>
+          <h1
+            style={{
+              width: "fit-content",
+              margin: "auto",
+              textAlign: "center",
+            }}
+          >
+            DISCLAIMER
+          </h1>
+          <p style={{ width: "70%", margin: "auto", textAlign: "center" }}>
+            ​ This website represents Samson Properties, a reputable real estate
+            company. The content provided here is for informational purposes
+            only and does not constitute an offer to avail of any specific
+            service. Prices mentioned are subject to change without prior
+            notice, and the availability of properties may vary. The logos and
+            images displayed on this website are the exclusive property of
+            Samson Properties and are protected under applicable copyright laws.
+            We do not claim any ownership or rights to materials not directly
+            associated with our brand. These visuals are used solely for
+            illustrative and informational purposes. For any inquiries or
+            further details, please feel free to contact us. Thank you for
+            visiting Samson Properties!
+          </p>
           <div className="container-fluid ltn__border-top-2">
             <Row>
               <Col xs={12} md={6}>

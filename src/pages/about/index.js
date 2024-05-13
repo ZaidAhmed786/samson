@@ -80,53 +80,6 @@ function AboutUs() {
 
         <AboutUsStyleOne sectionSpace="pb-90" />
 
-        {/* <Feature
-          classes="section-bg-1"
-          servicebtn={true}
-          iconTag={false}
-          data={featureDataSorted}
-          titleSectionData={{
-            sectionClasses: "text-center",
-            subTitle: "Our Services",
-            title: "Our Main Focus",
-          }}
-        /> */}
-
-
-
-
-        <div className="ltn__team-area pt-115 pb-90">
-          <Container>
-            <Row>
-              <Col lg={12}>
-                <TitleSection
-                  sectionClasses="text-center"
-                  headingClasses="section-subtitle-2"
-                  titleSectionData={{
-                    subTitle: "Team",
-                    title: "Property Agents",
-                  }}
-                />
-              </Col>
-            </Row>
-
-            <Row>
-              {agents.map((data, key) => {
-                const slug = productSlug(data.name);
-                return (
-                  <Col key={key} xs={12} sm={6} lg={4} >
-                    <TeamItem baseUrl="blog" data={data} slug={slug} additionalClassname="" />
-                  </Col>
-                );
-              })}
-            </Row>
-
-
-          </Container>
-        </div>
-
-
-
         {/* <!-- TESTIMONIAL AREA START (testimonial-7) -->  */}
         <div
           className="ltn__testimonial-area bg-image-top pt-115 pb-70"

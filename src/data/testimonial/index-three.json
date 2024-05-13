@@ -1,30 +1,9 @@
 [
   {
-    "id": "5",
-    "name": "Russel William",
-    "type": "Manager",
-    "img": "1.jpg",
-    "description": "Super Save Realty went above and beyond to help me find my dream home. Their expertise and personalized service made the entire process smooth and stress-free. I highly recommend them to anyone looking to buy or sell"
-  },
-  {
-    "id": "2",
-    "name": "Ethan James",
-    "type": "Admin",
-    "img": "2.jpg",
-    "description": "I can't thank Super Save Realty enough for their dedication and professionalism. They not only found me the perfect investment property but also negotiated a fantastic deal. Trustworthy and reliable, they are the real deal in real estate!"
-  },
-  {
-    "id": "3",
-    "name": "Noah Alexander",
-    "type": "Professor",
-    "img": "3.jpg",
-    "description": "Super Save Realty truly cares about their clients. Their knowledge of the market and attention to detail ensured that I found exactly what I was looking for in a home. I couldn't be happier with the outcome!"
-  },
-  {
-    "id": "4",
-    "name": "Liam Mason",
-    "type": "Officer",
-    "img": "4.jpg",
-    "description": "Choosing Super Save Realty was the best decision I made when selling my home. Their marketing strategies and negotiation skills resulted in a quick sale at a great price. I wouldn't hesitate to work with them again."
+    "id": "1",
+    "name": "Gerome Quigley, Client",
+    "type": "Client",
+    "img": "",
+    "description": "Ola Craig has been instrumental in selling 2 properties and helping our family purchase our dream home. I would definitely recommend hiring her for your real estate needs."
   }
 ]

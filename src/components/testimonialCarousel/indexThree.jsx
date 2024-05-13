@@ -144,7 +144,7 @@ function TestimonialStyleThree({ data }) {
                     <FaRegComments/>
                 </div>
                 <div className="ltn__testimonial-image">
-                    <img  src={`/img/testimonial/${item.img}`} alt="quote"/>
+                    <img  src={`/img/testimonial/${item.img}`} alt=""/>
                 </div>
                 <div className="ltn__testimonial-info">
                     <p>{item.description}</p>
@@ -157,7 +157,7 @@ function TestimonialStyleThree({ data }) {
         </Slider>
 
 
-        <Slider
+        {/* <Slider
               {...Navsettings}
               asNavFor={nav1}
               ref={(slider2) => setNav2(slider2)}
@@ -168,7 +168,7 @@ function TestimonialStyleThree({ data }) {
                   <img key={key} src={`/img/testimonial/${item.img}`} alt="/" />
                 );
               })}
-            </Slider>
+            </Slider> */}
       </div>
     </>
   );
