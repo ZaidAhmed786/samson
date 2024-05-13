@@ -117,7 +117,9 @@ const Footer = function () {
                   <div className="footer-menu">
                     <ul>
                       <li>
-                        <Link href="/termsandCondition">Terms and Conditions</Link>
+                        <Link href="/termsandCondition">
+                          Terms and Conditions
+                        </Link>
                       </li>
                       <li>
                         <Link href="/privacypolice">Privacy Police</Link>
@@ -153,6 +155,14 @@ const Footer = function () {
           </Container>
         </div>
         <div className="ltn__copyright-area ltn__copyright-2 section-bg-7  plr--5">
+        <p style={{textAlign: 'center'}}>
+          Welcome to Super Savvy Sales, where selling your home is easy, fast,
+          and commission-free! Our cash offer ensures a quick home sale process,
+          putting top dollar in your pocket. Enjoy a free home valuation and a
+          seamless, fast closing process. No condition is too challenging for us
+          – we buy houses in any state. Say hello to a stress-free selling
+          experience with Super Savvy Sales.
+        </p>
           <h1
             style={{
               width: "fit-content",
