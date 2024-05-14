@@ -16,8 +16,7 @@ export default function Home() {
       </Head>
       <main>
         <PapaJhon/>
-        <Popup url="/papajhon/papajhonlogo.svg" color="red" number="+1(225)-523-2569" logoWidth="300px !important"/>
-        
+        <Popup url="/papajhon/papajhonlogo.svg" color="red" number="+1(321)-333-4374" logoWidth="300px !important"/>
       </main>
     </>
   );
