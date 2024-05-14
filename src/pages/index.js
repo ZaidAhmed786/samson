@@ -342,8 +342,8 @@ function HomeVersionThree(props) {
       <Popup
         url="/img/logo.png"
         color="#0b2c3d"
-        number="1(225)-523-2569"
-        tel="+1 225 523 2569"
+        number="1(863)-695-2461"
+        tel="+1 863 695 2461"
         logoWidth="300px !important"
       />
 

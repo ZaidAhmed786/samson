@@ -28,7 +28,7 @@ const MenuList = ({ addListing }) => {
       </li>
       {addListing ? (
         <li className="special-link" style={{textAlign: 'center'}}>
-          <a href="tel:+12255232569">Call Us <br /> +1(225)-523-2569 </a>
+          <a href="tel:+18636952461">Call Us <br /> +1(863)-695-2461 </a>
         </li>
       ) : null}
     </ul>
