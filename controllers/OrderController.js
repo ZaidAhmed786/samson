@@ -1,115 +1,138 @@
-const Address = require("../models/OrderSchema"); // Import the Address model
-const Product = require("../models/ProductSchema"); // Import the Product model
-const ApiFeatures = require("../utils/ApiFeatures"); // Assuming this utility is available
+const Order = require("../models/OrderSchema");
+const Address = require("../models/AddressSchema");
+const Product = require("../models/ProductSchema");
 const mongoose = require("mongoose");
+const ApiFeatures = require("../utils/ApiFeatures");
 
 module.exports = {
-  /*** Create Address ***/
-  addAddress: async (req, res) => {
+  /*** Create Order ***/
+  addOrder: async (req, res) => {
     try {
-      const { country, addressType, streetAddress, aptSteFloor, aptSteFloorNumber, zipCode, productId } = req.body;
+      const {
+        user,
+        card,
+        addressId,
+        items,
+        totalAmount,
+        deliveryFee,
+        tax,
+        tipPercentage,
+        status,
+      } = req.body;
 
-      // Validate the productId is a valid ObjectId and exists in the Product collection
-      if (!mongoose.Types.ObjectId.isValid(productId)) {
-        return res.status(400).json({ status: "fail", message: "Invalid productId" });
+      // Validate addressId is a valid ObjectId and exists in the Address collection
+      if (!mongoose.Types.ObjectId.isValid(addressId)) {
+        return res
+          .status(400)
+          .json({ status: "fail", message: "Invalid addressId" });
       }
-      const productExists = await Product.findById(productId);
-      if (!productExists) {
-        return res.status(400).json({ status: "fail", message: "Product does not exist" });
+      const addressExists = await Address.findById(addressId);
+      if (!addressExists) {
+        return res
+          .status(400)
+          .json({ status: "fail", message: "Address does not exist" });
       }
 
-      const newAddress = new Address({
-        country,
-        addressType,
-        streetAddress,
-        aptSteFloor,
-        aptSteFloorNumber,
-        zipCode,
-        productId: mongoose.Types.ObjectId(productId),
+      // Validate items contain valid productId references and exist in the Product collection
+      for (const item of items) {
+        if (!mongoose.Types.ObjectId.isValid(item.productId)) {
+          return res
+            .status(400)
+            .json({ status: "fail", message: "Invalid productId in items" });
+        }
+        const productExists = await Product.findById(item.productId);
+        if (!productExists) {
+          return res
+            .status(400)
+            .json({
+              status: "fail",
+              message: "Product in items does not exist",
+            });
+        }
+      }
+
+      const newOrder = new Order({
+        user,
+        card,
+        address: mongoose.Types.ObjectId(addressId),
+        items,
+        totalAmount,
+        deliveryFee,
+        tax,
+        tipPercentage,
+        status,
       });
-      const address = await newAddress.save();
-      res.status(200).json({ status: "success", data: address });
+      const order = await newOrder.save();
+      res.status(200).json({ status: "success", data: order });
     } catch (err) {
       res.status(400).json({ status: "fail", message: err.message });
     }
   },
 
-  /*** Read All Addresses ***/
-   getAddresses: async (req, res) => {
+  /*** Read All Orders ***/
+  getOrders: async (req, res) => {
     try {
-        const features = new ApiFeatures(Address.find().populate("productId"), req.query)
-            .filter()
-            .sort()
-            .limitFields()
-            .paginate();
+      const features = new ApiFeatures(
+        Order.find().populate("address items.productId"),
+        req.query
+      )
+        .filter()
+        .sort()
+        .limitFields()
+        .paginate();
 
-        const addressData = await features.query;
-        res.status(200).json({
-            status: "success",
-            results: addressData.length,
-            data: addressData,
-        });
+      const orders = await features.query;
+      res.status(200).json({ status: "success", data: orders });
     } catch (err) {
-        res.status(401).json({ status: "fail", message: err.message });
+      res.status(400).json({ status: "fail", message: err.message });
     }
-},
+  },
 
-  /*** Read Single Address ***/
-  getSingleAddress: async (req, res) => {
+  /*** Read Single Order ***/
+  getSingleOrder: async (req, res) => {
     try {
-      const address = await Address.findById(req.params.id).populate("productId");
-      if (!address) {
-        return res.status(404).json({ status: "fail", message: "Address not found" });
+      const order = await Order.findById(req.params.id);
+      if (!order) {
+        return res
+          .status(404)
+          .json({ status: "fail", message: "Order not found" });
       }
-      res.status(200).json({ status: "success", data: address });
+      res.status(200).json({ status: "success", data: order });
     } catch (err) {
       res.status(404).json({ status: "fail", message: err.message });
     }
   },
 
-  /*** Update Address ***/
-  updateAddress: async (req, res) => {
+  /*** Update Order ***/
+  updateOrder: async (req, res) => {
     try {
-      const { productId } = req.body;
-
-      // If productId is being updated, validate it
-      if (productId) {
-        if (!mongoose.Types.ObjectId.isValid(productId)) {
-          return res.status(400).json({ status: "fail", message: "Invalid productId" });
-        }
-        const productExists = await Product.findById(productId);
-        if (!productExists) {
-          return res.status(400).json({ status: "fail", message: "Product does not exist" });
-        }
-      }
-
-      const address = await Address.findByIdAndUpdate(req.params.id, req.body, {
+      const order = await Order.findByIdAndUpdate(req.params.id, req.body, {
         new: true,
         runValidators: true,
-      }).populate("productId");
-
-      if (!address) {
-        return res.status(404).json({ status: "fail", message: "Address not found" });
+      });
+      if (!order) {
+        return res
+          .status(404)
+          .json({ status: "fail", message: "Order not found" });
       }
-
-      res.status(200).json({ status: "success", data: address });
+      res.status(200).json({ status: "success", data: order });
     } catch (err) {
       res.status(400).json({ status: "fail", message: err.message });
     }
   },
 
-  /*** Delete Address ***/
-  deleteAddress: async (req, res) => {
+  /*** Delete Order ***/
+  deleteOrder: async (req, res) => {
     try {
-      const address = await Address.findByIdAndDelete(req.params.id);
-
-      if (!address) {
-        return res.status(404).json({ status: "fail", message: "Address not found" });
+      const order = await Order.findByIdAndDelete(req.params.id);
+      if (!order) {
+        return res
+          .status(404)
+          .json({ status: "fail", message: "Order not found" });
       }
-
       res.status(204).json({ status: "success", data: null });
     } catch (err) {
-      res.status(404).json({ status: "fail", message: err.message });
+      res.status(400).json({ status: "fail", message: err.message });
     }
   },
 };

@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const orderSchema = new Schema({
+const addressSchema = new Schema({
   country: {
     type: String,
     enum: ["USA", "CANADA"], // Assuming only USA is allowed for now
@@ -49,14 +49,9 @@ const orderSchema = new Schema({
       },
       message: (props) => `${props.value} is not a valid zip code!`,
     },
-  },
-  productId: {
-    type: Schema.Types.ObjectId,
-    ref: "Product",
-    required: [true, "Product Id is required"],
-  },
+  }
 });
 
-const Address = mongoose.model("Address", orderSchema);
+const Address = mongoose.model("Address", addressSchema);
 
 module.exports = Address;

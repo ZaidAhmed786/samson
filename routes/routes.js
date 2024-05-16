@@ -2,11 +2,12 @@ const express = require("express");
 const router = express.Router();
 const upload = require("../middleware/MulterMiddleware");
 const CategoryController = require("../controllers/CategoryController");
-const ProductController = require("../controllers/ProductController"); 
-const OrderController = require("../controllers/OrderController");
+const ProductController = require("../controllers/ProductController");
+const AddressController = require("../controllers/AddressController");
+const CartController = require("../controllers/CartController"); // Import CartController
 
 // *********** Import Controller Functions *********** //
-//!!  ********************* Routes ********************* --//
+//!! ********************* Routes ********************* --//
 require("dotenv").config();
 
 router.get("/", (req, res) => {
@@ -37,18 +38,28 @@ router
 router
   .route("/api/products/category/:categoryId")
   .get(ProductController.getProductsByCategory); /*** Get Products by Category ***/
- 
 
-//! *** Order Routes *** !//
+//! *** Address Routes *** !//
 router
-  .route("/api/orders")
-  .get(OrderController.getAddresses) /*** Get all Orders ***/
-  .post(OrderController.addAddress); /*** Add New Order ***/
+  .route("/api/address")
+  .get(AddressController.getAddresses) /*** Get all Addresses ***/
+  .post(AddressController.addAddress); /*** Add New Address ***/
 router
-  .route("/api/orders/:id")
-  .get(OrderController.getSingleAddress) /*** Get a Single Order ***/
-  .patch(OrderController.updateAddress) /*** Update Order ***/
-  .delete(OrderController.deleteAddress); /*** Remove Order ***/
+  .route("/api/address/:id")
+  .get(AddressController.getSingleAddress) /*** Get a Single Address ***/
+  .patch(AddressController.updateAddress) /*** Update Address ***/
+  .delete(AddressController.deleteAddress); /*** Remove Address ***/
+
+//! *** Cart Routes *** !//
+router
+  .route("/api/cart")
+  .get(CartController.getCarts) /*** Get all Carts ***/
+  .post(CartController.addCart); /*** Add New Cart ***/
+router
+  .route("/api/cart/:id")
+  .get(CartController.getSingleCart) /*** Get a Single Cart ***/
+  .patch(CartController.updateCart) /*** Update Cart ***/
+  .delete(CartController.deleteCart); /*** Remove Cart ***/
 
 router.all("*", (req, res) => {
   res.send("Route not found");
