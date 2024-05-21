@@ -112,7 +112,7 @@ const ServiceDetailSection = () => {
             <div className="ba-service-widget mb-30">
               <div className="ba-service-widget-info-box">
                 <h5 className="ba-service-widget-info-box-title mb-20">
-                  Need help?
+                  Need Need Help?
                 </h5>
                 <p className="mb-25">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed

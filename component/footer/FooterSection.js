@@ -27,9 +27,9 @@ const FooterSection = () => {
 
                     <div className="col-xl-2 col-lg-3 col-6">
                         <div className="ba-footer-widget footer-two-widget">
-                            <h3 className="ba-footer-widget-title footer-two-widget__title">Help?</h3>
+                            <h3 className="ba-footer-widget-title footer-two-widget__title">Need Help?</h3>
                             <ul>
-                                <li><a href="termsandconditions">Term & conditions</a></li>
+                                <li><a href="termsandconditions">Term & Conditions</a></li>
                                 <li><a href="disclaimer">Disclaimer</a></li>
                                 <li><a href="privacypolicy">Privacy Policy</a></li>
                             </ul>

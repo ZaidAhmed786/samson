@@ -11,7 +11,7 @@ const ContactSection = () => {
                 <div style={{display: 'flex', flexDirection: 'column',justifyContent: 'center', alignItems: 'center'}}>
                 <h2 className="ba-section-title">Free Online Quote Now!</h2>
                 <p >Call Us on:  <a href="te:+1(888)-636-0385" style={{textDecoration: 'none'}}>+1 (888) 636-0385</a></p>
-                <p>Write us at:  <a href="mailto:admin@zolara.live"  style={{textDecoration: 'none'}}>admin@zolara.live</a></p>
+                <p>Write us at:  <a href="mailto:sales@cabledeal.live"  style={{textDecoration: 'none'}}>sales@cabledeal.live</a></p>
                 </div>
               </div>
             </div>

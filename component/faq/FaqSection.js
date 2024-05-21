@@ -16,10 +16,6 @@ const FaqSection = () => {
                 Want to Ask Something from Us?
               </h3>
             </div>
-            <p className="ba-mb-0 wow fadeInUp" data-wow-delay=".3s">
-              Asi enim ad minim veniam, quis nostrud exerci Lorem ipsum dolor sit amet,
-              <br /> consecteturadipisicing elit, sed do eiusmod tempor
-            </p>
           </div>
           <AccordionSection/>
         </div>
