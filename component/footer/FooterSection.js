@@ -12,13 +12,13 @@ const FooterSection = () => {
                        <b style={{fontSize: '30px'}}> Beamen Tech LLC</b>
 
                             <div className="company-info__txt">
-                                <span>3060 E College Ave # 138, Ruskin, FL 33570 </span>
+                                <span>564 4th Ave, San Bruno, CA 94066 </span>
 
                                 <div className="company__numbers">
                                     <a href="tel:+1(888)-636-0385">+1 (888) 636-0385</a>
                                 </div>
 
-                                <span>admin@zolara.live</span>
+                                <span>sales@cabledeal.live</span>
                                 <span>Opening Hours : 9.00AM - 6.00PM</span>
                                 <span>Monday - Saturday</span>
                             </div>
@@ -47,7 +47,7 @@ const FooterSection = () => {
                                         <span className="value"> 9.00AM - 6.00PM</span>
                                     </li>
                                     <li>
-                                        <span className="label">Tusday</span>
+                                        <span className="label">Tuesday</span>
                                         <span className="value"> 9.00AM - 6.00PM</span>
                                     </li>
                                     <li>
@@ -65,6 +65,10 @@ const FooterSection = () => {
                                     <li>
                                         <span className="label">Saturday</span>
                                         <span className="value"> 9.00AM - 6.00PM</span>
+                                    </li>
+                                    <li>
+                                        <span className="label">Sunday</span>
+                                        <span className="value"> Holiday</span>
                                     </li>
                                 </ul>
                             </div>

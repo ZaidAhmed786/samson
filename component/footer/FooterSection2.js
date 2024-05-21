@@ -83,7 +83,7 @@ const FooterSection2 = () => {
                                  <span className="value">10:00 – 11:00</span>
                               </li>
                               <li>
-                                 <span className="label">Tusday</span>
+                                 <span className="label">Tuesday</span>
                                  <span className="value">11:00 – 11:40</span>
                               </li>
                               <li>

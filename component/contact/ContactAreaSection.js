@@ -74,10 +74,10 @@ Beamen Tech LLC</h1>
                         <a href="mailto:kenray@nurcodes.com">Email Us</a>
                       </h5>
                       <a
-                        href="mailto:admin@cabledeal.live"
+                        href="mailto:sales@cabledeal.live"
                         className="ba-contact-left-value"
                       >
-                        admin@cabledeal.live
+                        sales@cabledeal.live
                       </a>
                     </div>
                   </li>
