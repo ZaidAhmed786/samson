@@ -1,12 +1,17 @@
 import React, { useState } from "react";
 import Styles from "./cart.module.css";
+import { FaCheck } from "react-icons/fa";
 
 const Cart = () => {
   const options = Array.from({ length: 20 }, (_, i) => i + 1);
-  const [activeButton, setActiveButton] = useState(null);
+  const [activeButtons, setActiveButtons] = useState([]);
 
   const handleButtonClick = (buttonName) => {
-    setActiveButton(buttonName);
+    setActiveButtons((prev) =>
+      prev.includes(buttonName)
+        ? prev.filter((name) => name !== buttonName)
+        : [...prev, buttonName]
+    );
   };
 
   const buttons = [
@@ -15,6 +20,7 @@ const Cart = () => {
     "Add Extra Cheese",
     "Add Extra Sauce cups",
   ];
+
   return (
     <div className={Styles.mainDiv}>
       <div className={Styles.wrapper}>
@@ -29,9 +35,19 @@ const Cart = () => {
               </div>
               <div className={Styles.extraThingsWrapper}>
                 {buttons.map((button) => (
-                  <div div key={button} >
+                  <div
+                    key={button}
+                    onClick={() => handleButtonClick(button)}
+                    className={`${Styles.buttonWrapper} ${
+                      activeButtons.includes(button) ? Styles.activeButton : ""
+                    }`}
+                  >
                     <div className={Styles.extraThings}>
-                      <p>+</p>
+                      {activeButtons.includes(button) ? (
+                        <FaCheck className={Styles.checkIcon} />
+                      ) : (
+                        <p className={Styles.plusIcon}>+</p>
+                      )}
                       <p>{button}</p>
                     </div>
                   </div>
@@ -47,7 +63,7 @@ const Cart = () => {
                 ))}
               </select>
             </div>
-            <p style={{fontSize: '18px', fontWeight: '900'}}>$16.50</p>
+            <p style={{ fontSize: "18px", fontWeight: "900" }}>$16.50</p>
           </div>
           <hr />
         </div>
@@ -55,28 +71,24 @@ const Cart = () => {
           <button className={Styles.checkoutbtn}>checkout</button>
           <div>
             <div className={Styles.rowDiv}>
-              {" "}
               <p>
-                {" "}
                 <b>Sub Total</b>
-              </p>{" "}
+              </p>
               <p>
                 <b>$51.99</b>
-              </p>{" "}
+              </p>
             </div>
             <div className={Styles.rowDiv}>
-              {" "}
-              <p>Delivery Fee</p>{" "}
+              <p>Delivery Fee</p>
               <p>
                 <b>$5.25</b>
-              </p>{" "}
+              </p>
             </div>
             <div className={Styles.rowDiv}>
-              {" "}
-              <p>Estimated Tax</p>{" "}
+              <p>Estimated Tax</p>
               <p>
                 <b>$3.80</b>
-              </p>{" "}
+              </p>
             </div>
           </div>
           <hr />

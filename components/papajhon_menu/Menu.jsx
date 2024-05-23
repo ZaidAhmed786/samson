@@ -10,9 +10,9 @@ import {
   handcraftedMeatlessSpecialties,
   GlutenFreeCrustWithAncientGrains,
 } from "@/data";
-
+import CommonCard from "../common_card/CommonCard";
 const Menu = () => {
-  const [activeButton, setActiveButton] = useState('PIZZA');
+  const [activeButton, setActiveButton] = useState("PIZZA");
 
   const handleButtonClick = (buttonName) => {
     setActiveButton(buttonName);
@@ -131,7 +131,8 @@ const Menu = () => {
         <div>
           <h1 className={styles.category_heading}>HANDCRAFTED SPECIALTIES</h1>
           <div className={styles.PapaPicks}>
-            <div className={styles.firstCard}>
+            <CommonCard paragraphText="" />
+            {/* <div className={styles.firstCard}>
               <span>$13.99</span>
               <h1>
                 NY STYLE CRISPY CUPPY <br /> {`'`}RONI PIZZA
@@ -141,7 +142,8 @@ const Menu = () => {
                 <button>Add to order</button>
                 <button>customize</button>
               </div>
-            </div>
+               <div className={styles.paragrafh - box}></div> 
+            </div> */}
             {handcraftedSpecialties.map((data, index) => (
               <div
                 key={index}
