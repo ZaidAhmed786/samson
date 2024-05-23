@@ -1,0 +1,289 @@
+.menu_wrapper {
+  width: 85%;
+  margin: auto;
+  /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+}
+.pizza_menu {
+  display: flex;
+  justify-content: flex-start;
+  column-gap: 10px;
+  align-items: center;
+  font-family: PapaSans-Medium Condensed, HelveticaNeue-Condensed Bold,
+    Arial Narrow, Arial, sans-serif;
+  margin: 30px 0;
+}
+.header {
+  padding: 20px 0 20px 20px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #d1d1d1;
+}
+.pizza_menu p {
+  font-size: 16px;
+  line-height: 1.375em;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 800;
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 12px;
+  cursor: pointer;
+  letter-spacing: -1px;
+}
+.pizza_menu .active {
+  color: #fff;
+  border-radius: 30px;
+  background: #2d5d2a;
+  transition: 0.2s ease-out;
+}
+.pizza_menu p:hover {
+  color: #fff;
+  border-radius: 30px;
+  background: #2d5d2a;
+  transition: 0.2s ease-out;
+}
+.label {
+  display: flex;
+  width: 100%;
+  border: 1px solid #ffcf6e;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 10px;
+  margin-bottom: 30px;
+}
+.label h1 {
+  font-size: 20px;
+  line-height: 1.375em;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 800;
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 12px;
+  cursor: pointer;
+  letter-spacing: -1px;
+  margin: 0;
+}
+.label h2 {
+  font-size: 18px;
+  line-height: 1.375em;
+  text-align: center;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 12px;
+  cursor: pointer;
+  letter-spacing: -1px;
+  margin: 0;
+}
+.label p {
+  font-size: 18px;
+  line-height: 1.375em;
+  text-align: center;
+  font-weight: 400;
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 12px;
+  cursor: pointer;
+  letter-spacing: -1px;
+  margin: 0;
+}
+.label button {
+  font-size: 16px;
+  line-height: 1.375em;
+  height: 3vw;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 800;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0 12px;
+  cursor: pointer;
+  letter-spacing: -1px;
+  color: #fff;
+  border-radius: 30px;
+  background: #2d5d2a;
+  border: none;
+  margin: 0 10px;
+}
+.custom_pizza_section {
+  display: flex;
+  justify-content: space-between;
+  height: fit-content;
+}
+.content_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+.content_wrapper h1 {
+  font-size: 30px;
+  line-height: 1.375em;
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: 800;
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 12px;
+  cursor: pointer;
+  letter-spacing: -1px;
+  margin: 0;
+  width: 70%;
+}
+.content_wrapper p {
+  font-size: 16px;
+  line-height: 1.375em;
+  text-align: left;
+  font-weight: 400;
+  text-decoration: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  letter-spacing: -1px;
+  margin: 0;
+  width: 60%;
+}
+
+.slider_section {
+  width: 70%;
+}
+
+.slider_section h1 {
+  font-size: 20px;
+  line-height: 1.375em;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 800;
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 12px;
+  cursor: pointer;
+  letter-spacing: -1px;
+  margin: 0;
+}
+.slider_section h2 {
+  font-size: 18px;
+  line-height: 1.375em;
+  text-align: center;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 12px;
+  cursor: pointer;
+  letter-spacing: -1px;
+  margin: 0;
+}
+.PapaPicks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  column-gap: 2%;
+  /* align-items: center; */
+  row-gap: 40px;
+}
+.category_heading {
+  font-size: 28px;
+  line-height: 1.375em;
+  text-align: center;
+  font-weight: 900;
+  text-decoration: none;
+  display: inline-block;
+  padding: 22px 0 12px 0;
+  cursor: pointer;
+  letter-spacing: -1px;
+  margin: 0;
+}
+.card_wrapper {
+  max-width: 23%;
+  flex: 0 0 25%;
+}
+.firstCard {
+  padding-top: 270px;
+  padding-left: 10px;
+  box-sizing: border-box;
+  background-image: linear-gradient(transparent 20%, black),
+    url(../../public//papajhon//2024-p4-ccr-pizza-featured.webp);
+  min-width: 300px;
+  height: 532px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+}
+.firstCard span {
+  text-transform: uppercase;
+  font-size: 30px;
+  line-height: 38px;
+  color: #fff;
+  padding: 2px 6px;
+  -moz-osx-font-smoothing: grayscale;
+  background: #e60000;
+  letter-spacing: 2px;
+  display: inline-block;
+  transform: skewY(-7deg);
+  margin-bottom: 10px;
+}
+
+.firstCard .button_wrapper {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.firstCard .button_wrapper button:nth-child(1) {
+  font-size: 14px;
+  line-height: 1.375em;
+  height: 2.5vw;
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: 800;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0 12px;
+  cursor: pointer;
+  letter-spacing: -1px;
+  color: black;
+  border-radius: 30px;
+  background: white;
+  border: none;
+  margin: 0 10px;
+  width: 120px;
+}
+
+.firstCard .button_wrapper button:nth-child(2) {
+  font-size: 14px;
+  line-height: 1.375em;
+  height: 2.5vw;
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: 800;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0 12px;
+  cursor: pointer;
+  letter-spacing: -1px;
+  color: white;
+  border-radius: 30px;
+  background: black;
+  border: 1px solid white;
+  margin: 0;
+  width: 105px;
+}
+.firstCard h1 {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 25px;
+  line-height: 38px;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+.firstCard p {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 15px;
+  line-height: 38px;
+  font-weight: 900;
+  letter-spacing: -1px;
+  text-decoration: underline;
+}

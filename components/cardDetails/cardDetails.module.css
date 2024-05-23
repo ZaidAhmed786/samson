@@ -1,0 +1,197 @@
+.horizentalDiv {
+  display: flex;
+}
+.img_wrapper img {
+  width: 50vw;
+  height: 90vh;
+}
+.content_wrapper {
+  width: 35%;
+  padding: 4% 0 0 5%;
+  box-sizing: border-box;
+}
+.content_wrapper h1 {
+  font-size: 38px;
+  line-height: 48px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+.content_wrapper h2 {
+  font-size: 25px;
+  line-height: 35px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.content_wrapper p {
+  font-size: 20px;
+  line-height: 35px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.dropdown {
+  width: 100%;
+}
+
+.container label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.container select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  outline: none;
+}
+
+.incrementer {
+  display: flex;
+  align-items: center;
+}
+
+.incrementer select {
+  width: 50px;
+}
+
+.incrementer input[type="number"] {
+  width: 50px;
+  text-align: center;
+}
+
+.container button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.container button:hover {
+  background-color: #0056b3;
+}
+.container .first_row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 10px;
+}
+.button_wrapper {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.button_wrapper button:nth-child(1) {
+  font-size: 14px;
+  line-height: 1.375em;
+  height: 2.5vw;
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: 800;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0 12px;
+  cursor: pointer;
+  letter-spacing: -1px;
+  color: #fff;
+  border-radius: 30px;
+  background: #2d5d2a;
+  border: none;
+  margin: 0 10px;
+  width: 105px;
+}
+.button_wrapper button:nth-child(2) {
+  font-size: 14px;
+  line-height: 1.375em;
+  height: 2.5vw;
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: 800;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0 12px;
+  cursor: pointer;
+  letter-spacing: -1px;
+  color: black;
+  border-radius: 30px;
+  background: #fff;
+  border: 1px solid rgb(0, 0, 0, 0.3);
+  margin: 0;
+  width: 105px;
+}
+.table_wrapper {
+  width: 85%;
+  margin: auto;
+}
+.table_wrapper h1:nth-child(1) {
+  margin: 40px 0 80px 0;
+}
+.table_wrapper h1:nth-child(4) {
+  margin: 40px 0 40px 0;
+}
+.table_wrapper h2 {
+  font-size: 25px;
+  line-height: 35px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.table_wrapper i {
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  margin-top: 40px;
+}
+.table_wrapper p {
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  margin-top: 40px;
+}
+.table_wrapper p:nth-child(8) {
+  color: rgba(0, 0, 0, 0.6);
+}
+.table_wrapper p:nth-child(9) {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.table_wrapper h1 {
+  font-size: 38px;
+  line-height: 48px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.table_wrapper .table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table_wrapper .th,
+.td {
+  border: 1px solid gray;
+  padding: 8px;
+  text-align: center;
+}
+.table_wrapper .th {
+  background-color: #e6e6e6;
+}
