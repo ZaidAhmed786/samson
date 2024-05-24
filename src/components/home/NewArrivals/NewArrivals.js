@@ -8,6 +8,11 @@ import {
   newArrThree,
   newArrFour,
 } from "../../../assets/images/index";
+import ArrowOne from "../../../Images/Lenovo_IdeaPad_1_15AMN7.png";
+import ArrowTwo from "../../../Images/Lenovo_V15_G3_IAP.png";
+import ArrowThree from "../../../Images/Dell_Vostro_3520.png";
+import ArrowFour from "../../../Images/Lenovo_IdeaPad_Slim_3.png";
+import ArrowFive from "../../../Images/HP_250_G10.png";
 import SampleNextArrow from "./SampleNextArrow";
 import SamplePrevArrow from "./SamplePrevArrow";
 
@@ -53,56 +58,56 @@ const NewArrivals = () => {
         <div className="px-2">
           <Product
             _id="100001"
-            img={newArrOne}
-            productName="Round Table Clock"
-            price="44.00"
+            img={ArrowOne}
+            productName="Lenovo IdeaPad 1 15AMN7"
+            price="358"
             color="Black"
             badge={true}
-            des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis."
+            des="Ideapad 1 Series laptops are engineered for productivity but priced for accessibility."
           />
         </div>
         <div className="px-2">
           <Product
             _id="100002"
-            img={newArrTwo}
-            productName="Smart Watch"
-            price="250.00"
+            img={ArrowTwo}
+            productName="Lenovo V15 G3 IAP"
+            price="373"
             color="Black"
             badge={true}
-            des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis."
+            des="Think of the Lenovo V15 as your office manager, executing your everyday tasks with efficiency."
           />
         </div>
         <div className="px-2">
           <Product
             _id="100003"
-            img={newArrThree}
-            productName="cloth Basket"
-            price="80.00"
+            img={ArrowThree}
+            productName="Dell Vostro 3520"
+            price="376"
             color="Mixed"
             badge={true}
-            des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis."
+            des="Everyday tasks are quickly handled with ease using up to 12th Gen Intel® Core™ Processors."
           />
         </div>
         <div className="px-2">
           <Product
             _id="100004"
-            img={newArrFour}
-            productName="Funny toys for babies"
-            price="60.00"
+            img={ArrowFour}
+            productName="Lenovo IdeaPad Slim 3"
+            price="389"
             color="Mixed"
             badge={false}
-            des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis."
+            des="The smart, powerful, and military-grade durable IdeaPad Slim 5i Gen 8 laptop is designed for life on the go – and the school of hard knocks. It’s thin and light enough to slip under your arm or into any bag."
           />
         </div>
         <div className="px-2">
           <Product
             _id="100005"
-            img={newArrTwo}
-            productName="Funny toys for babies"
-            price="60.00"
+            img={ArrowFive}
+            productName="HP 250 G10"
+            price="394"
             color="Mixed"
             badge={false}
-            des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis."
+            des="The budget-friendly, business-ready HP 250 G10 Laptop provides essential power and productivity features in a thin and light design with a large 15.6-inch diagonal display."
           />
         </div>
       </Slider>

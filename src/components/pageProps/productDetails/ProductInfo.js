@@ -30,9 +30,9 @@ const ProductInfo = ({ productInfo }) => {
       <p className="text-2xl font-semibold">
         {productInfo.price} Dt
         <span className="text-xl font-semibold line-through ml-2">540</span>
-        <span className="text-xs ml-2 inline-flex items-center px-3 py-1 rounded-full bg-green-600 text-white">
+        {/* <span className="text-xs ml-2 inline-flex items-center px-3 py-1 rounded-full bg-green-600 text-white">
           Save 100
-        </span>
+        </span> */}
       </p>
       <hr />
       <p className="text-base text-gray-600">{renderDescription()}</p>

@@ -70,7 +70,7 @@ const Pagination = ({ itemsPerPage }) => {
           currentItems={currentItems}
           selectedBrands={selectedBrands}
           selectedCategories={selectedCategories}
-        />{" "}
+        />
       </div>
       <div className="flex flex-col mdl:flex-row justify-center mdl:justify-between items-center">
         <ReactPaginate

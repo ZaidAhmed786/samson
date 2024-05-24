@@ -30,7 +30,7 @@ import {
   bac1,
   bac2,
   bac3,
-  bac4, 
+  bac4,
   IMPRIMANTE_PANTUM_CP2200DW,
   IMPRIMANTE_PANTUM_BM5100FDW,
   IMPRIMANTE_PANTUM_M6609N,
@@ -51,6 +51,27 @@ import {
   espson1,
   espson2,
 } from "../assets/images/index";
+import ShopImageOne from "../Images/Lenovo_IdeaPad_1_15AMN7.png";
+import ShopImageTwo from "../Images/Lenovo_V15_G3_IAP.png";
+import ShopImageThree from "../Images/Dell_Vostro_3520.png";
+import ShopImageFour from "../Images/Lenovo_IdeaPad_Slim_3.png";
+import ShopImageFive from "../Images/HP_250_G10.png";
+import ShopImageSix from "../Images/HP_Laptop_15-FD0336NIA_Intel_Core_i3.png";
+import ShopImageSeven from "../Images/Lenovo_V15_G4_IRU.png";
+import ShopImageEight from "../Images/Dell_Inspiron_16_5635.png";
+import ShopImageNine from "../Images/HP_15S-FQ5099TU.png";
+import ShopImageTen from "../Images/Lenovo_ThinkBook_16_G6_IRL_Business.png";
+import ShopImageEleven from "../Images/Dell_Inspiron_14_7430_2-in-1.png";
+import ShopImageTwelve from "../Images/CarouselImageTwo.png";
+import ShopImageThirteen from "../Images/HP_OMEN_16-XF0033DX_Gaming_Laptop.png";
+import ShopImageFourteen from "../Images/Dell_Latitude_3540.png";
+import ShopImageFifteen from "../Images/TP-Link_Tapo_C310_Outdoor_Security_Wi-Fi_Camera_-_Ver_1.0.png";
+import ShopImageSixteen from "../Images/Sony_DualSense_Wireless_Controller_for_PS5_PlayStation_5.png";
+import ShopImageSeventeen from "../Images/Bloody_G230P_Stereo_Surround_Sound_Gaming_Headphone.png";
+import ShopImageEighteen from "../Images/Samsung_Galaxy_Watch6_Classic_47mm.png";
+import ShopImageNinteen from "../Images/Samsung_LS22A330NHMXUE_22_FHD_Flat_Monitor.png";
+import ShopImageTwenty from "../Images/ViewSonic_VA2432-H_24_1080p_IPS_100Hz_1ms_FHD_Monitor.png";
+import ShopImageTwentyOne from "../Images/Asus_TUF_Gaming_VG249Q3A_Gaming_Monitor.png";
 
 import "./style.css";
 
@@ -293,13 +314,13 @@ export const SplOfferData = [
 export const paginationItems = [
   {
     _id: "201",
-    img: IMPRIMANTE_PANTUM_CP2200DW,
-    productName: "Imprimante PANTUM CP2200DW",
-    price: "35.00",
+    img: ShopImageOne,
+    productName: "Lenovo IdeaPad 1 15AMN7",
+    price: "358",
     color: "Blanc",
     badge: true,
     brand: "Pantum",
-    des: "Imprimante Laser PANTUM Couleur - Fonctions: Impression  - Technologie d'impression: Laser - Format Papier: A4 - Vitesse d’impression(Couleur/N&B): 24 ppm (A4) / 26 ppm (Lettre) - Résolution d'impression: 600 x 600 dpi - Sortie papier: 100 page - Mémoire: Double cœur, 1 GHz - Impression recto verso: Automatique - Heure de la première impression: Moins de 11s  - Connecteurs: USB 2.0 haut débit Ethernet 10/100/1000 BaseTX (RJ-45) 802.11b/g/n Sans fil - Dimensions: 411.2 x 394.1 x 243.7mm - Poids: 16,1 kg - Couleur: Blanc",
+    des: "Ideapad 1 Series laptops are engineered for productivity but priced for accessibility.",
     cat: "Imprimante",
     ficheTech: [
       { label: "Technology ", value: "Electrophotographic monochrome laser " },
@@ -318,13 +339,13 @@ export const paginationItems = [
   },
   {
     _id: "202",
-    img: IMPRIMANTE_PANTUM_BM5100FDW,
-    productName: "IMPRIMANTE PANTUM BM5100FDW",
-    price: "450",
+    img: ShopImageTwo,
+    productName: "Lenovo V15 G3 IAP",
+    price: "373",
     color: "Blanc",
     badge: true,
     brand: "Pantum",
-    des: "Pantum BM5100fdw Imprimante laser mono : Pantum BM5100fdw -Imprimante :laser -monochrome multifonction,:format A4-,4-en-1 avec fonctions impression, copie, numérisation et fax, vitesse d'impression de 40ppm, connexion Réseau :LAN RJ45-, Wifichrome multifonction, format A4, 4-en-1 avec fonctions impression, copie, numérisation et fax, vitesse d'impression de 40ppm, connexion Réseau LAN RJ45, Wifi",
+    des: "Think of the Lenovo V15 as your office manager, executing your everyday tasks with efficiency. It will keep your business productive and your data secure, while its thinner, smaller design and narrower side bezels put a clean, professional look on your desk—or wherever you choose to use it.",
     cat: "Imprimante",
     ficheTech: [
       { label: "Vitesse d'impression ", value: "40ppm(A4)/42ppm(lettre) " },
@@ -361,13 +382,13 @@ export const paginationItems = [
 
   {
     _id: "203",
-    img: IMPRIMANTE_PANTUM_BP5100DN,
-    productName: "IMPRIMANTE PANTUM BP5100DN",
-    price: "450",
+    img: ShopImageThree,
+    productName: "Dell Vostro 3520",
+    price: "376",
     color: "Blanc",
     badge: true,
     brand: "Pantum",
-    des: "Imprimante Monochrome Laser PANTUM BP5100DN : Fonctions Impression - :Capacité Bac à papier 250 pages - :Formats papier -: A4 - Technologie d’impression Laser Monochrome - :Vitesse d’impression Noir & Blanc Jusqu’à 40 pages par minute en A4 -: Résolution 1200 dpi -: Mémoire 512 Mo - Connectivité Ethernet, USB 2.0 -:Auto-Duplex-, Network-Ready : Impression silencieuse - faible encombrement et respectueux de l'environnement -: cartouches à haut rendement en option - processeur haute vitesse 1,2 GHz - Dimensions: 364 x 344 x 257 mm - Poids: 9.3 kg - Garantie: 1 an",
+    des: "Everyday tasks are quickly handled with ease using up to 12th Gen Intel® Core™ Processors.",
     cat: "Imprimante",
     ficheTech: [
       { label: "Vitesse d'impression ", value: "40ppm(A4)/42ppm(lettre) " },
@@ -403,13 +424,13 @@ export const paginationItems = [
   },
   {
     _id: "2005",
-    img: IMPRIMANTE_PANTUM_M6609N,
-    productName: "IMPRIMANTE PANTUM M6559N",
-    price: "450",
+    img: ShopImageFour,
+    productName: "Lenovo IdeaPad Slim 3",
+    price: "389",
     color: "Blanc",
     badge: true,
     brand: "Pantum",
-    des: "Imprimante Laser 3en1 à toner rechargeable PANTUM M6559N - Capacité d'impression Jusqu'à 1600 pages - Vitesse d’impression : 22 ppm (A4) / 23 ppm (Lettre) - Résolution (impression, copie et numérisation) : 1200×1200dpi - Heure de la première impression : Moins de 7.8s - Connectivité : USB 2.0 haute vitesse - Vitesse de copie : 22cpm (A4) / 23cpm (Lettre) - Capacité du chargeur automatique de documents : 35 pages - Entrée papier : 150 pages - Sortie papier : 100 pages - Dimensions : 417 x 305 x 301 mm - Poids : 8.5 kg - Garantie 1 an",
+    des: "The smart, powerful, and military-grade durable IdeaPad Slim 5i Gen 8 laptop is designed for life on the go – and the school of hard knocks. It’s thin and light enough to slip under your arm or into any bag.",
     cat: "Imprimante",
     ficheTech: [
       { label: "gtin	", value: "M6559N      " },
@@ -445,13 +466,13 @@ export const paginationItems = [
 
   {
     _id: "20005",
-    img: IMPRIMANTE_PANTUM_M6559N,
-    productName: "IMPRIMANTE PANTUM M6559N",
-    price: "450",
+    img: ShopImageFive,
+    productName: "HP 250 G10",
+    price: "394",
     color: "Blanc",
     badge: true,
     brand: "Pantum",
-    des: "Imprimante Laser 3en1 à toner rechargeable PANTUM M6559N - Capacité d'impression Jusqu'à 1600 pages - Vitesse d’impression : 22 ppm (A4) / 23 ppm (Lettre) - Résolution (impression, copie et numérisation) : 1200×1200dpi - Heure de la première impression : Moins de 7.8s - Connectivité : USB 2.0 haute vitesse - Vitesse de copie : 22cpm (A4) / 23cpm (Lettre) - Capacité du chargeur automatique de documents : 35 pages - Entrée papier : 150 pages - Sortie papier : 100 pages - Dimensions : 417 x 305 x 301 mm - Poids : 8.5 kg - Garantie 1 an",
+    des: "The budget-friendly, business-ready HP 250 G10 Laptop provides essential power and productivity features in a thin and light design with a large 15.6-inch diagonal display.",
     cat: "Imprimante",
     ficheTech: [
       { label: "gtin	", value: "M6559N      " },
@@ -487,13 +508,13 @@ export const paginationItems = [
 
   {
     _id: "206",
-    img: IMPRIMANTE_PANTUM_P3300DN,
-    productName: "IMPRIMANTE PANTUM P3300DN",
-    price: "450",
+    img: ShopImageSix,
+    productName: "HP Laptop 15-FD0336NIA Intel Core i3",
+    price: "396",
     color: "Blanc",
     badge: true,
     brand: "Pantum",
-    des: "Imprimante Laser PANTUM P3300DN - Fonctions: Impression - Technologie d'impression: Laser - Format Papier: A4-A5 - Vitesse d’impression: 33 ppm (A4) / 35 ppm (Lettre) - Résolution d'impression: Jusqu'à 1200 x 1200 ppp - Papier Bac d'alimentation: 250 pages - Sortie papier: 150 page - Mémoire: 256 Mo - Impression recto verso: Automatique - Heure de la première impression: Moins de 8.2s  - Taille du support: A4, A5, JIS B5, IS0 B5, A6, Lettre, Légal, Exécutif, Folio, Oficio, Déclaration, Carte postale japonaise, ZL, Big 16K, Big 32K, 16K, 32K, B6， Yougata4, Carte postale, Younaga3, Nagagata3, Yougata2 - Connecteurs: USB2.0 haut débit / Ethernet：IEEE 802.3 10/100Base-Tx - Dimensions: 354 x 334 x 232mm - Poids: 6,8 kg - Couleur: Blanc",
+    des: "Say hello to the reliable PCs that easily pass the vibe check. HP PCs are built with dependable technology, next-level power, and rock-solid performance that turn your to-do lists into to-done lists.",
     cat: "Imprimante",
     ficheTech: [
       { label: "gtin	", value: "P3300DN      " },
@@ -540,13 +561,13 @@ export const paginationItems = [
 
   {
     _id: "207",
-    img: IMPRIMANTE_PANTUM_P3300DW,
-    productName: "IMPRIMANTE PANTUM P3300DW",
-    price: "450",
+    img: ShopImageSeven,
+    productName: "Lenovo V15 G4 IRU",
+    price: "495",
     color: "Blanc",
     badge: true,
     brand: "Pantum",
-    des: "Imprimante Laser PANTUM P3300DW - Fonctions: Impression - Technologie d'impression: Laser - Format Papier: A4-A5 - Vitesse d’impression: 33 ppm (A4) / 35 ppm (Lettre) - Résolution d'impression: Jusqu'à 1200 x 1200 ppp - Papier Bac d'alimentation: 250 pages - Sortie papier: 150 page - Mémoire: 256 Mo - Impression recto verso: Automatique - Heure de la première impression: Moins de 8.2s - Interface: Ethernet USB 2.0 haut débit : Wi-Fi IEEE 802.3 10/100Base-Tx : IEEE 802.11b/g/n - Connecteurs: USB ; WIFI - Dimensions: 354 x 334 x 232mm - Poids: 6,8 kg - Couleur: Blanc",
+    des: "Open for business tired of entry-level laptops that lack the tools you need to run a business? The Lenovo V15 Gen 4 laptop is both feature packed and value priced. You'll enjoy powerful Intel® processing, battery-efficient Intel® integrated graphics, and a conveniently sized, 15.6 display that gives a great workspace.",
     cat: "Imprimante",
     ficheTech: [
       { label: "gtin		", value: "P3300DW      " },
@@ -592,13 +613,13 @@ export const paginationItems = [
 
   {
     _id: "208",
-    img: IMPRIMANTE_PANTUM_P2509W,
-    productName: "IMPRIMANTE PANTUM P2509W",
-    price: "450",
+    img: ShopImageEight,
+    productName: "Dell Inspiron 16 5635",
+    price: "556",
     color: "Blanc",
     badge: true,
     brand: "Pantum",
-    des: "Imprimante Laser PANTUM P2509W - Fonctions: Impression - Technologie d'impression: Laser - Format Papier: A4 - Vitesse d’impression: 22 ppm (A4) / 23 ppm (Lettre) - Résolution d'impression: Jusqu'à 1200 x 1200 ppp - Entrée papier: de 150 feuilles - Sortie papier: 100 page - Mémoire: 128 Mo - Impression recto verso: Manuel - Heure de la première impression: Moins de 7.8s - Taille du support: A4, A5, A6, JIS B5, ISO B5, B6, Lettre, Légal, Exécutif, Déclaration, Enveloppe Monarch, Enveloppe DL, enveloppe C5, enveloppe C6, enveloppe NO.10, carte postale japonaise, Folio, Oficio, Grand 16k, 32k, 16k, Grand 32k, ZL,Yougata4, Carte postale, Younaga3, Nagagata3, Yougata2 - Toner rechargeable - Connecteurs: USB 2.0 ; Wi-Fi - Dimensions: 337 x 220 x 178 mm - Poids: 4,75 kg - Couleur: Blanc.",
+    des: "Level-up your productivity by using the world’s longest battery life in a 16 essential commercial notebook*. Customize to fit your needs with a vast array of options and speed your work with Dell Optimizer, now with Express Connect.",
     cat: "Imprimante",
     ficheTech: [
       { label: "gtin	", value: "P2509W      " },
@@ -633,136 +654,136 @@ export const paginationItems = [
   },
   {
     _id: "233",
-    img: IMPRIMANTE_PANTUM_P2509,
-    productName: "IMPRIMANTE PANTUM P2509",
-    price: "450",
+    img: ShopImageNine,
+    productName: "HP 15S-FQ5099TU",
+    price: "599",
     color: "Blanc",
     badge: true,
     brand: "Pantum",
-    des: "Imprimante Laser PANTUM P2509 - Fonctions Impression - Capacité d'impression Jusqu'à :1600 pages - Formats papier: A4 - Technologie d’impression Laser Monochrome - Vitesse d’impression Noir & Blanc: Jusqu’à 22 pages par minute en A4 - Résolution: 1200 dpi - Mémoire: 128 Mo - Connectivité: USB 2.0 - Dimensions: 337 x 220 x 178 mm - Poids: 4.75 kg - Toner recheargeable - Garantie: 1 an",
+    des: "Stay productive and entertained from anywhere with long-lasting battery life and a micro-edge display. 6L1S5PA#UUF.",
     cat: "Imprimante",
     ficheTech: [],
   },
   {
     _id: "220",
-    img: bac3,
-    productName: "Bac de dechet",
-    price: "25.00",
+    img: ShopImageTen,
+    productName: "Lenovo ThinkBook 16 G6 IRL Business",
+    price: "678",
     color: "Mixed",
     badge: true,
-    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
+    des: "ThinkBook Series | Built for business, designed for you. These laptops make it easy to do business with style. From options that keep you up and running without pause, to security that works behind the scenes. And that's not all-ThinkBook laptops are built with premium materials like anodized aluminium with dual-tone finish.    ",
     cat: "Bac",
   },
   {
     _id: "221",
-    img: bac4,
-    productName: "Bac de dechet",
-    price: "220.00",
+    img: ShopImageEleven,
+    productName: "Dell Inspiron 14 7430 2-in-1",
+    price: "720",
     color: "Black",
     badge: true,
-    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
+    des: "Work, watch and listen as you explore the depths of your entertainment with Dolby Atmos® spatial audio.",
     cat: "Bac",
   },
   {
     _id: "215",
-    img: ruban3,
-    productName: "Ruban",
-    price: "25.00",
+    img: ShopImageTwelve,
+    productName: "HP Pavilion 15-EG3147NIA Touchscreen Laptop",
+    price: "520",
     color: "Mixed",
     badge: true,
-    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
+    des: "Do your thing, anywhere, with the help of the compact HP Pavilion 15 Laptop.",
     cat: "Ruban",
   },
   {
     _id: "216",
-    img: ruban4,
-    productName: "Ruban",
-    price: "220.00",
+    img: ShopImageThirteen,
+    productName: "HP OMEN 16-XF0033DX Gaming Laptop",
+    price: "420",
     color: "Black",
     badge: true,
-    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
+    des: "Powerful gaming anywhere with next-gen performance and comfort.",
     cat: "Ruban",
   },
   {
     _id: "209",
-    img: encre1,
-    productName: "encre",
-    price: "25.00",
+    img: ShopImageFourteen,
+    productName: "Dell Latitude 3540",
+    price: "753",
     color: "Mixed",
     badge: true,
-    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
+    des: "Modern design to boost productivity. Experience uncompromised connectivity. Essential performance for any business.",
     cat: "Encre",
   },
   {
     _id: "210",
-    img: encre2,
-    productName: "encre",
-    price: "220.00",
+    img: ShopImageFifteen,
+    productName: "TP-Link Tapo C310 Outdoor Security Wi-Fi Camera - Ver 1.0",
+    price: "48",
     color: "Black",
     badge: true,
-    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
+    des: "Ultra-High-Definition Video: Records every image in crystal-clear 3MP definition.",
     cat: "Encre",
   },
 
   {
     _id: "211",
-    img: encre3,
-    productName: "encre",
-    price: "25.00",
+    img: ShopImageSixteen,
+    productName: "Sony DualSense Wireless Controller for PS5 PlayStation 5",
+    price: "71",
     color: "Mixed",
     badge: true,
-    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
+    des: "Discover a deeper, highly immersive gaming experience* that brings the action to life in the palms of your hands.",
     cat: "Encre",
   },
   {
     _id: "212",
-    img: encre4,
-    productName: "encre",
-    price: "220.00",
+    img: ShopImageSeventeen,
+    productName: "Bloody G230P Stereo Surround Sound Gaming Headphone",
+    price: "12",
     color: "Black",
     badge: true,
-    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
+    des: "Discover a deeper, highly immersive gaming experience* that brings the action to life in the palms of your hands.",
     cat: "Encre",
   },
   {
     _id: "213",
-    img: ruban1,
-    productName: "Ruban",
-    price: "25.00",
+    img: ShopImageEighteen,
+    productName: "Samsung Galaxy Watch6 Classic 47mm",
+    price: "251",
     color: "Mixed",
     badge: true,
-    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
+    des: "Galaxy Watch6. Start your everyday wellness journey.",
     cat: "Ruban",
   },
   {
     _id: "214",
-    img: ruban2,
-    productName: "Ruban",
-    price: "220.00",
+    img: ShopImageNinteen,
+    productName: "Samsung LS22A330NHMXUE 22 FHD Flat Monitor",
+    price: "114",
     color: "Black",
     badge: true,
-    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
+    des: "Experience the whole picture from wherever you sit. Everything remains vivid and clear from 178° all around—even up into the very corners.",
     cat: "Ruban",
   },
 
   {
     _id: "217",
-    img: bac1,
-    productName: "Bac de dechet",
-    price: "25.00",
+    img: ShopImageTwenty,
+    productName: "ViewSonic VA2432-H 24” 1080p IPS 100Hz 1ms FHD Monitor",
+    price: "128",
     color: "Mixed",
     badge: true,
-    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
+    des: "The ViewSonic VA2432-H is a 24” 1080p IPS monitor featuring HDMI and VGA inputs for business and home use.",
     cat: "Bac",
   },
   {
     _id: "219",
-    img: bac2,
-    productName: "Bac de dechet",
-    price: "220.00",
+    img: ShopImageTwentyOne,
+    productName: "Asus TUF Gaming VG249Q3A Gaming Monitor",
+    price: "194",
     color: "Black",
     badge: true,
-    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
+    des: "TUF Gaming VG249Q3A Gaming Monitor – 24-inch(23.8 inch viewable), Full HD(1920x1080), 180Hz, Fast IPS, ELMB, 1ms (GTG), FreeSync Premium™, Variable Overdrive, 99% sRGB",
     cat: "Bac",
   },
 

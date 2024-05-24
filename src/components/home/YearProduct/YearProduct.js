@@ -17,8 +17,8 @@ const YearProduct = () => {
             Product of The year
           </h1>
           <p className="text-base font-normal text-primeColor max-w-[600px] mr-4">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat
-            cupiditate modi amet! Facilis, aperiam quaerat.
+            A clock tracks time, providing precise hours, minutes, and seconds
+            for daily activities and schedules.
           </p>
           <ShopNow />
         </div>

@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
-import {
-  bannerImgOne, 
-} from "../../assets/images";
+import { bannerImgOne } from "../../assets/images";
+import BannerImageOne from "../../Images/Dell_Inspiron_14_7430_2-in-1.png";
+import BannerImageTwo from "../../Images/CarouselImageTwo.png";
+import BannerImageThree from "../../Images/HP_OMEN_16-XF0033DX_Gaming_Laptop.png";
 import Image from "../designLayouts/Image";
 
 const CustomSlide = ({ Subtext, imgSrc, text, buttonLink, buttonText }) => (
@@ -149,26 +150,25 @@ const Banner = () => {
 
   const slides = [
     {
-      imgSrc: bannerImgOne,
-      text: "Enhance Your Printing Experience",
+      imgSrc: BannerImageOne,
+      text: "Dell Inspiron 14 2-in-1",
       Subtext:
-        "Explore our premium printers and consumables for exceptional results",
+        "Work, watch and listen as you explore the depths of your entertainment with Dolby Atmos® spatial audio.",
       buttonLink: "/offer",
       buttonText: "Shop Now",
     },
     {
-      imgSrc: bannerImgOne,
-      text: "Quality Printing Solutions",
+      imgSrc: BannerImageTwo,
+      text: "HP Pavilion 15 Touchscreen Laptop",
       Subtext:
-        "Discover our wide range of printers and consumables designed for professional printing needs.",
+        "Do your thing, anywhere, with the help of the compact HP Pavilion 15 Laptop",
       buttonLink: "/shop",
       buttonText: "About-us",
     },
     {
-      imgSrc: bannerImgOne,
-      text: "Efficiency Redefined",
-      Subtext:
-        "Maximize productivity with our advanced printers and high-quality consumables. ",
+      imgSrc: BannerImageThree,
+      text: "HP OMEN 16 Gaming Laptop",
+      Subtext: "Powerful gaming anywhere with next-gen performance and comfort",
       buttonLink: "/contact",
       buttonText: "Contact-us",
     },
