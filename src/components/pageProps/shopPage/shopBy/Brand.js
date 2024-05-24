@@ -14,7 +14,7 @@ const Brand = () => {
   const brands = [
     {
       _id: 900,
-      title: "Pantum",
+      title: "lenovo",
     },
     {
       _id: 901,
@@ -22,7 +22,7 @@ const Brand = () => {
     },
     {
       _id: 902,
-      title: "Epson",
+      title: "Dell",
     },
 
     {

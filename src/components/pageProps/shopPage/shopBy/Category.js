@@ -15,20 +15,24 @@ const Category = () => {
 
   const category = [
     {
+      _id: 9004,
+      title: "Laptops",
+    },
+    {
+      _id: 9005,
+      title: "Gaming",
+    },
+    {
       _id: 9006,
-      title: "Imprimante",
+      title: "Watch",
     },
     {
       _id: 9007,
-      title: "Encre",
+      title: "Camera",
     },
     {
       _id: 9008,
-      title: "Ruban",
-    },
-    {
-      _id: 9009,
-      title: "Bac de dechet",
+      title: "Lcd",
     },
   ];
 

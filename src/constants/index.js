@@ -319,9 +319,9 @@ export const paginationItems = [
     price: "358",
     color: "Blanc",
     badge: true,
-    brand: "Pantum",
+    brand: "lenovo",
     des: "Ideapad 1 Series laptops are engineered for productivity but priced for accessibility.",
-    cat: "Imprimante",
+    cat: "Laptops",
     ficheTech: [
       { label: "Technology ", value: "Electrophotographic monochrome laser " },
       { label: "Print speed ", value: "22 ppm (A4)/23 ppm (Letter)" },
@@ -344,9 +344,9 @@ export const paginationItems = [
     price: "373",
     color: "Blanc",
     badge: true,
-    brand: "Pantum",
+    brand: "lenovo",
     des: "Think of the Lenovo V15 as your office manager, executing your everyday tasks with efficiency. It will keep your business productive and your data secure, while its thinner, smaller design and narrower side bezels put a clean, professional look on your desk—or wherever you choose to use it.",
-    cat: "Imprimante",
+    cat: "Laptops",
     ficheTech: [
       { label: "Vitesse d'impression ", value: "40ppm(A4)/42ppm(lettre) " },
       { label: "Temps de sortie de la première page ", value: "≤6.9 s" },
@@ -387,9 +387,9 @@ export const paginationItems = [
     price: "376",
     color: "Blanc",
     badge: true,
-    brand: "Pantum",
+    brand: "Dell",
     des: "Everyday tasks are quickly handled with ease using up to 12th Gen Intel® Core™ Processors.",
-    cat: "Imprimante",
+    cat: "Laptops",
     ficheTech: [
       { label: "Vitesse d'impression ", value: "40ppm(A4)/42ppm(lettre) " },
       { label: "Temps de sortie de la première page ", value: "≤6.9 s" },
@@ -429,9 +429,9 @@ export const paginationItems = [
     price: "389",
     color: "Blanc",
     badge: true,
-    brand: "Pantum",
+    brand: "lenovo",
     des: "The smart, powerful, and military-grade durable IdeaPad Slim 5i Gen 8 laptop is designed for life on the go – and the school of hard knocks. It’s thin and light enough to slip under your arm or into any bag.",
-    cat: "Imprimante",
+    cat: "Laptops",
     ficheTech: [
       { label: "gtin	", value: "M6559N      " },
       { label: "Marque	", value: "PANTUM      " },
@@ -471,9 +471,9 @@ export const paginationItems = [
     price: "394",
     color: "Blanc",
     badge: true,
-    brand: "Pantum",
+    brand: "Hp",
     des: "The budget-friendly, business-ready HP 250 G10 Laptop provides essential power and productivity features in a thin and light design with a large 15.6-inch diagonal display.",
-    cat: "Imprimante",
+    cat: "Laptops",
     ficheTech: [
       { label: "gtin	", value: "M6559N      " },
       { label: "Marque	", value: "PANTUM      " },
@@ -513,9 +513,9 @@ export const paginationItems = [
     price: "396",
     color: "Blanc",
     badge: true,
-    brand: "Pantum",
+    brand: "Hp",
     des: "Say hello to the reliable PCs that easily pass the vibe check. HP PCs are built with dependable technology, next-level power, and rock-solid performance that turn your to-do lists into to-done lists.",
-    cat: "Imprimante",
+    cat: "Laptops",
     ficheTech: [
       { label: "gtin	", value: "P3300DN      " },
       { label: "fonctions	", value: "Monofonction      " },
@@ -566,9 +566,9 @@ export const paginationItems = [
     price: "495",
     color: "Blanc",
     badge: true,
-    brand: "Pantum",
+    brand: "Lenovo",
     des: "Open for business tired of entry-level laptops that lack the tools you need to run a business? The Lenovo V15 Gen 4 laptop is both feature packed and value priced. You'll enjoy powerful Intel® processing, battery-efficient Intel® integrated graphics, and a conveniently sized, 15.6 display that gives a great workspace.",
-    cat: "Imprimante",
+    cat: "Laptops",
     ficheTech: [
       { label: "gtin		", value: "P3300DW      " },
       { label: "fonctions	", value: "Monofonction      " },
@@ -618,9 +618,9 @@ export const paginationItems = [
     price: "556",
     color: "Blanc",
     badge: true,
-    brand: "Pantum",
+    brand: "Dell",
     des: "Level-up your productivity by using the world’s longest battery life in a 16 essential commercial notebook*. Customize to fit your needs with a vast array of options and speed your work with Dell Optimizer, now with Express Connect.",
-    cat: "Imprimante",
+    cat: "Laptops",
     ficheTech: [
       { label: "gtin	", value: "P2509W      " },
       { label: "fonctions	", value: "Monofonction      " },
@@ -659,9 +659,9 @@ export const paginationItems = [
     price: "599",
     color: "Blanc",
     badge: true,
-    brand: "Pantum",
+    brand: "Hp",
     des: "Stay productive and entertained from anywhere with long-lasting battery life and a micro-edge display. 6L1S5PA#UUF.",
-    cat: "Imprimante",
+    cat: "Laptops",
     ficheTech: [],
   },
   {
@@ -671,8 +671,10 @@ export const paginationItems = [
     price: "678",
     color: "Mixed",
     badge: true,
+    brand: "Lenovo",
     des: "ThinkBook Series | Built for business, designed for you. These laptops make it easy to do business with style. From options that keep you up and running without pause, to security that works behind the scenes. And that's not all-ThinkBook laptops are built with premium materials like anodized aluminium with dual-tone finish.    ",
-    cat: "Bac",
+    cat: "Laptops",
+    ficheTech: [],
   },
   {
     _id: "221",
@@ -682,7 +684,7 @@ export const paginationItems = [
     color: "Black",
     badge: true,
     des: "Work, watch and listen as you explore the depths of your entertainment with Dolby Atmos® spatial audio.",
-    cat: "Bac",
+    cat: "Laptops",
   },
   {
     _id: "215",
@@ -692,7 +694,7 @@ export const paginationItems = [
     color: "Mixed",
     badge: true,
     des: "Do your thing, anywhere, with the help of the compact HP Pavilion 15 Laptop.",
-    cat: "Ruban",
+    cat: "Laptops",
   },
   {
     _id: "216",
@@ -702,7 +704,7 @@ export const paginationItems = [
     color: "Black",
     badge: true,
     des: "Powerful gaming anywhere with next-gen performance and comfort.",
-    cat: "Ruban",
+    cat: "Laptops",
   },
   {
     _id: "209",
@@ -712,7 +714,7 @@ export const paginationItems = [
     color: "Mixed",
     badge: true,
     des: "Modern design to boost productivity. Experience uncompromised connectivity. Essential performance for any business.",
-    cat: "Encre",
+    cat: "Laptops",
   },
   {
     _id: "210",
@@ -722,7 +724,7 @@ export const paginationItems = [
     color: "Black",
     badge: true,
     des: "Ultra-High-Definition Video: Records every image in crystal-clear 3MP definition.",
-    cat: "Encre",
+    cat: "Camera",
   },
 
   {
@@ -733,7 +735,7 @@ export const paginationItems = [
     color: "Mixed",
     badge: true,
     des: "Discover a deeper, highly immersive gaming experience* that brings the action to life in the palms of your hands.",
-    cat: "Encre",
+    cat: "Gaming",
   },
   {
     _id: "212",
@@ -743,7 +745,7 @@ export const paginationItems = [
     color: "Black",
     badge: true,
     des: "Discover a deeper, highly immersive gaming experience* that brings the action to life in the palms of your hands.",
-    cat: "Encre",
+    cat: "Gaming",
   },
   {
     _id: "213",
@@ -753,7 +755,7 @@ export const paginationItems = [
     color: "Mixed",
     badge: true,
     des: "Galaxy Watch6. Start your everyday wellness journey.",
-    cat: "Ruban",
+    cat: "Watch",
   },
   {
     _id: "214",
@@ -763,7 +765,7 @@ export const paginationItems = [
     color: "Black",
     badge: true,
     des: "Experience the whole picture from wherever you sit. Everything remains vivid and clear from 178° all around—even up into the very corners.",
-    cat: "Ruban",
+    cat: "Lcd",
   },
 
   {
@@ -774,7 +776,7 @@ export const paginationItems = [
     color: "Mixed",
     badge: true,
     des: "The ViewSonic VA2432-H is a 24” 1080p IPS monitor featuring HDMI and VGA inputs for business and home use.",
-    cat: "Bac",
+    cat: "Lcd",
   },
   {
     _id: "219",
@@ -784,7 +786,7 @@ export const paginationItems = [
     color: "Black",
     badge: true,
     des: "TUF Gaming VG249Q3A Gaming Monitor – 24-inch(23.8 inch viewable), Full HD(1920x1080), 180Hz, Fast IPS, ELMB, 1ms (GTG), FreeSync Premium™, Variable Overdrive, 99% sRGB",
-    cat: "Bac",
+    cat: "Lcd",
   },
 
   // =================== imprimante hp =================
@@ -799,7 +801,7 @@ export const paginationItems = [
     badge: true,
     brand: "Hp",
     des: "Desc : Imprimante Jet D'encre HP SMART TANK 516 3en1 Couleur 3YW70A - Fonction: Impression, Copie, Numérisation - Technologie d'impression: jet d'encre - Vitesse d'impression Noir : Jusqu'à 22 ppm - Vitesse d’impression Couleur : Jusqu'à 16 ppm - Résolution d'impression Couleur : 1200x1200dpi - Format Papier : A4 - Capacité Papier : 100 feuilles -  Cycle d'utilisation (mensuel, A4) : Jusqu'à 1000pages - Connectivité: USB 2.0 haute vitesse, Wi-Fi, Bluetooth LE -  Dimensions: 447 x 373 x 158 mm - Garantie: 1 an",
-    cat: "Imprimante",
+    cat: "Printers",
     ficheTech: [
       { label: "DISPONIBILITÉ", value: "En stock" },
       { label: "gtin", value: "3YW70A" },
@@ -862,7 +864,7 @@ export const paginationItems = [
     badge: true,
     brand: "Hp",
     des: "Desc : Imprimante Multifonction Jet d'encre 3 en 1 à réservoir intégré - Impression, numérisation, copie, sans fil - Résolution d'impression: Jusqu'à 4800 x 1200 dpi - Vitesse d'impression Couleur Jusqu'à 15 ppm -Vitesse d'impression N et B Jusqu'à 18 ppm - Résolution du scanner: 1200 x 1200 dpi - Format A4 - Interface USB - Bac d'alimentation de 60 feuilles - Dimensions: 525 x 310 x 158 mm - Garantie 1 an (+ Extension de Garantie 2 Ans ) + 5 Bouteilles",
-    cat: "Imprimante",
+    cat: "Printers",
     ficheTech: [],
   },
 
@@ -875,7 +877,7 @@ export const paginationItems = [
     badge: true,
     brand: "Hp",
     des: "Imprimante à Réservoir intégré HP Ink Tank 315 - Fonctions: Impression, copier, Numérisation - Format Papier: A4 - Technologie d'impression: jet d'encre thermique HP - Vitesse d'impression: Jusqu'à 19 ppm (Noir), Jusqu'à 15 ppm (couleur) - Résolution d'impression: 1200 x 1200 dpi(couleur), 4800 x 1200 dpi(noir) - Vitesse de copie(A4, ISO): 6,5 cpm Noir; 2 cpm Couleur - Vitesse de numérisation A4: Jusqu'à 21 secondes - Impression recto verso Manuelle - Formats de fichiers pour la numérisation: JPEG, TIFF, PDF, BMP, PNG - Vitesse du processeur: 360 MHz - Connectivité: USB  - Dimensions: 525 x 310 x 158 mm - Poids: 4,67 kg - Garantie: 1 an",
-    cat: "Imprimante",
+    cat: "Printers",
     ficheTech: [
       { label: "DISPONIBILITÉ", value: "En stock" },
       { label: "gtin", value: "Z4B04A" },
@@ -978,7 +980,7 @@ export const paginationItems = [
     badge: true,
     brand: "Ricoh",
     des: "Imprimante à Réservoir intégré HP Ink Tank 315 - Fonctions: Impression, copier, Numérisation - Format Papier: A4 - Technologie d'impression: jet d'encre thermique HP - Vitesse d'impression: Jusqu'à 19 ppm (Noir), Jusqu'à 15 ppm (couleur) - Résolution d'impression: 1200 x 1200 dpi(couleur), 4800 x 1200 dpi(noir) - Vitesse de copie(A4, ISO): 6,5 cpm Noir; 2 cpm Couleur - Vitesse de numérisation A4: Jusqu'à 21 secondes - Impression recto verso Manuelle - Formats de fichiers pour la numérisation: JPEG, TIFF, PDF, BMP, PNG - Vitesse du processeur: 360 MHz - Connectivité: USB  - Dimensions: 525 x 310 x 158 mm - Poids: 4,67 kg - Garantie: 1 an",
-    cat: "Imprimante",
+    cat: "Printers",
     ficheTech: [
       { label: "DISPONIBILITÉ", value: "En stock" },
       { label: "gtin", value: "Z4B04A" },
@@ -1081,7 +1083,7 @@ export const paginationItems = [
     badge: true,
     brand: "Ricoh",
     des: "Imprimante à Réservoir intégré HP Ink Tank 315 - Fonctions: Impression, copier, Numérisation - Format Papier: A4 - Technologie d'impression: jet d'encre thermique HP - Vitesse d'impression: Jusqu'à 19 ppm (Noir), Jusqu'à 15 ppm (couleur) - Résolution d'impression: 1200 x 1200 dpi(couleur), 4800 x 1200 dpi(noir) - Vitesse de copie(A4, ISO): 6,5 cpm Noir; 2 cpm Couleur - Vitesse de numérisation A4: Jusqu'à 21 secondes - Impression recto verso Manuelle - Formats de fichiers pour la numérisation: JPEG, TIFF, PDF, BMP, PNG - Vitesse du processeur: 360 MHz - Connectivité: USB  - Dimensions: 525 x 310 x 158 mm - Poids: 4,67 kg - Garantie: 1 an",
-    cat: "Imprimante",
+    cat: "Printers",
     ficheTech: [
       { label: "DISPONIBILITÉ", value: "En stock" },
       { label: "gtin", value: "Z4B04A" },
@@ -1183,7 +1185,7 @@ export const paginationItems = [
     badge: true,
     brand: "Ricoh",
     des: "Imprimante à Réservoir intégré HP Ink Tank 315 - Fonctions: Impression, copier, Numérisation - Format Papier: A4 - Technologie d'impression: jet d'encre thermique HP - Vitesse d'impression: Jusqu'à 19 ppm (Noir), Jusqu'à 15 ppm (couleur) - Résolution d'impression: 1200 x 1200 dpi(couleur), 4800 x 1200 dpi(noir) - Vitesse de copie(A4, ISO): 6,5 cpm Noir; 2 cpm Couleur - Vitesse de numérisation A4: Jusqu'à 21 secondes - Impression recto verso Manuelle - Formats de fichiers pour la numérisation: JPEG, TIFF, PDF, BMP, PNG - Vitesse du processeur: 360 MHz - Connectivité: USB  - Dimensions: 525 x 310 x 158 mm - Poids: 4,67 kg - Garantie: 1 an",
-    cat: "Imprimante",
+    cat: "Printers",
     ficheTech: [
       { label: "DISPONIBILITÉ", value: "En stock" },
       { label: "gtin", value: "Z4B04A" },
@@ -1285,7 +1287,7 @@ export const paginationItems = [
     badge: true,
     brand: "Ricoh",
     des: "Imprimante à Réservoir intégré HP Ink Tank 315 - Fonctions: Impression, copier, Numérisation - Format Papier: A4 - Technologie d'impression: jet d'encre thermique HP - Vitesse d'impression: Jusqu'à 19 ppm (Noir), Jusqu'à 15 ppm (couleur) - Résolution d'impression: 1200 x 1200 dpi(couleur), 4800 x 1200 dpi(noir) - Vitesse de copie(A4, ISO): 6,5 cpm Noir; 2 cpm Couleur - Vitesse de numérisation A4: Jusqu'à 21 secondes - Impression recto verso Manuelle - Formats de fichiers pour la numérisation: JPEG, TIFF, PDF, BMP, PNG - Vitesse du processeur: 360 MHz - Connectivité: USB  - Dimensions: 525 x 310 x 158 mm - Poids: 4,67 kg - Garantie: 1 an",
-    cat: "Imprimante",
+    cat: "Printers",
     ficheTech: [
       { label: "DISPONIBILITÉ", value: "En stock" },
       { label: "gtin", value: "Z4B04A" },
@@ -1387,7 +1389,7 @@ export const paginationItems = [
     badge: true,
     brand: "Ricoh",
     des: "Imprimante à Réservoir intégré HP Ink Tank 315 - Fonctions: Impression, copier, Numérisation - Format Papier: A4 - Technologie d'impression: jet d'encre thermique HP - Vitesse d'impression: Jusqu'à 19 ppm (Noir), Jusqu'à 15 ppm (couleur) - Résolution d'impression: 1200 x 1200 dpi(couleur), 4800 x 1200 dpi(noir) - Vitesse de copie(A4, ISO): 6,5 cpm Noir; 2 cpm Couleur - Vitesse de numérisation A4: Jusqu'à 21 secondes - Impression recto verso Manuelle - Formats de fichiers pour la numérisation: JPEG, TIFF, PDF, BMP, PNG - Vitesse du processeur: 360 MHz - Connectivité: USB  - Dimensions: 525 x 310 x 158 mm - Poids: 4,67 kg - Garantie: 1 an",
-    cat: "Imprimante",
+    cat: "Printers",
     ficheTech: [
       { label: "DISPONIBILITÉ", value: "En stock" },
       { label: "gtin", value: "Z4B04A" },
@@ -1492,7 +1494,7 @@ export const paginationItems = [
     badge: true,
     brand: "Epson",
     des: "Imprimante à Réservoir intégré HP Ink Tank 315 - Fonctions: Impression, copier, Numérisation - Format Papier: A4 - Technologie d'impression: jet d'encre thermique HP - Vitesse d'impression: Jusqu'à 19 ppm (Noir), Jusqu'à 15 ppm (couleur) - Résolution d'impression: 1200 x 1200 dpi(couleur), 4800 x 1200 dpi(noir) - Vitesse de copie(A4, ISO): 6,5 cpm Noir; 2 cpm Couleur - Vitesse de numérisation A4: Jusqu'à 21 secondes - Impression recto verso Manuelle - Formats de fichiers pour la numérisation: JPEG, TIFF, PDF, BMP, PNG - Vitesse du processeur: 360 MHz - Connectivité: USB  - Dimensions: 525 x 310 x 158 mm - Poids: 4,67 kg - Garantie: 1 an",
-    cat: "Imprimante",
+    cat: "Printers",
     ficheTech: [
       { label: "DISPONIBILITÉ", value: "En stock" },
       { label: "gtin", value: "Z4B04A" },
@@ -1595,7 +1597,7 @@ export const paginationItems = [
     badge: true,
     brand: "Epson",
     des: "Imprimante à Réservoir intégré HP Ink Tank 315 - Fonctions: Impression, copier, Numérisation - Format Papier: A4 - Technologie d'impression: jet d'encre thermique HP - Vitesse d'impression: Jusqu'à 19 ppm (Noir), Jusqu'à 15 ppm (couleur) - Résolution d'impression: 1200 x 1200 dpi(couleur), 4800 x 1200 dpi(noir) - Vitesse de copie(A4, ISO): 6,5 cpm Noir; 2 cpm Couleur - Vitesse de numérisation A4: Jusqu'à 21 secondes - Impression recto verso Manuelle - Formats de fichiers pour la numérisation: JPEG, TIFF, PDF, BMP, PNG - Vitesse du processeur: 360 MHz - Connectivité: USB  - Dimensions: 525 x 310 x 158 mm - Poids: 4,67 kg - Garantie: 1 an",
-    cat: "Imprimante",
+    cat: "Printers",
     ficheTech: [
       { label: "DISPONIBILITÉ", value: "En stock" },
       { label: "gtin", value: "Z4B04A" },
