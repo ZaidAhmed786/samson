@@ -49,6 +49,7 @@ const Menu = () => {
       items: 1,
     },
   };
+  const [Access, setAccess] = useState(true);
 
   return (
     <div className={styles.main_div}>
@@ -98,16 +99,20 @@ const Menu = () => {
           <div className={styles.slider_section}>
             <div>
               <Carousel responsive={responsive}>
-                {customPicks.map((data, index) => (
-                  <div key={index} className={styles.card_wrapper}>
+                {customPicks.map((data, index) => {
+                  return(
+                    <div key={index.toString()} className={styles.card_wrapper}>
                     <Card
+                      Access={Access}
                       cardHeight="130px"
                       img={data.img}
                       title={data.title}
                       description={data.description}
+                      handleClick={data.id}
                     />
                   </div>
-                ))}
+                  )
+                })}
               </Carousel>
             </div>
           </div>
@@ -119,10 +124,12 @@ const Menu = () => {
             {PapaPicks.map((data, index) => (
               <div key={index} className={styles.card_wrapper}>
                 <Card
-                  cardHeight="200px"
+                  Access={Access}
+                  cardHeight="130px"
                   img={data.img}
                   title={data.title}
                   description={data.description}
+                  handleClick={data.id}
                 />
               </div>
             ))}
@@ -151,10 +158,12 @@ const Menu = () => {
                 style={{ height: "532px" }}
               >
                 <Card
-                  cardHeight="200px"
-                  img={data.img}
-                  title={data.title}
-                  description={data.description}
+                   Access={Access}
+                   cardHeight="130px"
+                   img={data.img}
+                   title={data.title}
+                   description={data.description}
+                   handleClick={data.id}
                 />
               </div>
             ))}
@@ -168,10 +177,12 @@ const Menu = () => {
             {handcraftedMeatlessSpecialties.map((data, index) => (
               <div key={index} className={styles.card_wrapper}>
                 <Card
-                  cardHeight="200px"
+                  Access={Access}
+                  cardHeight="130px"
                   img={data.img}
                   title={data.title}
                   description={data.description}
+                  handleClick={data.id}
                 />
               </div>
             ))}
@@ -185,10 +196,12 @@ const Menu = () => {
             {GlutenFreeCrustWithAncientGrains.map((data, index) => (
               <div key={index} className={styles.card_wrapper}>
                 <Card
-                  cardHeight="200px"
+                  Access={Access}
+                  cardHeight="130px"
                   img={data.img}
                   title={data.title}
                   description={data.description}
+                  handleClick={data.id}
                 />
               </div>
             ))}

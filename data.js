@@ -1,35 +1,41 @@
 export const customPicks = [
   {
+    id:1,
     img: "./papajhon/Original-Crust-Cheese.webp",
     title: "Original Crust",
     description:
       "Our signature dough. Fresh, never frozen. Made with 6 simple ingredients & hand-tossed.",
   },
   {
+    id:2,
     img: "./papajhon/Original-Crust-Cheese.webp",
     heading: "Garlic Epic Stuffed Crust",
     description:
       "Our signature garlic flavor stuffed into and drizzled on the cheesy crust. Served with Special Garlic Dipping Sauce.",
   },
   {
+    id:3,
     img: "./papajhon/Original-Crust-Cheese.webp",
     heading: "Epic Stuffed Crust",
     description:
       "Our original dough stuffed with melty cheese and baked to a crispy, golden goodness. ORDER NOW",
   },
   {
+    id:4,
     img: "./papajhon/Original-Crust-Cheese.webp",
     heading: "XL New York Style Crust",
     description:
       "An extra-large pizza made with our original dough hand-stretched, with 8 oversized, foldable slices.",
   },
   {
+    id:5,
     img: "./papajhon/Original-Crust-Cheese.webp",
     title: "Thin Crust",
     description:
       "Lighter than our Original Crust, and just a little bit crispy.",
   },
   {
+    id:6,
     img: "./papajhon/Original-Crust-Cheese.webp",
     heading: "Gluten-Free Pizza",
     description:

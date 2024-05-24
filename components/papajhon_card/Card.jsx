@@ -1,35 +1,35 @@
 import React, { use } from "react";
 import Styles from "./card.module.css";
 import { useState } from "react";
+import Link from "next/link";
 
-const Card = (props) => {
-  const [Access, setAccess] = useState(true);
+const Card = ({img, title, description, cardHeight, Access, handleClick}) => {
   return (
     <div className={Styles.main_div}>
       <div>
         <div className={Styles.image_div}>
           <img
             src={
-              props.img ? props.img : "./papajhon/Original-Crust-Cheese.webp"
+              img ? img : "./papajhon/Original-Crust-Cheese.webp"
             }
             alt=""
             width={"100%"}
-            height={props.cardHeight ? props.cardHeight : '130px'}
+            height={cardHeight ? cardHeight : '130px'}
           />
         </div>
         <div>
           <div className={Styles.title_wrapper}>
             {" "}
-            <h1>{props.title ? props.title : "Original Crust"}</h1>{" "}
-            <p>details</p>
+            <h1>{title ? title : "Original Crust"}</h1>{" "}
+            <Link href={`/product-detail/${handleClick}`}>details</Link>
           </div>
           <p>
             {Access ? (
               <p style={{ paddingLeft: "14px" }}>
                 $18.99 340 cal /slice, 8 slices
               </p>
-            ) : props.description ? (
-              props.description
+            ) : description ? (
+              description
             ) : (
               "Our signature dough. Fresh, never frozen. Made with 6 simple ingredients & hand-tossed"
             )}
