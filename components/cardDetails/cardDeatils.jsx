@@ -64,7 +64,7 @@ const CardDeatils = () => {
           </div>
         </div>
       </div>
-      <div className={Styles.table_wrapper}>
+      {/* <div className={Styles.table_wrapper}>
         <h1>BETTER INGREDIENTS. BETTER PIZZA</h1>
         <h1>NUTRITIONAL INFORMATION </h1>
         <table className={Styles.table}>
@@ -134,7 +134,7 @@ const CardDeatils = () => {
           2,000 calories a day is used for general nutrition advice, but calorie
           needs vary.
         </p>
-      </div>
+      </div> */}
     </div>
   );
 };

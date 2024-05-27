@@ -3,8 +3,8 @@ import Styles from "./card.module.css";
 import { useState } from "react";
 import Link from "next/link";
 
-const Card = ({img, title, description, cardHeight, Access, handleClick}) => {
-  // const [Access, setAccess] = useState(true);
+const Card = (props, {img, title, description, cardHeight, AccessData, handleClick, onFormDataChange}) => {
+  const [Access, setAccess] = useState({AccessData});
 
   const [formData, setFormData] = useState({
     size: "Small",
@@ -42,6 +42,7 @@ const Card = ({img, title, description, cardHeight, Access, handleClick}) => {
   useEffect(() => {
     // This will log formData whenever it changes
     console.log(formData);
+    console.log('access', Access)
   }, [formData]);
 
   return (
@@ -91,7 +92,7 @@ const Card = ({img, title, description, cardHeight, Access, handleClick}) => {
                     {/* Add more size options here */}
                   </select>
                 </div>
-
+ 
                 <div className={Styles.incrementer}>
                   <select
                     id="quantity"
@@ -107,7 +108,7 @@ const Card = ({img, title, description, cardHeight, Access, handleClick}) => {
                   </select>
                 </div>
               </div>
-
+ 
               <div className={Styles.dropdown}>
                 <select
                   id="crust"
@@ -123,14 +124,14 @@ const Card = ({img, title, description, cardHeight, Access, handleClick}) => {
                   <option value="Gluten-Free Crust"> Gluten-Free Crust </option>
                 </select>
               </div>
-
+ 
               <div className={Styles.dropdown}>
                 <select
                   id="flavor"
                   name="flavor"
                   value={formData.flavor}
                   onChange={handleFlavorChange}
-                  // disabled={formData.size !== "Large"}
+                   disabled={formData.size !== "Large"}
                 >
                   <option value="Add Crust Flavor" >
                     Add Crust Flavor
@@ -146,8 +147,9 @@ const Card = ({img, title, description, cardHeight, Access, handleClick}) => {
         </div>
       </div>
       <div className={Styles.button_wrapper}>
-        <button onClick={handleButtonClick}>Order Now</button>
-        <button>customize</button>
+        <button onClick={props.handleButtonClick} >Order Now</button>
+       <Link href={'customization'}> <button>customize</button></Link>
+       
       </div>
     </div>
   );
