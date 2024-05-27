@@ -1,38 +1,95 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./menu.module.css";
 import Card from "@/components/papajhon_card/Card";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import {
-  customPicks,
-  PapaPicks,
-  handcraftedSpecialties,
-  handcraftedMeatlessSpecialties,
-  GlutenFreeCrustWithAncientGrains,
-} from "@/data";
+import { useSelector, useDispatch } from "react-redux";
+import { cartAction } from "../../redux/cart";
+import TemCart from "../../pages/temCart";
+import { menuDataMap } from "@/data";
 import CommonCard from "../common_card/CommonCard";
-const Menu = () => {
-  const [activeButton, setActiveButton] = useState("PIZZA");
 
-  const handleButtonClick = (buttonName) => {
-    setActiveButton(buttonName);
+const Menu = () => {
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [activeButton, setActiveButton] = useState("PIZZA");
+  const [menuData, setMenuData] = useState(menuDataMap["PIZZA"]);
+  const [formData, setFormData] = useState({});
+
+  const cart = useSelector((state) => state.cart);
+  const dispatch = useDispatch();
+
+  const categoryMap = {
+    PIZZA: "Pizza",
+    CRISPY_CUPPY_RONI: "Crispy Cuppy Roni",
+    PAPA_BOWLS: "Papa Bowls",
+    PAPADIAS: "Papadias",
+    PAPA_BITES: "Papa Bites",
+    WINGS: "Wings",
+    SIDES: "Sides",
+    DESSERTS: "Desserts",
+    DRINKS: "Drinks",
+    EXTRAS: "Extras",
   };
 
-  const buttons = [
-    "PIZZA",
-    "CRISPY CUPPY RONI",
-    "PAPA BOWLS3",
-    "PAPADIAS",
-    "PAPA BITES",
-    "WINGS",
-    "SIDES",
-    "DESSERTS",
-    "DRINKS",
-    "EXTRAS",
-  ];
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await fetch(
+          "https://papa-johns.vercel.app/api/products"
+        );
+        const data = await response.json();
+        if (data.status === "success") {
+          setProducts(data.data);
+        } else {
+          setError("Failed to fetch products");
+        }
+      } catch (error) {
+        setError("Failed to fetch products");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProducts();
+  }, []);
+
+  const handleButtonClick = (button) => {
+    setActiveButton(button);
+    // setMenuData(menuDataMap[button]);
+  };
+
+  const addToCart = (item) => {
+    console.log('clicked data', item);
+    const isAdded = cart.some((e) => e.id === item.id);
+
+    if (!isAdded) {
+      dispatch(
+        cartAction.add({
+          // id: item._id,
+          name: item.title,
+          price: item.price,
+          amount: 1,
+        })
+      );
+    } else {
+      alert("Already Added");
+    }
+  };
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+
+  if (error) {
+    return <p>{error}</p>;
+  }
+
+  const buttons = Object.keys(categoryMap);
+
   const responsive = {
     superLargeDesktop: {
-      // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
       items: 5,
     },
@@ -49,7 +106,6 @@ const Menu = () => {
       items: 1,
     },
   };
-  const [Access, setAccess] = useState(true);
 
   return (
     <div className={styles.main_div}>
@@ -99,37 +155,30 @@ const Menu = () => {
           <div className={styles.slider_section}>
             <div>
               <Carousel responsive={responsive}>
-                {customPicks.map((data, index) => {
-                  return(
-                    <div key={index.toString()} className={styles.card_wrapper}>
+                {customPicks.map((data, index) => (
+                  <div key={index} className={styles.card_wrapper}>
                     <Card
-                      Access={Access}
                       cardHeight="130px"
                       img={data.img}
                       title={data.title}
                       description={data.description}
-                      handleClick={data.id}
                     />
                   </div>
-                  )
-                })}
+                ))}
               </Carousel>
             </div>
           </div>
         </div>
         {/* --------------------------------------PAPA PICKS------------------------------------------- */}
         <div>
-          <h1 className={styles.category_heading}>PAPA PICKS</h1>
           <div className={styles.PapaPicks}>
             {PapaPicks.map((data, index) => (
               <div key={index} className={styles.card_wrapper}>
                 <Card
-                  Access={Access}
-                  cardHeight="130px"
+                  cardHeight="200px"
                   img={data.img}
                   title={data.title}
                   description={data.description}
-                  handleClick={data.id}
                 />
               </div>
             ))}
@@ -158,12 +207,10 @@ const Menu = () => {
                 style={{ height: "532px" }}
               >
                 <Card
-                   Access={Access}
-                   cardHeight="130px"
-                   img={data.img}
-                   title={data.title}
-                   description={data.description}
-                   handleClick={data.id}
+                  cardHeight="200px"
+                  img={data.img}
+                  title={data.title}
+                  description={data.description}
                 />
               </div>
             ))}
@@ -177,12 +224,10 @@ const Menu = () => {
             {handcraftedMeatlessSpecialties.map((data, index) => (
               <div key={index} className={styles.card_wrapper}>
                 <Card
-                  Access={Access}
-                  cardHeight="130px"
+                  cardHeight="200px"
                   img={data.img}
                   title={data.title}
                   description={data.description}
-                  handleClick={data.id}
                 />
               </div>
             ))}
@@ -196,12 +241,10 @@ const Menu = () => {
             {GlutenFreeCrustWithAncientGrains.map((data, index) => (
               <div key={index} className={styles.card_wrapper}>
                 <Card
-                  Access={Access}
-                  cardHeight="130px"
+                  cardHeight="200px"
                   img={data.img}
                   title={data.title}
                   description={data.description}
-                  handleClick={data.id}
                 />
               </div>
             ))}
@@ -213,3 +256,21 @@ const Menu = () => {
 };
 
 export default Menu;
+// <div>
+//   <h1 className={styles.category_heading}>
+//     GLUTEN-FREE CRUST WITH ANCIENT GRAINS
+//   </h1>
+//   <div className={styles.PapaPicks}>
+//     {menuData.map((data, index) => (
+//       <div key={index} className={styles.card_wrapper}>
+//         <Card
+//           cardHeight="200px"
+//           img={data.img}
+//           title={data.title}
+//           description={data.description}
+//           handleButtonClick={() => addToCart(data)}
+//         />
+//       </div>
+//     ))}
+//   </div>
+// </div>
