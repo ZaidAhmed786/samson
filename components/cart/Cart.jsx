@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Styles from "./cart.module.css";
 import { FaCheck } from "react-icons/fa";
+import Link from "next/link";
 
 const Cart = () => {
   const buttons = [
@@ -144,7 +145,7 @@ const Cart = () => {
           ))}
         </div>
         <div className={Styles.paymentDetails}>
-          <button className={Styles.checkoutbtn}>checkout</button>
+          <Link href="/checkout" className={Styles.checkoutbtn}>checkout</Link>
           <div>
             <div className={Styles.rowDiv}>
               <p>
