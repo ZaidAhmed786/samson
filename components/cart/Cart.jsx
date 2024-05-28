@@ -4,7 +4,6 @@ import { FaCheck } from "react-icons/fa";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-
 const Cart = () => {
   const buttons = [
     "Make it Extra Large",
@@ -54,6 +53,52 @@ const Cart = () => {
 
     fetchProducts();
   }, []);
+  const postUpdatedCart = async () => {
+    try {
+      const cartItems = addToCart.map((item) => ({
+        productId: item.productId._id,
+        quantity: item.quantity,
+        price: item.productId.price,
+      }));
+      
+      const address = addToCart[0].address;
+      if (!address || !address._id) {
+        throw new Error("No valid address found in addToCart");
+      }
+      
+      const payload = {
+        addressId: "6652d37ba444ae798756dad1",
+        items: cartItems,
+        totalAmount: totalOrderValue,
+        deliveryFee: deliveryFee,
+        tax: estimatedTax  
+      };
+  
+      console.log("Payload:", payload);
+  
+      const response = await fetch("https://papa-johns.vercel.app/api/cart", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+  
+      const data = await response.json();
+      console.log("Response:", data);
+  
+      if (data.status !== "success") {
+        throw new Error("Failed to update cart");
+      } else {
+        alert("Cart updated successfully!");
+      }
+    } catch (error) {
+      console.error("Error updating cart:", error);
+      alert("Failed to update cart");
+    }
+  };
+  
+  
   const handleRemoveItem = async (id) => {
     setDeleting(true);
     try {
@@ -90,21 +135,25 @@ const Cart = () => {
   }
 
   const handleIncrement = (id) => {
-    setQuantities((prevQuantities) => ({
-      ...prevQuantities,
-      [id]: prevQuantities[id] + 1,
-    }));
+    setAddToCart((prevAddToCart) => {
+      return prevAddToCart.map((item) =>
+        item._id === id ? { ...item, quantity: item.quantity + 1 } : item
+      );
+    });
   };
 
   const handleDecrement = (id) => {
-    setQuantities((prevQuantities) => ({
-      ...prevQuantities,
-      [id]: prevQuantities[id] > 1 ? prevQuantities[id] - 1 : 0,
-    }));
+    setAddToCart((prevAddToCart) => {
+      return prevAddToCart.map((item) =>
+        item._id === id
+          ? { ...item, quantity: item.quantity > 1 ? item.quantity - 1 : 1 }
+          : item
+      );
+    });
   };
 
   const subtotal = addToCart.reduce((total, item) => {
-    return total + item.productId.price * quantities[item._id];
+    return total + item.productId.price * item.quantity;
   }, 0);
 
   const deliveryFee = 5.25;
@@ -138,7 +187,7 @@ const Cart = () => {
                     |<p>Edit</p>|
                     <p
                       onClick={() => {
-                        handleCardClick(cart._id)
+                        handleCardClick(cart._id);
                       }}
                     >
                       View Details
@@ -176,7 +225,7 @@ const Cart = () => {
                     -
                   </button>
                   <span className={Styles.valueDisplay}>
-                    {quantities[cart._id]}
+                    {cart.quantity}
                   </span>
                   <button
                     className={Styles.incrementButton}
@@ -196,8 +245,8 @@ const Cart = () => {
           {/* ----------------------------------------------cart-items---------------------------------------------------------- */}
         </div>
         <div className={Styles.paymentDetails}>
-          <Link href="/checkout" className={Styles.checkoutbtn}>
-            checkout
+          <Link href="/checkout"  >
+           <p className={Styles.checkoutbtn} onClick={()=> postUpdatedCart()}>checkout</p> 
           </Link>
           <div>
             <div className={Styles.rowDiv}>

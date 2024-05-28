@@ -40,7 +40,7 @@ const CardDeatils = ({ product }) => {
   const handleClick = () => {
     console.log("Card clicked");
   };
-
+  // const productTitles = product.map(item => item.productId.title);
   useEffect(() => {
     console.log(formData);
     console.log("access", Access);
@@ -67,7 +67,7 @@ const CardDeatils = ({ product }) => {
     };
 
     console.log("Sending request data to API:", requestData);
-
+    
     try {
       const response = await fetch(
         "https://papa-johns.vercel.app/api/cart-items",
