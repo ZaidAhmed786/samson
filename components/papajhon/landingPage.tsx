@@ -80,9 +80,6 @@ function App() {
       <div className={style.banner}>
         <img src="./papajhon/banner.png" alt="" />
       </div>
-      <div>
-        <h1>Pizza slider</h1>
-      </div>
       <div className={style.pizzaMenu}>
         <p>EXPLORE OUR MENU</p>
         <div className={style.grid_box}>
