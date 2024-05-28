@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import Styles from "./cart.module.css";
 import { FaCheck } from "react-icons/fa";
 import Link from "next/link";
+import { useRouter } from "next/router";
+
 
 const Cart = () => {
   const buttons = [
@@ -15,6 +17,7 @@ const Cart = () => {
   const [error, setError] = useState(null);
   const [activeButtons, setActiveButtons] = useState([]);
   const [quantities, setQuantities] = useState({});
+  const [deleting, setDeleting] = useState(false);
 
   const handleButtonClick = (buttonName) => {
     setActiveButtons((prev) =>
@@ -23,7 +26,7 @@ const Cart = () => {
         : [...prev, buttonName]
     );
   };
-
+  const router = useRouter();
   useEffect(() => {
     const fetchProducts = async () => {
       try {
@@ -51,6 +54,32 @@ const Cart = () => {
 
     fetchProducts();
   }, []);
+  const handleRemoveItem = async (id) => {
+    setDeleting(true);
+    try {
+      const response = await fetch(
+        `https://papa-johns.vercel.app/api/cart-items/${id}`,
+        {
+          method: "DELETE",
+        }
+      );
+      if (!response.ok) {
+        throw new Error("Failed to remove item");
+      }
+      // Remove the item from the state
+      setAddToCart((prevItems) => prevItems.filter((item) => item._id !== id));
+      // Update quantities state
+      setQuantities((prevQuantities) => {
+        const newQuantities = { ...prevQuantities };
+        delete newQuantities[id];
+        return newQuantities;
+      });
+    } catch (error) {
+      console.error("Error removing item:", error);
+    } finally {
+      setDeleting(false); // Set deleting to false when the delete request finishes
+    }
+  };
 
   if (loading) {
     return <p>Loading...</p>;
@@ -79,16 +108,20 @@ const Cart = () => {
   }, 0);
 
   const deliveryFee = 5.25;
-  const estimatedTax = 3.80;
+  const estimatedTax = 3.8;
   const totalOrderValue = subtotal + deliveryFee + estimatedTax;
+  const handleCardClick = (id) => {
+    router.push(`/product-detail/${id}`);
+  };
 
-  console.log('addtocart ashar>>>><<<<', addToCart);
+  console.log("addtocart ashar>>>><<<<", addToCart);
 
   return (
     <div className={Styles.mainDiv}>
       <div className={Styles.wrapper}>
         <div style={{ width: "60%" }}>
           <h1>YOUR ORDER</h1>
+          {/* ----------------------------------------------cart-items---------------------------------------------------------- */}
           {addToCart.map((cart) => (
             <div key={cart._id}>
               <div className={Styles.cartwrapper}>
@@ -96,7 +129,20 @@ const Cart = () => {
                 <div className={Styles.cartMiddleContent}>
                   <h1>{cart.productId.title}</h1>
                   <div className={Styles.linksWrapper}>
-                    <p>Remove </p>|<p> Edit </p>| <p>View Details</p>
+                    <p onClick={() => handleRemoveItem(cart._id)}>
+                      Remove{" "}
+                      {deleting && (
+                        <span className="loading-icon">Loading...</span>
+                      )}
+                    </p>
+                    |<p>Edit</p>|
+                    <p
+                      onClick={() => {
+                        handleCardClick(cart._id)
+                      }}
+                    >
+                      View Details
+                    </p>
                   </div>
                   <div className={Styles.extraThingsWrapper}>
                     {buttons.map((button) => (
@@ -104,7 +150,9 @@ const Cart = () => {
                         key={button}
                         onClick={() => handleButtonClick(button)}
                         className={`${Styles.buttonWrapper} ${
-                          activeButtons.includes(button) ? Styles.activeButton : ""
+                          activeButtons.includes(button)
+                            ? Styles.activeButton
+                            : ""
                         }`}
                       >
                         <div className={Styles.extraThings}>
@@ -127,7 +175,9 @@ const Cart = () => {
                   >
                     -
                   </button>
-                  <span className={Styles.valueDisplay}>{quantities[cart._id]}</span>
+                  <span className={Styles.valueDisplay}>
+                    {quantities[cart._id]}
+                  </span>
                   <button
                     className={Styles.incrementButton}
                     onClick={() => handleIncrement(cart._id)}
@@ -143,9 +193,12 @@ const Cart = () => {
               <hr />
             </div>
           ))}
+          {/* ----------------------------------------------cart-items---------------------------------------------------------- */}
         </div>
         <div className={Styles.paymentDetails}>
-          <Link href="/checkout" className={Styles.checkoutbtn}>checkout</Link>
+          <Link href="/checkout" className={Styles.checkoutbtn}>
+            checkout
+          </Link>
           <div>
             <div className={Styles.rowDiv}>
               <p>

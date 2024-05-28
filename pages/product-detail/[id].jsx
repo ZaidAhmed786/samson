@@ -30,10 +30,12 @@ export async function getStaticProps(context) {
   // Fetch the product data based on the 'id' from your API
   const res = await fetch(`https://papa-johns.vercel.app/api/products/${id}`);
   const product = await res.json();
+  const Cartres = await fetch(`https://papa-johns.vercel.app/api/cart-items/${id}`);
+  const cartProduct = await Cartres.json();
 console.log(product)
   return {
     props: {
-      product: product.data || null, // Pass the product data or null if not found
+      product: product.data || cartProduct.data, // Pass the product data or null if not found
     },
     revalidate: 10, // Optionally revalidate the data every 10 seconds
   };

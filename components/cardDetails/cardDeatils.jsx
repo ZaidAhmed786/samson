@@ -96,18 +96,19 @@ const CardDeatils = ({ product }) => {
   if (!product) {
     return <div>No product data</div>;
   }
+  console.log('walia>>>>>>', product)
 
   return (
     <div className={Styles.mainDiv}>
       <div className={Styles.horizentalDiv}>
         <div className={Styles.img_wrapper}>
-          <img src={product.img} alt="" width={"100%"} height={"100%"} />
+          <img src={product.img? product.img : product.productId.img} alt="" width={"100%"} height={"100%"} />
         </div>
         <div className={Styles.content_wrapper}>
           {/* <p>{product}</p> */}
-          <h1>{product.title}</h1>
+          <h1>{product.title ? product.title :  product.productId.title}</h1>
           <h2>$18.99 340 cal /slice, 8 slices</h2>
-          <p>{product.description}</p>
+          <p>{product.description? product.description : product.productId.title}</p>
           <div className={Styles.container}>
             <div className={Styles.first_row}>
               <div className={Styles.dropdown}>
