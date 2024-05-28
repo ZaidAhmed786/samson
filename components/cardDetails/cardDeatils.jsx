@@ -1,9 +1,98 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Styles from "./cardDetails.module.css";
 import { NutritionTableData } from "@/data";
 import Link from "next/link";
 
 const CardDeatils = ({ product }) => {
+  const [Access, setAccess] = useState(true);
+  const [formData, setFormData] = useState({
+    size: "Small",
+    crust: "Original Crust",
+    flavor: "",
+    quantity: 1,
+  });
+
+  const sizes = Array.from({ length: 50 }, (_, i) => i + 1);
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+
+    const updatedFormData = { ...formData, [name]: value };
+
+    // If changing the size from Large to another size, clear the flavor
+    if (name === "size" && value !== "Large") {
+      updatedFormData.flavor = "";
+    }
+
+    setFormData(updatedFormData);
+  };
+
+  const handleFlavorChange = (e) => {
+    if (formData.size !== "Large") {
+      e.preventDefault();
+      alert("Flavor is only available for large size.");
+    } else {
+      const updatedFormData = { ...formData, flavor: e.target.value };
+      setFormData(updatedFormData);
+    }
+  };
+
+  const handleClick = () => {
+    console.log("Card clicked");
+  };
+
+  useEffect(() => {
+    console.log(formData);
+    console.log("access", Access);
+  }, [formData]);
+  const postDataToApi = async (product) => {
+    const { _id, title, price } = product;
+    const requestData = {
+      address: "6652d37ba444ae798756dad1", 
+      productId: _id,
+      quantity: formData.quantity,
+      ingredients: [
+        {
+          size: formData.size || null,
+          crust: formData.crust || null,
+          crustFlavor: formData.flavor || null, 
+          sauce: null, 
+          type: null, 
+          bake: null, 
+          drinkSize: null, 
+          pieces: null, 
+        },
+      ],
+      extraIngredients: [], 
+    };
+
+    console.log("Sending request data to API:", requestData);
+
+    try {
+      const response = await fetch(
+        "https://papa-johns.vercel.app/api/cart-items",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(requestData),
+        }
+      );
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        console.error("API responded with an error:", errorData);
+        throw new Error("Failed to add item to the cart");
+      }
+
+      const responseData = await response.json();
+      console.log("Item added to the cart:", responseData);
+    } catch (error) {
+      console.error("Error adding item to the cart:", error);
+    }
+  };
+  console.log("formData>>", formData);
   if (!product) {
     return <div>No product data</div>;
   }
@@ -91,7 +180,13 @@ const CardDeatils = ({ product }) => {
             </div>
           </div>
           <div className={Styles.button_wrapper}>
-            <button onClick={props.handleButtonClick}>Order Now</button>
+            <button
+              onClick={() => {
+                postDataToApi(product);
+              }}
+            >
+              Order Now
+            </button>
             <Link href={"customization"}>
               {" "}
               <button>customize</button>

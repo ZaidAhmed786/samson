@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Card = (
   props,
-  { img, title, description, cardHeight, AccessData, onFormDataChange }
+  { cardHeight, AccessData, onFormDataChange }
 ) => {
   const [Access, setAccess] = useState({ AccessData });
   console.log(props?.handleClick);
@@ -53,7 +53,7 @@ const Card = (
       <div>
         <div className={Styles.image_div}>
           <img
-            src={img ? img : "./papajhon/Original-Crust-Cheese.webp"}
+            src={props.img ? props.img : "./papajhon/Original-Crust-Cheese.webp"}
             alt=""
             width={"100%"}
             height={cardHeight ? cardHeight : "130px"}
@@ -62,7 +62,7 @@ const Card = (
         <div>
           <div className={Styles.title_wrapper}>
             {" "}
-            <h1>{title ? title : "Original Crust"}</h1>{" "}
+            <h1>{props.title ? props.title : "Original Crust"}</h1>{" "}
             <p
               onClick={(e) => {
                 // e.stopPropagation();
@@ -78,8 +78,8 @@ const Card = (
               <p style={{ paddingLeft: "14px" }}>
                 $18.99 340 cal /slice, 8 slices
               </p>
-            ) : description ? (
-              description
+            ) : props.description ? (
+              props.description
             ) : (
               "Our signature dough. Fresh, never frozen. Made with 6 simple ingredients & hand-tossed"
             )}
