@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Styles from "./customization.module.css";
 import { CustomizePizza } from "@/data";
-const Customization = () => {
+const Customization = (product) => {
   const [selectedOptions, setSelectedOptions] = useState({});
   // ---------------------------- three buttons inside options-----------------------------
   const handleOptionChange = (heading, option) => {

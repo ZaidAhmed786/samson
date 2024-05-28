@@ -1,66 +1,101 @@
 import React from "react";
 import Styles from "./cardDetails.module.css";
 import { NutritionTableData } from "@/data";
+import Link from "next/link";
 
-const CardDeatils = () => {
-  // console.log(NutritionTableData);
+const CardDeatils = ({ product }) => {
+  if (!product) {
+    return <div>No product data</div>;
+  }
+
   return (
     <div className={Styles.mainDiv}>
       <div className={Styles.horizentalDiv}>
         <div className={Styles.img_wrapper}>
-          <img
-            src="./papajhon/Original-Crust-Cheese.webp"
-            alt=""
-            width={"100%"}
-            height={"100%"}
-          />
+          <img src={product.img} alt="" width={"100%"} height={"100%"} />
         </div>
         <div className={Styles.content_wrapper}>
-          <h1>THE WORKS PIZZA</h1>
+          {/* <p>{product}</p> */}
+          <h1>{product.title}</h1>
           <h2>$18.99 340 cal /slice, 8 slices</h2>
-          <p>
-            It’s everything you want on a pizza – and then some. A heaping
-            helping of pepperoni, julienne-cut Canadian bacon, spicy Italian
-            sausage, fresh-cut onions, crisp green peppers, mushrooms, ripe
-            black olives, and real cheese made from mozzarella. When you’re
-            hungry for a hearty pizza, the Works always works.
-          </p>
+          <p>{product.description}</p>
           <div className={Styles.container}>
             <div className={Styles.first_row}>
               <div className={Styles.dropdown}>
-                <select id="size" name="size">
-                  <option value="large">Large</option>
+                <select
+                  id="size"
+                  name="size"
+                  value={formData.size}
+                  onChange={handleInputChange}
+                >
+                  <option value="Small">Small</option>
+                  <option value="Medium">Medium</option>
+                  <option value="Large">Large</option>
+                  <option value="Extra Large">Extra Large</option>
                   {/* Add more size options here */}
                 </select>
               </div>
 
               <div className={Styles.incrementer}>
-                <select id="size" name="size">
-                  <option value="1">1</option>
-                  {/* Add more size options here */}
+                <select
+                  id="quantity"
+                  name="quantity"
+                  value={formData.quantity}
+                  onChange={handleInputChange}
+                >
+                  {sizes.map((size) => (
+                    <option key={size} value={size}>
+                      {size}
+                    </option>
+                  ))}
                 </select>
               </div>
             </div>
 
             <div className={Styles.dropdown}>
-              <select id="crust" name="crust">
+              <select
+                id="crust"
+                name="crust"
+                value={formData.crust}
+                onChange={handleInputChange}
+              >
                 <option value="original">Original Crust</option>
-                {/* Add more crust options here */}
+                <option value=" Garlic Epic Stuffed Crust">
+                  {" "}
+                  Garlic Epic Stuffed Crust{" "}
+                </option>
+                <option value="Epic Stuffed Crust"> Epic Stuffed Crust </option>
+                <option value="XL New York Style Crust">
+                  {" "}
+                  XL New York Style Crust{" "}
+                </option>
+                <option value="Thin Crust"> Thin Crust </option>
+                <option value="Gluten-Free Crust"> Gluten-Free Crust </option>
               </select>
             </div>
 
             <div className={Styles.dropdown}>
-              <select id="flavor" name="flavor">
-                <option value="" disabled selected>
-                  Add Crust Flavor
+              <select
+                id="flavor"
+                name="flavor"
+                value={formData.flavor}
+                onChange={handleFlavorChange}
+                disabled={formData.size !== "Large"}
+              >
+                <option value="Add Crust Flavor">Add Crust Flavor</option>
+                <option value="Garlic Parmesan Cheese">
+                  Garlic Parmesan Cheese
                 </option>
                 {/* Add more crust flavor options here */}
               </select>
             </div>
           </div>
           <div className={Styles.button_wrapper}>
-            <button>Order Now</button>
-            <button>customize</button>
+            <button onClick={props.handleButtonClick}>Order Now</button>
+            <Link href={"customization"}>
+              {" "}
+              <button>customize</button>
+            </Link>
           </div>
         </div>
       </div>

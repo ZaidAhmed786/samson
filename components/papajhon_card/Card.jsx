@@ -3,9 +3,12 @@ import Styles from "./card.module.css";
 import { useState } from "react";
 import Link from "next/link";
 
-const Card = (props, {img, title, description, cardHeight, AccessData, handleClick, onFormDataChange}) => {
-  const [Access, setAccess] = useState({AccessData});
-
+const Card = (
+  props,
+  { img, title, description, cardHeight, AccessData, onFormDataChange }
+) => {
+  const [Access, setAccess] = useState({ AccessData });
+  console.log(props?.handleClick);
   const [formData, setFormData] = useState({
     size: "Small",
     crust: "Original Crust",
@@ -38,11 +41,11 @@ const Card = (props, {img, title, description, cardHeight, AccessData, handleCli
       props.onFormDataChange(updatedFormData);
     }
   };
-  
+
   useEffect(() => {
     // This will log formData whenever it changes
     console.log(formData);
-    console.log('access', Access)
+    console.log("access", Access);
   }, [formData]);
 
   return (
@@ -50,19 +53,25 @@ const Card = (props, {img, title, description, cardHeight, AccessData, handleCli
       <div>
         <div className={Styles.image_div}>
           <img
-            src={
-              img ? img : "./papajhon/Original-Crust-Cheese.webp"
-            }
+            src={img ? img : "./papajhon/Original-Crust-Cheese.webp"}
             alt=""
             width={"100%"}
-            height={cardHeight ? cardHeight : '130px'}
+            height={cardHeight ? cardHeight : "130px"}
           />
         </div>
         <div>
           <div className={Styles.title_wrapper}>
             {" "}
             <h1>{title ? title : "Original Crust"}</h1>{" "}
-            <Link href={`/product-detail/${handleClick}`}>details</Link>
+            <p
+              onClick={(e) => {
+                // e.stopPropagation();
+                props.handleClick();
+              }}
+            >
+              details
+            </p>
+            {/* <Link href={`/product-detail/${handleClick}`}></Link> */}
           </div>
           <p>
             {Access ? (
@@ -80,10 +89,10 @@ const Card = (props, {img, title, description, cardHeight, AccessData, handleCli
               <div className={Styles.first_row}>
                 <div className={Styles.dropdown}>
                   <select
-                     id="size"
-                     name="size"
-                     value={formData.size}
-                     onChange={handleInputChange}
+                    id="size"
+                    name="size"
+                    value={formData.size}
+                    onChange={handleInputChange}
                   >
                     <option value="Small">Small</option>
                     <option value="Medium">Medium</option>
@@ -92,7 +101,7 @@ const Card = (props, {img, title, description, cardHeight, AccessData, handleCli
                     {/* Add more size options here */}
                   </select>
                 </div>
- 
+
                 <div className={Styles.incrementer}>
                   <select
                     id="quantity"
@@ -108,7 +117,7 @@ const Card = (props, {img, title, description, cardHeight, AccessData, handleCli
                   </select>
                 </div>
               </div>
- 
+
               <div className={Styles.dropdown}>
                 <select
                   id="crust"
@@ -117,26 +126,33 @@ const Card = (props, {img, title, description, cardHeight, AccessData, handleCli
                   onChange={handleInputChange}
                 >
                   <option value="original">Original Crust</option>
-                  <option value=" Garlic Epic Stuffed Crust"> Garlic Epic Stuffed Crust </option>
-                  <option value="Epic Stuffed Crust"> Epic Stuffed Crust </option>
-                  <option value="XL New York Style Crust"> XL New York Style Crust </option>
+                  <option value=" Garlic Epic Stuffed Crust">
+                    {" "}
+                    Garlic Epic Stuffed Crust{" "}
+                  </option>
+                  <option value="Epic Stuffed Crust">
+                    {" "}
+                    Epic Stuffed Crust{" "}
+                  </option>
+                  <option value="XL New York Style Crust">
+                    {" "}
+                    XL New York Style Crust{" "}
+                  </option>
                   <option value="Thin Crust"> Thin Crust </option>
                   <option value="Gluten-Free Crust"> Gluten-Free Crust </option>
                 </select>
               </div>
- 
+
               <div className={Styles.dropdown}>
                 <select
                   id="flavor"
                   name="flavor"
                   value={formData.flavor}
                   onChange={handleFlavorChange}
-                   disabled={formData.size !== "Large"}
+                  disabled={formData.size !== "Large"}
                 >
-                  <option value="Add Crust Flavor" >
-                    Add Crust Flavor
-                  </option>
-                  <option value="Garlic Parmesan Cheese"  >
+                  <option value="Add Crust Flavor">Add Crust Flavor</option>
+                  <option value="Garlic Parmesan Cheese">
                     Garlic Parmesan Cheese
                   </option>
                   {/* Add more crust flavor options here */}
@@ -147,9 +163,11 @@ const Card = (props, {img, title, description, cardHeight, AccessData, handleCli
         </div>
       </div>
       <div className={Styles.button_wrapper}>
-        <button onClick={props.handleButtonClick} >Order Now</button>
-       <Link href={'customization'}> <button>customize</button></Link>
-       
+        <button onClick={props.handleButtonClick}>Order Now</button>
+        <Link href={"customization"}>
+          {" "}
+          <button>customize</button>
+        </Link>
       </div>
     </div>
   );

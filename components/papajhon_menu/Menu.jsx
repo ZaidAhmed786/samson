@@ -8,6 +8,7 @@ import { cartAction } from "../../redux/cart";
 import TemCart from "../../pages/temCart";
 import { menuDataMap } from "@/data";
 import CommonCard from "../common_card/CommonCard";
+import { useRouter } from 'next/router';
 
 const Menu = () => {
   const [products, setProducts] = useState([]);
@@ -17,6 +18,7 @@ const Menu = () => {
   const [menuData, setMenuData] = useState(menuDataMap["PIZZA"]);
   const [formData, setFormData] = useState({});
   const [Access, setAccess] = useState(true);
+  const router = useRouter();
 
   const categoryMap = {
     PIZZA: "Pizza",
@@ -149,6 +151,9 @@ const Menu = () => {
     setFormData(updatedFormData);
   };
   console.log('formData>>', formData);
+  const handleCardClick = (id) => {
+    router.push(`/product-detail/${id}`);
+  };
   return (
     // <div className={styles.main_div}>
     //   <div className={styles.header}>
@@ -311,10 +316,11 @@ const Menu = () => {
                   img={product.img}
                   title={product.title}
                   description={product.description}
+                  handleClick={() => handleCardClick(product._id)}
                   handleButtonClick={() => postDataToApi(product)}
                   onFormDataChange={handleFormDataChange}
                 />
-                {/* <p>{product.subCategoryId.categoryId.title}</p> */}
+                <p>{product.subCategoryId.categoryId.title}</p>
               </div>
             ))
           ) : (

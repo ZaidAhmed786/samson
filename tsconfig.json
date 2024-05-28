@@ -27,7 +27,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "pages/menu.jsx"  ],
+, "pages/menu.jsx", "pages/products/[id].jsx"  ],
   "exclude": [
     "node_modules"
   ]
