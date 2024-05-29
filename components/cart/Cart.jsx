@@ -56,7 +56,7 @@ const Cart = () => {
   const postUpdatedCart = async () => {
     try {
       const cartItems = addToCart.map((item) => ({
-        productId: item.productId._id,
+        productId: item._id,
         quantity: item.quantity,
         price: item.productId.price,
       }));

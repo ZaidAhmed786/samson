@@ -5,16 +5,19 @@ import Link from "next/link";
 import CheckoutCart from "../../components/checkout-card/checkoutCart";
 
 export default function Checkout() {
-  const items = [
-    {
-      title: "Carryout Time",
-      refrence: "As soon as possible",
-    },
-    {
-      title: "Carryout Address",
-      refrence: "125 18th Street, Jersey City, NJ 07310",
-    },
-  ];
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phoneNumber: "",
+    cardNumber: "",
+    nameOnCard: "",
+    expiration: "",
+    cvv: "",
+    zipCode: "",
+  });
+  const [selectedValue, setSelectedValue] = useState(null);
+  const [cartItems, setCartItems] = useState([]);
 
   const addTip = [
     {
@@ -30,6 +33,75 @@ export default function Checkout() {
       price: "4.05",
     },
   ];
+
+  const handleClick = (index) => {
+    setSelectedValue(index);
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  useEffect(() => {
+    console.log("userdata>>>", formData);
+  }, [formData]);
+  useEffect(() => {
+    const fetchCartItems = async () => {
+      try {
+        const response = await fetch("https://papa-johns.vercel.app/api/cart");
+        const data = await response.json();
+        if (data.status === "success") {
+          setCartItems(data);
+        }
+      } catch (error) {
+        console.error("Error fetching cart items:", error);
+      }
+    };
+
+    fetchCartItems();
+  }, []);
+
+  const handleSubmit = async (e) => {
+    const selectedTip = addTip[selectedValue] ? parseInt(addTip[selectedValue].title) : 15;
+
+    const orderData = {
+      user: {
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        email: formData.email,
+        phone: formData.phoneNumber,
+      },
+      card: {
+        cardNumber: formData.cardNumber,
+        expiryDate: formData.expiration,
+        cvv: formData.cvv,
+        zipCode: formData.zipCode,
+      },
+      cartItems: cartItems.data[0]._id, // Replace with your cart items object ID
+      tipPercentage: selectedTip,
+    };
+
+    try {
+      const response = await fetch("https://papa-johns.vercel.app/api/orders", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(orderData),
+      });
+      const data = await response.json();
+      if (data.status !== "success") {
+        throw new Error("Failed to submit order" , data);
+      } else {
+        alert("Order submitted successfully!");
+      }
+    } catch (error) {
+      console.error("Error submitting order:", error);
+      alert("Failed to submit order");
+    }
+  };
+  console.log('ide only >>>>', cartItems)
 
   const [isHide, setIsHide] = useState(false);
   return (
@@ -48,7 +120,7 @@ export default function Checkout() {
               <SecondaryHeading title="CARRYOUT INFORMATION" size="28.8px" />
             </div>
 
-            <CheckoutCart items={items} />
+            {/* <CheckoutCart items={items} /> */}
 
             {/* tip */}
             <div>
@@ -56,21 +128,133 @@ export default function Checkout() {
               <div className={styles.tipRow}>
                 {addTip.map((item, i) => {
                   return (
-                    <div key={i.toString()} className={styles.tipCol}>
+                    <div
+                      key={i.toString()}
+                      className={`${styles.tipCol} ${
+                        selectedValue === i ? styles.active : ""
+                      }`}
+                      onClick={() => handleClick(i)}
+                    >
                       <h6>{item.title}</h6>
                       <p>${item.price}</p>
                     </div>
                   );
                 })}
 
-                <div className={styles.amountForm}>
+                {/* <div className={styles.amountForm}>
                   <form>
                     <input type="text" placeholder="Enter a custom amount" />
                     <button>APPLY</button>
                   </form>
-                </div>
+                </div> */}
               </div>
             </div>
+            <form className={styles.formContainer} >
+              <div>
+                <label htmlFor="firstName">First Name *</label>
+                <input
+                  type="text"
+                  id="firstName"
+                  name="firstName"
+                  value={formData.firstName}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div>
+                <label htmlFor="lastName">Last Name *</label>
+                <input
+                  type="text"
+                  id="lastName"
+                  name="lastName"
+                  value={formData.lastName}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div>
+                <label htmlFor="email">Email *</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div>
+                <label htmlFor="phoneNumber">Phone Number *</label>
+                <input
+                  type="text"
+                  id="phoneNumber"
+                  name="phoneNumber"
+                  value={formData.phoneNumber}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div style={{ width: "550px", margin: "30px 0" }}>
+                {" "}
+                <SecondaryHeading title="PAYMENT METHOD" size="30px" />
+              </div>
+
+              <div>
+                <label htmlFor="cardNumber">Card Number *</label>
+                <input
+                  type="text"
+                  id="cardNumber"
+                  name="cardNumber"
+                  value={formData.cardNumber}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div>
+                <label htmlFor="nameOnCard">Name On Card *</label>
+                <input
+                  type="text"
+                  id="nameOnCard"
+                  name="nameOnCard"
+                  value={formData.nameOnCard}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div>
+                <label htmlFor="expiration">MM/YY *</label>
+                <input
+                  type="text"
+                  id="expiration"
+                  name="expiration"
+                  value={formData.expiration}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div>
+                <label htmlFor="cvv">CVV *</label>
+                <input
+                  type="text"
+                  id="cvv"
+                  name="cvv"
+                  value={formData.cvv}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div>
+                <label htmlFor="zipCode">Zip Code *</label>
+                <input
+                  type="text"
+                  id="zipCode"
+                  name="zipCode"
+                  value={formData.zipCode}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+            </form>
           </div>
 
           <div className={styles.checkout_col2}>
@@ -128,13 +312,6 @@ export default function Checkout() {
               </div>
             </div>
 
-            <div className={styles.amountForm} style={{marginTop:"38px"}}>
-              <form>
-                <input type="text" placeholder="Enter a custom amount" style={{width:'81%'}} />
-                <button>APPLY</button>
-              </form>
-            </div>
-
             <div className={styles.agrement}>
               <input type="checkbox" name="*" id="*" value="payment" />
               <label htmlFor="*">
@@ -142,7 +319,7 @@ export default function Checkout() {
                 in the <Link href="#">Privacy Policy.</Link>
               </label>
             </div>
-            <button className={styles.review_order__btn}>REVIEW ORDER</button>
+            <button className={styles.review_order__btn} onClick={()=> handleSubmit()}>REVIEW ORDER</button>
           </div>
         </div>
       </div>
