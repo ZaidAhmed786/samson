@@ -40,7 +40,7 @@ const Menu = () => {
     const fetchProducts = async () => {
       try {
         const response = await fetch(
-          "https://papa-johns.vercel.app/api/products"
+          "https://papa-johns.vercel.app/api/products?limit=100"
         );
         const data = await response.json();
         if (data.status === "success") {
@@ -85,7 +85,7 @@ const Menu = () => {
     const requestData = {
       address: "6652d37ba444ae798756dad1",
       productId: _id,
-      quantity: formData.quantity,
+      quantity: formData.quantity || 1,
       ingredients: [
         {
           size: formData.size || null,
@@ -161,22 +161,23 @@ const Menu = () => {
       items: 1,
     },
   };
-  console.log("products>>", products);
+  // console.log("products>>", products);
   const filteredProducts = products.filter(
     (product) =>
-      product.subCategoryId.categoryId.title === categoryMap[activeButton]
+      product.subCategoryId.categoryId?.title === categoryMap[activeButton]
   );
-  console.log("active button", filteredProducts);
+  products.filter((product) => console.log('pizza data check >>>>>>>>>>', product.subCategoryId.title['PapaPicks']) )
+  // console.log("active button", filteredProducts);
 
   const handleFormDataChange = (updatedFormData) => {
     setFormData(updatedFormData);
   };
-  console.log("formData>>", formData);
   const handleCardClick = (id) => {
     router.push(`/product-detail/${id}`);
   };
+  // console.log("products>>", products);
   return (
-    <div>
+    <div className={styles.mainDiv}>
       <div className={styles.header}>
         <img src="./papajhon/papajhonlogo.svg" alt="papajhonlogo" />
         <Link href={"addtocart"} style={{textDecoration: 'none'}}>

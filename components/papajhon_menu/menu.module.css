@@ -1,5 +1,9 @@
-.menu_wrapper {
+.mainDiv{
   width: 85%;
+  margin: auto;
+}
+.menu_wrapper {
+  width: 100%;
   margin: auto;
   /* display: flex;
     flex-direction: column;
@@ -8,7 +12,7 @@
 }
 .pizza_menu {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   column-gap: 10px;
   align-items: center;
   font-family: PapaSans-Medium Condensed, HelveticaNeue-Condensed Bold,

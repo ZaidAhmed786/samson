@@ -14,17 +14,28 @@ const Cart = () => {
   const [addToCart, setAddToCart] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [activeButtons, setActiveButtons] = useState([]);
+  const [activeButtons, setActiveButtons] = useState({});
   const [quantities, setQuantities] = useState({});
   const [deleting, setDeleting] = useState(false);
 
-  const handleButtonClick = (buttonName) => {
-    setActiveButtons((prev) =>
-      prev.includes(buttonName)
-        ? prev.filter((name) => name !== buttonName)
-        : [...prev, buttonName]
-    );
+
+  const handleButtonClick = (cartId, buttonName) => {
+    setActiveButtons((prev) => {
+      const newActiveButtons = { ...prev };
+      if (!newActiveButtons[cartId]) {
+        newActiveButtons[cartId] = [];
+      }
+      if (newActiveButtons[cartId].includes(buttonName)) {
+        newActiveButtons[cartId] = newActiveButtons[cartId].filter(
+          (name) => name !== buttonName
+        );
+      } else {
+        newActiveButtons[cartId].push(buttonName);
+      }
+      return newActiveButtons;
+    });
   };
+
   const router = useRouter();
   useEffect(() => {
     const fetchProducts = async () => {
@@ -60,22 +71,22 @@ const Cart = () => {
         quantity: item.quantity,
         price: item.productId.price,
       }));
-      
+
       const address = addToCart[0].address;
       if (!address || !address._id) {
         throw new Error("No valid address found in addToCart");
       }
-      
+
       const payload = {
         addressId: "6652d37ba444ae798756dad1",
         items: cartItems,
         totalAmount: totalOrderValue,
         deliveryFee: deliveryFee,
-        tax: estimatedTax  
+        tax: estimatedTax,
       };
-  
-      console.log("Payload:", payload);
-  
+
+      console.log("Payload>>>>>", payload);
+
       const response = await fetch("https://papa-johns.vercel.app/api/cart", {
         method: "POST",
         headers: {
@@ -83,10 +94,10 @@ const Cart = () => {
         },
         body: JSON.stringify(payload),
       });
-  
+
       const data = await response.json();
       console.log("Response:", data);
-  
+
       if (data.status !== "success") {
         throw new Error("Failed to update cart");
       } else {
@@ -98,6 +109,9 @@ const Cart = () => {
     }
   };
   
+  
+  
+
   
   const handleRemoveItem = async (id) => {
     setDeleting(true);
@@ -171,82 +185,77 @@ const Cart = () => {
         <div style={{ width: "60%" }}>
           <h1>YOUR ORDER</h1>
           {/* ----------------------------------------------cart-items---------------------------------------------------------- */}
-          {addToCart.map((cart) => (
-            <div key={cart._id}>
-              <div className={Styles.cartwrapper}>
-                <img src={cart.productId.img} alt="" />
-                <div className={Styles.cartMiddleContent}>
-                  <h1>{cart.productId.title}</h1>
-                  <div className={Styles.linksWrapper}>
-                    <p onClick={() => handleRemoveItem(cart._id)}>
-                      Remove{" "}
-                      {deleting && (
-                        <span className="loading-icon">Loading...</span>
-                      )}
-                    </p>
-                    |<p>Edit</p>|
-                    <p
-                      onClick={() => {
-                        handleCardClick(cart._id);
-                      }}
-                    >
-                      View Details
-                    </p>
-                  </div>
-                  <div className={Styles.extraThingsWrapper}>
-                    {buttons.map((button) => (
-                      <div
-                        key={button}
-                        onClick={() => handleButtonClick(button)}
-                        className={`${Styles.buttonWrapper} ${
-                          activeButtons.includes(button)
-                            ? Styles.activeButton
-                            : ""
-                        }`}
-                      >
-                        <div className={Styles.extraThings}>
-                          {activeButtons.includes(button) ? (
-                            <FaCheck className={Styles.checkIcon} />
-                          ) : (
-                            <p className={Styles.plusIcon}>+</p>
-                          )}
-                          <p>{button}</p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                <div className={Styles.counterContainer}>
-                  <button
-                    className={Styles.decrementButton}
-                    onClick={() => handleDecrement(cart._id)}
-                    disabled={quantities[cart._id] === 0}
-                  >
-                    -
-                  </button>
-                  <span className={Styles.valueDisplay}>
-                    {cart.quantity}
-                  </span>
-                  <button
-                    className={Styles.incrementButton}
-                    onClick={() => handleIncrement(cart._id)}
-                    disabled={quantities[cart._id] === 50}
-                  >
-                    +
-                  </button>
-                </div>
-                <p style={{ fontSize: "18px", fontWeight: "900" }}>
-                  ${cart.productId.price.toFixed(2)}
+          {addToCart.map((cartItem) => (
+        <div key={cartItem._id}>
+          <div className={Styles.cartwrapper}>
+            <img src={cartItem.productId.img} alt="" />
+            <div className={Styles.cartMiddleContent}>
+              <h1>{cartItem.productId.title}</h1>
+              <div className={Styles.linksWrapper}>
+                <p onClick={() => handleRemoveItem(cartItem._id)}>
+                  Remove{" "}
+                  {deleting && (
+                    <span className="loading-icon">Loading...</span>
+                  )}
                 </p>
+                |<p>Edit</p>|
+                <p onClick={() => handleCardClick(cartItem._id)}>View Details</p>
               </div>
-              <hr />
+              <div className={Styles.extraThingsWrapper}>
+                {buttons.map((button) => (
+                  <div
+                    key={button}
+                    onClick={() => handleButtonClick(cartItem._id, button)}
+                    className={`${Styles.buttonWrapper} ${
+                      activeButtons[cartItem._id]?.includes(button)
+                        ? Styles.activeButton
+                        : ""
+                    }`}
+                  >
+                    <div className={Styles.extraThings}>
+                      {activeButtons[cartItem._id]?.includes(button) ? (
+                        <FaCheck className={Styles.checkIcon} />
+                      ) : (
+                        <p className={Styles.plusIcon}>+</p>
+                      )}
+                      <p>{button}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
-          ))}
+            <div className={Styles.counterContainer}>
+              <button
+                className={Styles.decrementButton}
+                onClick={() => handleDecrement(cartItem._id)}
+                disabled={quantities[cartItem._id] === 0}
+              >
+                -
+              </button>
+              <span className={Styles.valueDisplay}>{cartItem.quantity}</span>
+              <button
+                className={Styles.incrementButton}
+                onClick={() => handleIncrement(cartItem._id)}
+                disabled={quantities[cartItem._id] === 50}
+              >
+                +
+              </button>
+            </div>
+            <p style={{ fontSize: "18px", fontWeight: "900" }}>
+              ${cartItem.productId.price.toFixed(2)}
+            </p>
+          </div>
+          <hr />
+        </div>
+      ))}
+
           {/* ----------------------------------------------cart-items---------------------------------------------------------- */}
         </div>
         <div className={Styles.paymentDetails}>
-          <Link href="/checkout"  >
-           <p className={Styles.checkoutbtn} onClick={()=> postUpdatedCart()}>checkout</p> 
+          <Link href="/checkout">
+            <p className={Styles.checkoutbtn} onClick={() => postUpdatedCart()}>
+              checkout
+            </p>
           </Link>
           <div>
             <div className={Styles.rowDiv}>

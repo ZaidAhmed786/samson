@@ -8,7 +8,7 @@ const Card = (
   { cardHeight, AccessData, onFormDataChange }
 ) => {
   const [Access, setAccess] = useState({ AccessData });
-  console.log(props?.handleClick);
+  // console.log(props?.handleClick);
   const [formData, setFormData] = useState({
     size: "Small",
     crust: "Original Crust",
@@ -42,11 +42,11 @@ const Card = (
     }
   };
 
-  useEffect(() => {
-    // This will log formData whenever it changes
-    console.log(formData);
-    console.log("access", Access);
-  }, [formData]);
+  // useEffect(() => {
+  //   // This will log formData whenever it changes
+  //   console.log(formData);
+  //   console.log("access", Access);
+  // }, [formData]);
 
   return (
     <div className={Styles.main_div}>

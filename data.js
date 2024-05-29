@@ -170,32 +170,45 @@ export const Pizza = {
   ],
 };
 
-export const CustomizePizza = [
-  {
-    heading: 'SIZE',
-    options: ['Small', 'Medium', 'Large', 'Extra Large'],
-  },
-  {
-    heading: 'CRUST',
-    options: ['Original Crust', 'Garlic Epic Stuffed Crust', 'Epic Stuffed Crust', 'XL New York Style Crust', 'Thin Crust', 'Gluten-Free Crust'],
-  },
-  {
-    heading: 'CRUST FLAVOR',
-    options: ['None', 'Garlic Parmesan Cheese +25 cal'],
-  },
-  {
-    heading: 'SAUCE',
-    options: ['None', 'Alfredo Sauce', 'Buffalo', 'BBQ', 'Original Pizza', 'Ranch'],
-  },
-  {
-    heading: 'CUT',
-    options: ['Normal Cut', 'Square Cut', 'Clean Cut', 'No Cut'],
-  },
-  {
-    heading: 'BAKE',
-    options: ['Normal Bake', 'Well Done'],
-  }
-];
+// data.js
+// data.js
+export const CustomizePizza = {
+  Base: [
+    { heading: "SIZE", options: ["Small", "Medium", "Large", "Extra Large"] },
+    { heading: "CRUST", options: ["Original Crust", "Garlic Epic Stuffed Crust", "Epic Stuffed Crust", "XL New York Style Crust", "Thin Crust"] },
+    { heading: "CRUST FLAVOR", options: ["None", "Garlic Parmesan Cheese +25 cal"] },
+    { heading: "SAUCE", options: ["None", "Alfredo Sauce"] },
+    { heading: "SAUCE PORTION", options: ["Light", "Normal", "Extra"] },
+    { heading: "CUT", options: ["Normal Cut", "Square Cut", "Clean Cut", "No Cut"] },
+    { heading: "BAKE", options: ["Normal Bake", "Well Done"] },
+  ],
+  Cheese: [
+    { heading: "HOW MUCH CHEESE?", options: ["Normal Cheese", "Light Cheese", "No Cheese"] },
+    { heading: "ADDITIONAL CHEESE TOPPINGS", options: ["Extra Cheese +15 cal", "3 Cheese Blend +25 cal", "Parmesan Romano +20 cal"] }
+  ],
+  Meat: [
+    { heading: "MEATS", options: [
+      "Pepperoni +50 cal", "Crispy Cuppy Pepperoni +35 cal", "Sausage +60 cal", "Canadian Bacon +20 cal",
+      "Bacon +50 cal", "Grilled Chicken +20 cal", "Spicy Italian Sausage +50 cal", "Beef +40 cal",
+      "Meatball +70 cal", "Salami +20 cal", "Philly Steak +25 cal", "Anchovies +10 cal"
+    ] }
+  ],
+  Veggies: [
+    { heading: "VEGGIES", options: [
+      "Roma Tomatoes +5 cal",
+      "Fresh Spinach +12 cal",
+      "Mushrooms +5 cal",
+      "Onions +5 cal",
+      "Pineapple +10 cal",
+      "Black Olives +15 cal",
+      "Jalapeño Peppers +16 cal",
+      "Banana Peppers +12 cal",
+      "Green Peppers +14 cal"
+    ] }
+  ]
+};
+
+
 export const menuDataMap = {
   PIZZA: Pizza,
   CRISPY_CUPPY_RONI: Pizza['handcraftedSpecialties'],
