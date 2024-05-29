@@ -198,13 +198,11 @@ const TableComponent: React.FC<Props> = ({ orders }) => {
                 </button>
                 <button
                   onClick={handleNextProduct}
-                  disabled={
-                    selectedProductIndex ===
-                      selectedOrder.cartItems.items.length - 1 || 0
-                  }
+                  disabled={selectedProductIndex === selectedOrder.cartItems.items.length - 1}
                 >
                   Next
                 </button>
+
               </div>
             )}
             <p>
