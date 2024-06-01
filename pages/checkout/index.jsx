@@ -55,6 +55,7 @@ export default function Checkout() {
         const data = await response.json();
         if (data.status === "success") {
           setCartItems(data.data);
+          console.log('cart item fetched data >>', cartItems)
         }
       } catch (error) {
         console.error("Error fetching cart items:", error);
@@ -67,6 +68,7 @@ export default function Checkout() {
   const handleSubmit = async (e) => {
     const selectedTip = addTip[selectedValue] ? parseInt(addTip[selectedValue].title) : 15;
     const cartId = cartItems[0]?._id
+    console.log('cart_id', cartId)
     console.log(cartId)
     const orderData = {
       user: {
@@ -93,12 +95,13 @@ export default function Checkout() {
         },
         body: JSON.stringify(orderData),
       });
+      
       const data = await response.json();
       if (data.status !== "success") {
         throw new Error("Failed to submit order" , data);
       } else {
         alert("Order submitted successfully!");
-        localStorage.clear();
+        console.log('posted data >>> ', orderData)
       }
     } catch (error) {
       console.error("Error submitting order:", error);

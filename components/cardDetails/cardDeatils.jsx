@@ -47,8 +47,9 @@ const CardDeatils = ({ product }) => {
   }, [formData]);
   const postDataToApi = async (product) => {
     const { _id, title, price } = product;
+    let address_id = localStorage.getItem("address");
     const requestData = {
-      address: "6652d37ba444ae798756dad1", 
+      address: address_id, 
       productId: _id,
       quantity: formData.quantity,
       ingredients: [

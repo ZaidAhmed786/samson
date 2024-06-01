@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { useRouter } from 'next/router';
+import React, { useState } from "react";
+import { useRouter } from "next/router";
 
 const AddressForm = () => {
   const [formData, setFormData] = useState({
@@ -47,9 +47,9 @@ const AddressForm = () => {
 
       const result = await response.json();
 
-      console.log("API Response:", result);
-      let address = localStorage.setItem('address', result.data._id);
-      console.log("API Response:", address);
+      console.log("address api data:", result.data._id);
+      let address = localStorage.setItem("address", result.data._id);
+      console.log("address page address id >>:", address);
       if (response.ok && result.status === "success") {
         setResponseMessage("Form submitted successfully!");
         router.push('/menu');
@@ -62,16 +62,23 @@ const AddressForm = () => {
       console.error("Error submitting form:", error);
       setResponseMessage("An error occurred. Please try again.");
     } finally {
-        setLoading(false);
-      }
+      setLoading(false);
+    }
   };
-  
+
   return (
     <form onSubmit={handleSubmit} style={styles.form}>
       <h2 style={styles.heading}>Enter Delivery Address</h2>
-      <div style={{display: 'flex', gap: '10px', alignItems: 'end',width: '100%' }}>
+      <div
+        style={{
+          display: "flex",
+          gap: "10px",
+          alignItems: "end",
+          width: "100%",
+        }}
+      >
         <div style={styles.formGroup}>
-          <label style={{width: '100%'}}>
+          <label style={{ width: "100%" }}>
             Country
             <select
               name="country"
@@ -85,7 +92,7 @@ const AddressForm = () => {
           </label>
         </div>
         <div style={styles.formGroup}>
-          <label style={{width: '100%'}}>
+          <label style={{ width: "100%" }}>
             Address Type
             <select
               name="addressType"
@@ -100,7 +107,7 @@ const AddressForm = () => {
         </div>
       </div>
       <div style={styles.formGroup}>
-        <label style={{width: '100%'}}>
+        <label style={{ width: "100%" }}>
           Street Address *
           <input
             type="text"
@@ -113,27 +120,34 @@ const AddressForm = () => {
           />
         </label>
       </div>
-     <div  style={{display: 'flex', alignItems:'end', gap: '10px', marginBottom: '15px',width: '100%'}}>
-     <div style={{width: '100%', }}>
-        <label style={{width: '100%'}}>
-          Apt / Ste / Floor
-          <select
-            name="aptSteFloor"
-            value={formData.aptSteFloor}
-            onChange={handleChange}
-            style={styles.select}
-            required
-          >
-            <option value="">Select...</option>
-            <option value="Apartment">Apartment</option>
-            <option value="Suite">Suite</option>
-            <option value="Floor">Floor</option>
-            {/* Add other valid enum values as needed */}
-          </select>
-        </label>
-      </div>
-      <div style={{width: '100%', }}>
-      
+      <div
+        style={{
+          display: "flex",
+          alignItems: "end",
+          gap: "10px",
+          marginBottom: "15px",
+          width: "100%",
+        }}
+      >
+        <div style={{ width: "100%" }}>
+          <label style={{ width: "100%" }}>
+            Apt / Ste / Floor
+            <select
+              name="aptSteFloor"
+              value={formData.aptSteFloor}
+              onChange={handleChange}
+              style={styles.select}
+              required
+            >
+              <option value="">Select...</option>
+              <option value="Apartment">Apartment</option>
+              <option value="Suite">Suite</option>
+              <option value="Floor">Floor</option>
+              {/* Add other valid enum values as needed */}
+            </select>
+          </label>
+        </div>
+        <div style={{ width: "100%" }}>
           <input
             type="text"
             name="aptSteFloorNumber"
@@ -143,11 +157,10 @@ const AddressForm = () => {
             style={styles.input}
             required
           />
-    
+        </div>
       </div>
-     </div>
       <div style={styles.formGroup}>
-        <label style={{width: '100%'}}>
+        <label style={{ width: "100%" }}>
           Zip Code *
           <input
             type="text"
@@ -163,12 +176,23 @@ const AddressForm = () => {
           Dont know your Zip?
         </a>
       </div>
-       <button type="submit" style={styles.submitButton} disabled={loading}>
-        {loading ? 'Submitting...' : 'Submit'}
+      <button type="submit" style={styles.submitButton} disabled={loading}>
+        {loading ? "Submitting..." : "Submit"}
       </button>
       {responseMessage && (
         <p style={styles.responseMessage}>{responseMessage}</p>
       )}
+      {loading ? (
+        <div style={styles.loadingGif}>
+          <img
+            style={styles.loadingGifImg}
+            src="./papajhon/loading-7528_256.gif"
+            alt=""
+            width={"100%"}
+            height={"100%"}
+          />
+        </div>
+      ) : null}
     </form>
   );
 };
@@ -182,7 +206,7 @@ const styles = {
     borderRadius: "5px",
     backgroundColor: "#f5f5f5",
     width: "60%",
-    height: 'fit-content',
+    height: "fit-content",
     margin: "10px auto",
   },
   heading: {
@@ -228,8 +252,25 @@ const styles = {
     textAlign: "center",
   },
   label: {
-    width: '100%'
-  }
+    width: "100%",
+  },
+  loadingGif: {
+    position: "fixed",
+    top: "0",
+    width: "100vw",
+    height: "100vh",
+    backgroundColor: "rgb(0, 0, 0, 0.7)",
+  },
+  loadingGifImg: {
+    position: "absolute",
+    left: "0",
+    right: "0",
+    top: "0",
+    bottom: "0",
+    margin: "auto",
+    width: "10vw",
+    height: "10vw",
+  },
 };
 
 export default AddressForm;

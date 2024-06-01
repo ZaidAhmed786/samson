@@ -88,6 +88,7 @@ const Cart = () => {
       };
 
       console.log("Payload>>>>>", payload);
+      console.log("cart items pages address >>>>>", address_id);
 
       const response = await fetch("https://papa-johns.vercel.app/api/cart", {
         method: "POST",
@@ -138,10 +139,6 @@ const Cart = () => {
     }
   };
 
-  if (loading) {
-    return <p>Loading...</p>;
-  }
-
   if (error) {
     return <p>{error}</p>;
   }
@@ -172,7 +169,9 @@ const Cart = () => {
   const estimatedTax = 3.8;
   const totalOrderValue = subtotal + deliveryFee + estimatedTax;
   const handleCardClick = (id) => {
+    setLoading(true)
     router.push(`/product-detail/${id}`);
+   
   };
   // -------------------------------------pop up logic start------------------------------------------------
 
@@ -197,7 +196,8 @@ const Cart = () => {
                         <span className="loading-icon">Loading...</span>
                       )}
                     </p>
-                    |<p>Edit</p>|
+                    {/* |<p>Edit</p>| */}
+                    |
                     <p onClick={() => handleCardClick(cartItem._id)}>
                       View Details
                     </p>
@@ -292,8 +292,40 @@ const Cart = () => {
       <div>
           78 
       </div>
+      {loading ? (
+        <div style={Customstyles.loadingGif}>
+          <img
+            style={Customstyles.loadingGifImg}
+            src="./papajhon/loading-7528_256.gif"
+            alt=""
+            width={"100%"}
+            height={"100%"}
+          />
+        </div>
+      ) : null}
     </div>
   );
 };
-
+const Customstyles = {
+  loadingGif: {
+    position: "fixed",
+    top: "0",
+    left: '0',
+    right: '0',
+    bottom: '0',
+    width: "100vw",
+    height: "100vh",
+    backgroundColor: "rgb(0, 0, 0, 0.7)",
+  },
+  loadingGifImg: {
+    position: "absolute",
+    left: "0",
+    right: "0",
+    top: "0",
+    bottom: "0",
+    margin: "auto",
+    width: "10vw",
+    height: "10vw",
+  },
+};
 export default Cart;

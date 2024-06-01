@@ -35,6 +35,41 @@ const Menu = () => {
     DRINKS: "Drinks",
     EXTRAS: "Extras",
   };
+  const [data, setData] = useState(null);
+
+  const [responseMessage, setResponseMessage] = useState('');
+
+  useEffect(() => {
+    const fetchData = async () => {
+      setLoading(true);
+      try {
+        const response = await fetch("https://papa-johns.vercel.app/api/address", {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+
+        const result = await response.json();
+
+        console.log("menu page address api fetched result", result);
+        console.log("menu page address api fetched data:", data);
+        responseMessage
+        if (response.ok) {
+          setData(result);
+          setResponseMessage("Data fetched successfully!");
+        } else {
+          setResponseMessage(result.message || "Failed to fetch data. Please try again.");
+        }
+      } catch (error) {
+        console.error("Error fetching data:", error);
+        setResponseMessage("An error occurred. Please try again.");
+      }
+    };
+
+    fetchData();
+  }, []); // Empty depend
+
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -57,31 +92,9 @@ const Menu = () => {
 
     fetchProducts();
   }, []);
-  
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const response = await fetch(
-          "https://papa-johns.vercel.app/api/cart-items"
-        );
-        const data = await response.json();
-        if (data.status === "success") {
-          setAddToCart(data);
-        } else {
-          setError("Failed to fetch products");
-        }
-      } catch (error) {
-        setError("Failed to fetch products");
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchProducts();
-  }, []);
-
-  const postDataToApi = async (product) => {
-    let address_id = localStorage.getItem("address");
+   const postDataToApi = async (product) => {
+    let address_id = localStorage.getItem('address');
+    console.log("menu page address >>:", address_id);
     const { _id, title, price } = product;
     const requestData = {
       address: address_id,
@@ -101,7 +114,6 @@ const Menu = () => {
       ],
       extraIngredients: [],
     };
-
     console.log("Sending request data to API:", requestData);
 
     try {
@@ -128,10 +140,29 @@ const Menu = () => {
       console.error("Error adding item to the cart:", error);
     }
   };
+  
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await fetch(
+          "https://papa-johns.vercel.app/api/cart-items"
+        );
+        const data = await response.json();
+        if (data.status === "success") {
+          setAddToCart(data);
+        } else {
+          setError("Failed to fetch products");
+        }
+      } catch (error) {
+        setError("Failed to fetch products");
+      } finally {
+        setLoading(false);
+      }
+    };
 
-  if (loading) {
-    return <p>Loading...</p>;
-  }
+    fetchProducts();
+  }, [postDataToApi]);
+
 
   if (error) {
     return <p>{error}</p>;
@@ -237,15 +268,49 @@ const Menu = () => {
               </div>
             ))
           ) : (
-            <p>No products available</p>
+            <p>No products available try to refresh again </p>
           )}
         </div>
       </div>
+      {loading ? (
+        <div style={Customstyles.loadingGif}>
+          <img
+            style={Customstyles.loadingGifImg}
+            src="./papajhon/loading-7528_256.gif"
+            alt=""
+            width={"100%"}
+            height={"100%"}
+          />
+        </div>
+      ) : null}
     </div>
   );
 };
-
+const Customstyles = {
+  loadingGif: {
+    position: "fixed",
+    top: "0",
+    left: '0',
+    right: '0',
+    bottom: '0',
+    width: "100vw",
+    height: "100vh",
+    backgroundColor: "rgb(0, 0, 0, 0.7)",
+  },
+  loadingGifImg: {
+    position: "absolute",
+    left: "0",
+    right: "0",
+    top: "0",
+    bottom: "0",
+    margin: "auto",
+    width: "10vw",
+    height: "10vw",
+  },
+};
 export default Menu;
+
+
 
 // <div className={styles.main_div}>
 //   <div className={styles.header}>
