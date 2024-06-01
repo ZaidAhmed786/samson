@@ -3,8 +3,8 @@ import styles from "./AddToCardPopUp.module.css";
 import { IoClose } from "react-icons/io5";
 
 const AddToCardPopUp = () => {
-  const [showModal, setShowModal] = useState(false);
-  const [quantities, setQuantities] = useState([0, 0, 0]);
+  const [showModal, setShowModal] = useState(true);
+  const [quantities, setQuantities] = useState([0, 0, 0, 0]);
 
   const toggleModal = () => {
     setShowModal(!showModal);
@@ -27,31 +27,31 @@ const AddToCardPopUp = () => {
       return newQuantities;
     });
   };
-
   const modalData = [
     {
-      img: "./papajhon/thesauceblog.webp",
+      img: "./papajhon/Pizza_Sauce.webp",
       title: "Orignal Pizza Sauce",
-      price: "$0.9",
+      price: "$0.94",
     },
     {
-      img: "./papajhon/thesauceblog.webp",
+      img: "./papajhon/Ranch-sauce.webp",
       title: "Raunch Sause",
-      price: "$0.9",
+      price: "$0.94",
     },
     {
-      img: "./papajhon/thesauceblog.webp",
+      img: "./papajhon/Spicy_Garlic.webp",
       title: "Spicy Garlic Source",
-      price: "$0.9",
+      price: "$0.94",
+    },
+    {
+      img: "./papajhon/Special_Garlic.webp",
+      title: "Garlic Sauce Dipping Cup ",
+      price: "$0.94",
     },
   ];
 
   return (
     <div>
-      <button type="button" className={styles.btnPrimary} onClick={toggleModal}>
-        Launch demo modal
-      </button>
-
       {showModal && (
         <div className={styles.modalOverlay}>
           <div className={styles.modalCentered}>
@@ -87,7 +87,7 @@ const AddToCardPopUp = () => {
                 ))}
               </div>
               <div className={styles.modalFooter}>
-                <button type="button" className={styles.btnPrimary}>
+                <button type="button" className={styles.btnPrimary} onClick={toggleModal}>
                   No,Thankyou
                 </button>
               </div>

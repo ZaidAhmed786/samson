@@ -3,6 +3,7 @@ import Styles from "./cart.module.css";
 import { FaCheck } from "react-icons/fa";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import CardPopup from "../add_to_card_popup/AddToCardPopUp";
 
 const Cart = () => {
   const buttons = [
@@ -17,7 +18,8 @@ const Cart = () => {
   const [activeButtons, setActiveButtons] = useState({});
   const [quantities, setQuantities] = useState({});
   const [deleting, setDeleting] = useState(false);
-
+  const [showModal, setShowModal] = useState(true);
+  const [popupQuantities, setPopupQuantities] = useState([0, 0, 0, 0]);
 
   const handleButtonClick = (cartId, buttonName) => {
     setActiveButtons((prev) => {
@@ -76,9 +78,9 @@ const Cart = () => {
       if (!address || !address._id) {
         throw new Error("No valid address found in addToCart");
       }
-
+      let address_id = localStorage.getItem("address");
       const payload = {
-        addressId: "6652d37ba444ae798756dad1",
+        addressId: address_id,
         items: cartItems,
         totalAmount: totalOrderValue,
         deliveryFee: deliveryFee,
@@ -108,11 +110,7 @@ const Cart = () => {
       alert("Failed to update cart");
     }
   };
-  
-  
-  
 
-  
   const handleRemoveItem = async (id) => {
     setDeleting(true);
     try {
@@ -176,8 +174,9 @@ const Cart = () => {
   const handleCardClick = (id) => {
     router.push(`/product-detail/${id}`);
   };
+  // -------------------------------------pop up logic start------------------------------------------------
 
-  console.log("addtocart ashar>>>><<<<", addToCart);
+
 
   return (
     <div className={Styles.mainDiv}>
@@ -186,68 +185,72 @@ const Cart = () => {
           <h1>YOUR ORDER</h1>
           {/* ----------------------------------------------cart-items---------------------------------------------------------- */}
           {addToCart.map((cartItem) => (
-        <div key={cartItem._id}>
-          <div className={Styles.cartwrapper}>
-            <img src={cartItem.productId.img} alt="" />
-            <div className={Styles.cartMiddleContent}>
-              <h1>{cartItem.productId.title}</h1>
-              <div className={Styles.linksWrapper}>
-                <p onClick={() => handleRemoveItem(cartItem._id)}>
-                  Remove{" "}
-                  {deleting && (
-                    <span className="loading-icon">Loading...</span>
-                  )}
-                </p>
-                |<p>Edit</p>|
-                <p onClick={() => handleCardClick(cartItem._id)}>View Details</p>
-              </div>
-              <div className={Styles.extraThingsWrapper}>
-                {buttons.map((button) => (
-                  <div
-                    key={button}
-                    onClick={() => handleButtonClick(cartItem._id, button)}
-                    className={`${Styles.buttonWrapper} ${
-                      activeButtons[cartItem._id]?.includes(button)
-                        ? Styles.activeButton
-                        : ""
-                    }`}
-                  >
-                    <div className={Styles.extraThings}>
-                      {activeButtons[cartItem._id]?.includes(button) ? (
-                        <FaCheck className={Styles.checkIcon} />
-                      ) : (
-                        <p className={Styles.plusIcon}>+</p>
+            <div key={cartItem._id}>
+              <div className={Styles.cartwrapper}>
+                <img src={cartItem.productId.img} alt="" />
+                <div className={Styles.cartMiddleContent}>
+                  <h1>{cartItem.productId.title}</h1>
+                  <div className={Styles.linksWrapper}>
+                    <p onClick={() => handleRemoveItem(cartItem._id)}>
+                      Remove{" "}
+                      {deleting && (
+                        <span className="loading-icon">Loading...</span>
                       )}
-                      <p>{button}</p>
-                    </div>
+                    </p>
+                    |<p>Edit</p>|
+                    <p onClick={() => handleCardClick(cartItem._id)}>
+                      View Details
+                    </p>
                   </div>
-                ))}
+                  <div className={Styles.extraThingsWrapper}>
+                    {buttons.map((button) => (
+                      <div
+                        key={button}
+                        onClick={() => handleButtonClick(cartItem._id, button)}
+                        className={`${Styles.buttonWrapper} ${
+                          activeButtons[cartItem._id]?.includes(button)
+                            ? Styles.activeButton
+                            : ""
+                        }`}
+                      >
+                        <div className={Styles.extraThings}>
+                          {activeButtons[cartItem._id]?.includes(button) ? (
+                            <FaCheck className={Styles.checkIcon} />
+                          ) : (
+                            <p className={Styles.plusIcon}>+</p>
+                          )}
+                          <p>{button}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div className={Styles.counterContainer}>
+                  <button
+                    className={Styles.decrementButton}
+                    onClick={() => handleDecrement(cartItem._id)}
+                    disabled={quantities[cartItem._id] === 0}
+                  >
+                    -
+                  </button>
+                  <span className={Styles.valueDisplay}>
+                    {cartItem.quantity}
+                  </span>
+                  <button
+                    className={Styles.incrementButton}
+                    onClick={() => handleIncrement(cartItem._id)}
+                    disabled={quantities[cartItem._id] === 50}
+                  >
+                    +
+                  </button>
+                </div>
+                <p style={{ fontSize: "18px", fontWeight: "900" }}>
+                  ${cartItem.productId.price.toFixed(2)}
+                </p>
               </div>
+              <hr />
             </div>
-            <div className={Styles.counterContainer}>
-              <button
-                className={Styles.decrementButton}
-                onClick={() => handleDecrement(cartItem._id)}
-                disabled={quantities[cartItem._id] === 0}
-              >
-                -
-              </button>
-              <span className={Styles.valueDisplay}>{cartItem.quantity}</span>
-              <button
-                className={Styles.incrementButton}
-                onClick={() => handleIncrement(cartItem._id)}
-                disabled={quantities[cartItem._id] === 50}
-              >
-                +
-              </button>
-            </div>
-            <p style={{ fontSize: "18px", fontWeight: "900" }}>
-              ${cartItem.productId.price.toFixed(2)}
-            </p>
-          </div>
-          <hr />
-        </div>
-      ))}
+          ))}
 
           {/* ----------------------------------------------cart-items---------------------------------------------------------- */}
         </div>
@@ -285,6 +288,9 @@ const Cart = () => {
             <h2>${totalOrderValue.toFixed(2)}</h2>
           </div>
         </div>
+      </div>
+      <div>
+          78 
       </div>
     </div>
   );

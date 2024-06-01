@@ -45,14 +45,16 @@ export default function Checkout() {
 
   useEffect(() => {
     console.log("userdata>>>", formData);
-  }, [formData]);
+  
+    // console.log('cart itme data in check out >>>>', cartId)
+  }, [formData,cartItems]);
   useEffect(() => {
     const fetchCartItems = async () => {
       try {
         const response = await fetch("https://papa-johns.vercel.app/api/cart");
         const data = await response.json();
         if (data.status === "success") {
-          setCartItems(data);
+          setCartItems(data.data);
         }
       } catch (error) {
         console.error("Error fetching cart items:", error);
@@ -64,7 +66,8 @@ export default function Checkout() {
 
   const handleSubmit = async (e) => {
     const selectedTip = addTip[selectedValue] ? parseInt(addTip[selectedValue].title) : 15;
-
+    const cartId = cartItems[0]?._id
+    console.log(cartId)
     const orderData = {
       user: {
         firstName: formData.firstName,
@@ -78,7 +81,7 @@ export default function Checkout() {
         cvv: formData.cvv,
         zipCode: formData.zipCode,
       },
-      cartItems: cartItems.data[0]._id, // Replace with your cart items object ID
+      cartItems: cartId, // Replace with your cart items object ID
       tipPercentage: selectedTip,
     };
 
@@ -95,15 +98,16 @@ export default function Checkout() {
         throw new Error("Failed to submit order" , data);
       } else {
         alert("Order submitted successfully!");
+        localStorage.clear();
       }
     } catch (error) {
       console.error("Error submitting order:", error);
       alert("Failed to submit order");
     }
   };
-  console.log('ide only >>>>', cartItems)
 
   const [isHide, setIsHide] = useState(false);
+  // console.log('checkout data >>', );
   return (
     <>
       <div className="container">

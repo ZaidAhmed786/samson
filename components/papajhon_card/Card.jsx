@@ -47,7 +47,6 @@ const Card = (
   //   console.log(formData);
   //   console.log("access", Access);
   // }, [formData]);
-
   return (
     <div className={Styles.main_div}>
       <div>
@@ -164,10 +163,11 @@ const Card = (
       </div>
       <div className={Styles.button_wrapper}>
         <button onClick={props.handleButtonClick}>Order Now</button>
-        <Link href={"customization"}>
           {" "}
-          <button>customize</button>
-        </Link>
+          <button  onClick={(e) => {
+                // e.stopPropagation();
+                props.customizationClick();
+              }}>customize</button>
       </div>
     </div>
   );

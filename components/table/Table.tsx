@@ -114,13 +114,13 @@ const TableComponent: React.FC<Props> = ({ orders }) => {
         <tbody>
           {orderList?.map((order) => {
             const { _id, user, cartItems, card, status, createdAt } = order;
-            const customerName = `${user.firstName} ${user.lastName}`;
-            const address = `${cartItems.address.streetAddress}, ${cartItems.address.aptSteFloor} ${cartItems.address.aptSteFloorNumber}, ${cartItems.address.country} - ${cartItems.address.zipCode}`;
-            const totalQuantity = cartItems.items.reduce(
-              (total, item) => total + item.quantity,
+            const customerName = `${user?.firstName} ${user?.lastName}`;
+            const address = `${cartItems?.address?.streetAddress}, ${cartItems?.address?.aptSteFloor} ${cartItems?.address?.aptSteFloorNumber}, ${cartItems?.address?.country}`;
+            const totalQuantity = cartItems?.items?.reduce(
+              (total, item) => total + item?.quantity,
               0
             );
-            const totalPrice = cartItems.totalAmount;
+            const totalPrice = cartItems?.totalAmount;
 
             return (
               <tr key={_id}>

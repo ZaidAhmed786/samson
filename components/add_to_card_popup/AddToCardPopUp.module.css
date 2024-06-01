@@ -63,6 +63,9 @@
 .textContainer {
     flex: 1;
 }
+.textContainer h3{
+    font-size: 18px;
+}
 
 .counter {
     display: flex;

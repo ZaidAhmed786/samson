@@ -81,9 +81,10 @@ const Menu = () => {
   }, []);
 
   const postDataToApi = async (product) => {
+    let address_id = localStorage.getItem("address");
     const { _id, title, price } = product;
     const requestData = {
-      address: "6652d37ba444ae798756dad1",
+      address: address_id,
       productId: _id,
       quantity: formData.quantity || 1,
       ingredients: [
@@ -175,6 +176,9 @@ const Menu = () => {
   const handleCardClick = (id) => {
     router.push(`/product-detail/${id}`);
   };
+  const customizationHandleClick = (id)=> {
+    router.push(`/customization/${id}`);
+  }
   // console.log("products>>", products);
   return (
     <div className={styles.mainDiv}>
@@ -225,6 +229,7 @@ const Menu = () => {
                   img={product.img}
                   title={product.title}
                   description={product.description}
+                  customizationClick={() => customizationHandleClick(product._id)}
                   handleClick={() => handleCardClick(product._id)}
                   handleButtonClick={() => postDataToApi(product)}
                   onFormDataChange={handleFormDataChange}

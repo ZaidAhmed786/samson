@@ -1,30 +1,56 @@
+// pages/products/[id].tsx
+
 import React, { useEffect, useState } from 'react';
-import CustomizationPage from "../../components/customization/Customization"
-import { customPicks } from "@/data";
+import CustomizationPage from '../../components/customization/Customization'; // Adjust the import path as needed
 import { useRouter } from 'next/router';
 
-const Customization = () => {
-  const [isActive, setIsActive] = useState(null);
+const Customization = ({ product }) => {
+  // const [isActive, setIsActive] = useState(product);
+  
   const router = useRouter();
-  const { id } = router.query;
 
-  useEffect(() => {
-    if (id) {
-      const productRes = customPicks.find(product => product.id === parseInt(id));
-      setIsActive(productRes);
-    }
-  }, [id]);
+  console.log('product details data active<><>', product);;
 
-  useEffect(() => {
-    console.log("productRes", isActive);
-  }, [isActive]);
+  if (router.isFallback) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <>
-          <CustomizationPage  product={isActive}/>
-
+      <CustomizationPage product= {product} />
     </>
   );
 };
 
+
+export async function getStaticProps(context) {
+  const { id } = context.params;
+  console.log("id...", id)
+  // Fetch the product data based on the 'id' from your API
+  const res = await fetch(`https://papa-johns.vercel.app/api/products/${id}`);
+  const product = await res.json();
+  const Cartres = await fetch(`https://papa-johns.vercel.app/api/cart-items/${id}`);
+  const cartProduct = await Cartres.json();
+console.log(product)
+  return {
+    props: {
+      product: product.data || cartProduct.data, // Pass the product data or null if not found
+    },
+    revalidate: 10, // Optionally revalidate the data every 10 seconds
+  };
+}
+
 export default Customization;
+export async function getStaticPaths() {
+  // Fetch the list of valid product IDs from your API
+  const res = await fetch('https://papa-johns.vercel.app/api/products?limit=1');
+  const products = await res.json(); 
+  const paths = products.data.map((product) => ({
+    params:  {id: product._id.toString()} ,
+  }));
+   
+  return {
+    paths,
+    fallback: true, // Set to 'true' or 'blocking' as needed
+  };
+}

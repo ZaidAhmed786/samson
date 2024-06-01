@@ -31,7 +31,6 @@ const AddressForm = () => {
       zipCode: formData.zipCode,
       //   productId: formData.productId
     };
-
     console.log("Data to send:", dataToSend); // Log the data being sent
 
     try {
@@ -48,8 +47,9 @@ const AddressForm = () => {
 
       const result = await response.json();
 
-      console.log("API Response:", result); // Log the full API response
-
+      console.log("API Response:", result);
+      let address = localStorage.setItem('address', result.data._id);
+      console.log("API Response:", address);
       if (response.ok && result.status === "success") {
         setResponseMessage("Form submitted successfully!");
         router.push('/menu');
@@ -65,7 +65,7 @@ const AddressForm = () => {
         setLoading(false);
       }
   };
-
+  
   return (
     <form onSubmit={handleSubmit} style={styles.form}>
       <h2 style={styles.heading}>Enter Delivery Address</h2>
