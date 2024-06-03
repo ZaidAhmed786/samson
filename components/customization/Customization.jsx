@@ -111,7 +111,7 @@ const Customization = ({ product }) => {
     }
   };
   console.log("quantity >>>", cartQuantity);
-  console.log("id>>>>>>>>>>>>>>>>>>>>>>>>>>>>>", product._id);
+  // console.log("id>>>>>>>>>>>>>>>>>>>>>>>>>>>>>", product._id);
   return (
     <div className={Styles.mainDiv}>
       <div className={Styles.horizentalDiv}>
