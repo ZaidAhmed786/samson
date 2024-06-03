@@ -65,7 +65,7 @@ export default function Checkout() {
 
     fetchCartItems();
   }, []);
-  console.log("cartItems data >>", cartItems[cartItems.length - 1]?.totalAmount);
+  // console.log("cartItems data >>", cartItems[cartItems.length - 1]?.totalAmount);
   const handleSubmit = async (e) => {
     const selectedTip = addTip[selectedValue]
       ? parseInt(addTip[selectedValue].title)
@@ -308,7 +308,7 @@ export default function Checkout() {
               <div className={styles.subTotalRow}>
                 <SecondaryHeading title="Sub Total" size="16px" />
                 <SecondaryHeading
-                  title={cartItems[cartItems.length - 1].totalAmount}
+                  // title={cartItems[cartItems.length - 1].totalAmount}
                   size="16px"
                 />
               </div>
@@ -325,7 +325,7 @@ export default function Checkout() {
               <div className={styles.subTotalRow}>
                 <SecondaryHeading title="ORDER TOTAL" size="30px" />
                 <SecondaryHeading
-                  title={cartItems[cartItems.length - 1].totalAmount}
+                  // title={cartItems[cartItems.length - 1].totalAmount}
                   size="30px"
                 />
               </div>

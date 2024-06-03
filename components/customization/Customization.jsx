@@ -4,7 +4,11 @@ import { CustomizePizza } from "@/data";
 import { useRouter } from "next/router";
 
 const Customization = ({ product }) => {
-  const [selectedOptions, setSelectedOptions] = useState({});
+  const [selectedOptions, setSelectedOptions] = useState({
+    MEATS: [],
+    VEGGIES: [],
+  });
+  
   const [activeButton, setActiveButton] = useState("Base");
   const [cartQuantity, setCartQuantity] = useState(3);
   const pricePerItem = 16.5;
@@ -12,11 +16,23 @@ const Customization = ({ product }) => {
   const buttons = ["Base", "Cheese", "Meat", "Veggies"];
 
   const handleOptionChange = (heading, option) => {
-    setSelectedOptions((prevState) => ({
-      ...prevState,
-      [heading]: option,
-    }));
+    setSelectedOptions((prevState) => {
+      // Check if prevState[heading] exists and initialize it as an empty array if it doesn't
+      const optionsArray = prevState[heading] || [];
+  
+      // Update the state based on the heading
+      return {
+        ...prevState,
+        [heading]: heading === "MEATS" || heading === "VEGGIES"
+          ? optionsArray.includes(option)
+            ? optionsArray.filter((item) => item !== option)
+            : [...optionsArray, option]
+          : option,
+      };
+    });
   };
+  
+  
 
   const handleDetailChange = (heading, detail) => {
     setSelectedOptions((prevState) => ({
@@ -47,20 +63,39 @@ const Customization = ({ product }) => {
   }, [selectedOptions]);
 
   const prepareExtraIngredients = () => {
-    const extraIngredients = [];
+    const extraIngredients = {};
+  
+    // Iterate over selectedOptions to group options by type
     for (const [key, value] of Object.entries(selectedOptions)) {
-      if (typeof value === "object") {
-        extraIngredients.push({
-          type: key,
-          option: value.option,
-          detail: value.detail,
+      if (Array.isArray(value)) {
+        // Handle arrays (e.g., MEATS, VEGGIES)
+        if (!extraIngredients[key]) {
+          extraIngredients[key] = [];
+        }
+        value.forEach((option) => {
+          // Check if the option is already included for this type
+          if (!extraIngredients[key].some((item) => item.option === option)) {
+            extraIngredients[key].push({ type: key, option });
+          }
         });
       } else {
-        extraIngredients.push({ type: key, option: value });
+        // Handle primitive values (e.g., SIZE, HOW MUCH CHEESE?)
+        if (!extraIngredients[key]) {
+          extraIngredients[key] = { type: key, option: value };
+        }
       }
     }
-    return extraIngredients;
+  
+    // Flatten the object into an array
+    const flattenedArray = Object.values(extraIngredients).flatMap((value) =>
+      Array.isArray(value) ? value : [value]
+    );
+  
+    return flattenedArray;
   };
+  
+  
+  
 
   const postDataToApi = async (product) => {
     let address_id = localStorage.getItem("address");
@@ -80,8 +115,8 @@ const Customization = ({ product }) => {
           cut: selectedOptions.CUT || null,
         },
       ],
-      extraIngredients: [prepareExtraIngredients()],
-    };
+      extraIngredients: prepareExtraIngredients(), // Directly call prepareExtraIngredients
+    };    
 
     console.log("Sending request data to API:", requestData);
 
@@ -139,71 +174,70 @@ const Customization = ({ product }) => {
             </div>
           </div>
           {CustomizePizza[activeButton]?.map((data, index) => (
-            <div className={Styles.size_container} key={index}>
-              <p>{data.heading}</p>
-              {data.options.map((option, optionIndex) => (
-                <div key={optionIndex}>
-                  <div className={Styles.size_option}>
-                    <input
-                      type="radio"
-                      id={`${data.heading}-${option}`}
-                      name={data.heading}
-                      checked={
-                        typeof selectedOptions[data.heading] === "object"
-                          ? selectedOptions[data.heading].option === option
-                          : selectedOptions[data.heading] === option
-                      }
-                      onChange={() => handleOptionChange(data.heading, option)}
-                    />
-                    <label htmlFor={`${data.heading}-${option}`}>
-                      {option}
-                    </label>
-                  </div>
-                  {option === "Original Pizza" && data.heading === "SAUCE" && (
-                    <div className={Styles.optionDeatilsBtn}>
-                      <button
-                        className={`${Styles.custom_button} ${
-                          selectedOptions[data.heading]?.detail === "Light"
-                            ? Styles.active
-                            : ""
-                        }`}
-                        onClick={() =>
-                          handleDetailChange(data.heading, "Light")
-                        }
-                      >
-                        Light
-                      </button>
-                      <button
-                        className={`${Styles.custom_button} ${
-                          selectedOptions[data.heading]?.detail === "Normal"
-                            ? Styles.active
-                            : ""
-                        }`}
-                        onClick={() =>
-                          handleDetailChange(data.heading, "Normal")
-                        }
-                      >
-                        Normal
-                      </button>
-                      <button
-                        className={`${Styles.custom_button} ${
-                          selectedOptions[data.heading]?.detail === "Extra"
-                            ? Styles.active
-                            : ""
-                        }`}
-                        onClick={() =>
-                          handleDetailChange(data.heading, "Extra")
-                        }
-                      >
-                        Extra
-                      </button>
-                    </div>
-                  )}
-                  <hr />
-                </div>
-              ))}
-            </div>
-          ))}
+  <div className={Styles.size_container} key={index}>
+    <p>{data.heading}</p>
+    {data.options.map((option, optionIndex) => (
+      <div key={optionIndex}>
+        <div className={Styles.size_option}>
+          <input
+            type="checkbox" // Change type to checkbox
+            id={`${data.heading}-${option}`}
+            name={data.heading}
+            checked={
+              selectedOptions[data.heading]?.includes(option) // Check if the option is included in selectedOptions array
+            }
+            onChange={() => handleOptionChange(data.heading, option)}
+          />
+          <label htmlFor={`${data.heading}-${option}`}>
+            {option}
+          </label>
+        </div>
+        {option === "Original Pizza" && data.heading === "SAUCE" && (
+          <div className={Styles.optionDeatilsBtn}>
+            <button
+              className={`${Styles.custom_button} ${
+                selectedOptions[data.heading]?.detail === "Light"
+                  ? Styles.active
+                  : ""
+              }`}
+              onClick={() =>
+                handleDetailChange(data.heading, "Light")
+              }
+            >
+              Light
+            </button>
+            <button
+              className={`${Styles.custom_button} ${
+                selectedOptions[data.heading]?.detail === "Normal"
+                  ? Styles.active
+                  : ""
+              }`}
+              onClick={() =>
+                handleDetailChange(data.heading, "Normal")
+              }
+            >
+              Normal
+            </button>
+            <button
+              className={`${Styles.custom_button} ${
+                selectedOptions[data.heading]?.detail === "Extra"
+                  ? Styles.active
+                  : ""
+              }`}
+              onClick={() =>
+                handleDetailChange(data.heading, "Extra")
+              }
+            >
+              Extra
+            </button>
+          </div>
+        )}
+        <hr />
+      </div>
+    ))}
+  </div>
+))}
+
           <p className={Styles.lastParagraph}>
             2,000 calories a day is used for general nutrition advice, but
             calorie needs vary. Additional nutrition information available upon

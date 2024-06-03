@@ -203,6 +203,11 @@
   font-size: 16px;
   margin-bottom: 10px;
   cursor: pointer;
+  column-gap: 10px;
+}
+.size_option input{
+  width: 20px;
+  height: 20px;
 }
 .size_option input[type="radio"] {
   margin-right: 5px;
