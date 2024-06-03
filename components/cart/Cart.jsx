@@ -6,12 +6,12 @@ import { useRouter } from "next/router";
 import CardPopup from "../add_to_card_popup/AddToCardPopUp";
 
 const Cart = () => {
-  const buttons = [
-    "Make it Extra Large",
-    "Epic Stuffed",
-    "Add Extra Cheese",
-    "Add Extra Sauce cups",
-  ];
+  // const buttons = [
+  //   "Make it Extra Large",
+  //   "Epic Stuffed",
+  //   "Add Extra Cheese",
+  //   "Add Extra Sauce cups",
+  // ];
   const [addToCart, setAddToCart] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -21,22 +21,22 @@ const Cart = () => {
   const [showModal, setShowModal] = useState(true);
   const [popupQuantities, setPopupQuantities] = useState([0, 0, 0, 0]);
 
-  const handleButtonClick = (cartId, buttonName) => {
-    setActiveButtons((prev) => {
-      const newActiveButtons = { ...prev };
-      if (!newActiveButtons[cartId]) {
-        newActiveButtons[cartId] = [];
-      }
-      if (newActiveButtons[cartId].includes(buttonName)) {
-        newActiveButtons[cartId] = newActiveButtons[cartId].filter(
-          (name) => name !== buttonName
-        );
-      } else {
-        newActiveButtons[cartId].push(buttonName);
-      }
-      return newActiveButtons;
-    });
-  };
+  // const handleButtonClick = (cartId, buttonName) => {
+  //   setActiveButtons((prev) => {
+  //     const newActiveButtons = { ...prev };
+  //     if (!newActiveButtons[cartId]) {
+  //       newActiveButtons[cartId] = [];
+  //     }
+  //     if (newActiveButtons[cartId].includes(buttonName)) {
+  //       newActiveButtons[cartId] = newActiveButtons[cartId].filter(
+  //         (name) => name !== buttonName
+  //       );
+  //     } else {
+  //       newActiveButtons[cartId].push(buttonName);
+  //     }
+  //     return newActiveButtons;
+  //   });
+  // };
 
   const router = useRouter();
   useEffect(() => {
@@ -202,10 +202,10 @@ const Cart = () => {
                     </p>
                   </div>
                   <div className={Styles.extraThingsWrapper}>
-                    {buttons.map((button) => (
+                    {/* {buttons.map((button) => (
                       <div
                         key={button}
-                        onClick={() => handleButtonClick(cartItem._id, button)}
+                        // onClick={() => handleButtonClick(cartItem._id, button)}
                         className={`${Styles.buttonWrapper} ${
                           activeButtons[cartItem._id]?.includes(button)
                             ? Styles.activeButton
@@ -221,7 +221,7 @@ const Cart = () => {
                           <p>{button}</p>
                         </div>
                       </div>
-                    ))}
+                    ))} */}
                   </div>
                 </div>
                 <div className={Styles.counterContainer}>
