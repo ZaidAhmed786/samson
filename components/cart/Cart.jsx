@@ -114,6 +114,7 @@ const Cart = () => {
 
   const handleRemoveItem = async (id) => {
     setDeleting(true);
+    setLoading(true);
     try {
       const response = await fetch(
         `https://papa-johns.vercel.app/api/cart-items/${id}`,
@@ -136,6 +137,7 @@ const Cart = () => {
       console.error("Error removing item:", error);
     } finally {
       setDeleting(false); // Set deleting to false when the delete request finishes
+      setLoading(false);
     }
   };
 
@@ -169,13 +171,10 @@ const Cart = () => {
   const estimatedTax = 3.8;
   const totalOrderValue = subtotal + deliveryFee + estimatedTax;
   const handleCardClick = (id) => {
-    setLoading(true)
+    setLoading(true);
     router.push(`/product-detail/${id}`);
-   
   };
   // -------------------------------------pop up logic start------------------------------------------------
-
-
 
   return (
     <div className={Styles.mainDiv}>
@@ -191,13 +190,13 @@ const Cart = () => {
                   <h1>{cartItem.productId.title}</h1>
                   <div className={Styles.linksWrapper}>
                     <p onClick={() => handleRemoveItem(cartItem._id)}>
-                      Remove{" "}
-                      {deleting && (
+                      {deleting ? (
                         <span className="loading-icon">Loading...</span>
+                      ) : (
+                        "Remove"
                       )}
                     </p>
-                    {/* |<p>Edit</p>| */}
-                    |
+                    {/* |<p>Edit</p>| */}|
                     <p onClick={() => handleCardClick(cartItem._id)}>
                       View Details
                     </p>
@@ -289,9 +288,7 @@ const Cart = () => {
           </div>
         </div>
       </div>
-      <div>
-          78 
-      </div>
+      <div>78</div>
       {loading ? (
         <div style={Customstyles.loadingGif}>
           <img
@@ -310,9 +307,9 @@ const Customstyles = {
   loadingGif: {
     position: "fixed",
     top: "0",
-    left: '0',
-    right: '0',
-    bottom: '0',
+    left: "0",
+    right: "0",
+    bottom: "0",
     width: "100vw",
     height: "100vh",
     backgroundColor: "rgb(0, 0, 0, 0.7)",

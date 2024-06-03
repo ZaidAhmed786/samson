@@ -50,6 +50,7 @@ const TableComponent: React.FC<Props> = ({ orders }) => {
   const [selectedProductIndex, setSelectedProductIndex] = useState<number>(0);
   console.log(selectedOrder);
   const deleteOrder = async (orderId: string) => {
+
     try {
       const res = await fetch(
         `https://papa-johns.vercel.app/api/orders/${orderId}`,
@@ -167,29 +168,58 @@ const TableComponent: React.FC<Props> = ({ orders }) => {
               Close
             </button>
             <h2>Order Details</h2>
-            <p>
-              <strong>Customer:</strong>{" "}
-              {`${selectedOrder.user.firstName} ${selectedOrder.user.lastName}`}
-            </p>
-            <p>
-              <strong>Email:</strong> {selectedOrder.user.email}
-            </p>
-            <p>
-              <strong>Phone:</strong> {selectedOrder.user.phone}
-            </p>
-            <p>
-              <strong>Address:</strong>{" "}
-              {`${selectedOrder.cartItems.address.streetAddress}, ${selectedOrder.cartItems.address.aptSteFloor} ${selectedOrder.cartItems.address.aptSteFloorNumber}, ${selectedOrder.cartItems.address.country} - ${selectedOrder.cartItems.address.zipCode}`}
-            </p>
-            <h3>Products:</h3>
 
-            <CartCard
-              items={selectedOrder.cartItems.items}
-              selectedProductIndex={selectedProductIndex}
-            />
+         <div style={{display: 'flex', alignItems: 'center',columnGap: '50px'}}>
+         <div>
+         <div>
+              <p>
+                <strong>Customer:</strong>{" "}
+                {`${selectedOrder.user.firstName} ${selectedOrder.user.lastName}`}
+              </p>
+              <p>
+                <strong>Email:</strong> {selectedOrder.user.email}
+              </p>
+              <p>
+                <strong>Phone:</strong> {selectedOrder.user.phone}
+              </p>
+              <p>
+                <strong>Address:</strong>{" "}
+                {`${selectedOrder.cartItems.address.streetAddress}, ${selectedOrder.cartItems.address.aptSteFloor} ${selectedOrder.cartItems.address.aptSteFloorNumber}, ${selectedOrder.cartItems.address.country} - ${selectedOrder.cartItems.address.zipCode}`}
+              </p>
+            </div>
+            <div>
+              <p>
+                <strong>Total Quantity:</strong>{" "}
+                {selectedOrder.cartItems.items.reduce(
+                  (total, item) => total + item.quantity,
+                  0
+                )}
+              </p>
+              <p>
+                <strong>Total Price:</strong> $
+                {selectedOrder.cartItems.totalAmount}
+              </p>
+              <p>
+                <strong>Status:</strong> {selectedOrder.status}
+              </p>
+              <p>
+                <strong>Order Date:</strong>{" "}
+                {new Date(selectedOrder.createdAt).toLocaleDateString()}
+              </p>
+            </div>
+         </div>
+            <div>
+              {/* <h3>Products:</h3> */}
+
+              <CartCard
+                items={selectedOrder.cartItems.items}
+                selectedProductIndex={selectedProductIndex}
+              />
+            </div>
+         </div>
 
             {selectedOrder.cartItems.items.length > 1 && (
-              <div>
+              <div style={{display: 'flex', justifyContent: 'end'}}>
                 <button
                   onClick={handlePrevProduct}
                   disabled={selectedProductIndex === 0}
@@ -205,24 +235,7 @@ const TableComponent: React.FC<Props> = ({ orders }) => {
 
               </div>
             )}
-            <p>
-              <strong>Total Quantity:</strong>{" "}
-              {selectedOrder.cartItems.items.reduce(
-                (total, item) => total + item.quantity,
-                0
-              )}
-            </p>
-            <p>
-              <strong>Total Price:</strong> $
-              {selectedOrder.cartItems.totalAmount}
-            </p>
-            <p>
-              <strong>Status:</strong> {selectedOrder.status}
-            </p>
-            <p>
-              <strong>Order Date:</strong>{" "}
-              {new Date(selectedOrder.createdAt).toLocaleDateString()}
-            </p>
+
           </div>
         </div>
       )}
@@ -232,6 +245,26 @@ const TableComponent: React.FC<Props> = ({ orders }) => {
       )}
     </div>
   );
-};
 
+};
+const loadingGif: React.CSSProperties = {
+  position: "fixed",
+  top: "0",
+  left: '0',
+  right: '0',
+  bottom: '0',
+  width: "100vw",
+  height: "100vh",
+  backgroundColor: "rgb(0, 0, 0, 0.7)",
+};
+const loadingGifImg: React.CSSProperties = {
+  position: "absolute",
+  left: "0",
+  right: "0",
+  top: "0",
+  bottom: "0",
+  margin: "auto",
+  width: "10vw",
+  height: "10vw",
+};
 export default TableComponent;

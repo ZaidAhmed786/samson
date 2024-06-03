@@ -3,6 +3,7 @@ import styles from "./checkout.module.css";
 import SecondaryHeading from "../../components/heading/heading";
 import Link from "next/link";
 import CheckoutCart from "../../components/checkout-card/checkoutCart";
+import { useRouter } from "next/router";
 
 export default function Checkout() {
   const [formData, setFormData] = useState({
@@ -18,7 +19,7 @@ export default function Checkout() {
   });
   const [selectedValue, setSelectedValue] = useState(null);
   const [cartItems, setCartItems] = useState([]);
-
+  const router = useRouter();
   const addTip = [
     {
       title: "15%",
@@ -67,8 +68,8 @@ export default function Checkout() {
 
   const handleSubmit = async (e) => {
     const selectedTip = addTip[selectedValue] ? parseInt(addTip[selectedValue].title) : 15;
-    const cartId = cartItems[0]?._id
-    console.log('cart_id', cartId)
+    const cartId = cartItems[cartItems.length - 1]?._id;
+    console.log('cart_id', cartId);    
     console.log(cartId)
     const orderData = {
       user: {
@@ -102,10 +103,11 @@ export default function Checkout() {
       } else {
         alert("Order submitted successfully!");
         console.log('posted data >>> ', orderData)
+        router.push('/table');
       }
     } catch (error) {
       console.error("Error submitting order:", error);
-      alert("Failed to submit order");
+      alert("Failed to submit order please check all details is fully collected ?");
     }
   };
 

@@ -93,6 +93,7 @@ const Menu = () => {
     fetchProducts();
   }, []);
    const postDataToApi = async (product) => {
+    setLoading(true)
     let address_id = localStorage.getItem('address');
     console.log("menu page address >>:", address_id);
     const { _id, title, price } = product;
@@ -136,8 +137,11 @@ const Menu = () => {
 
       const responseData = await response.json();
       console.log("Item added to the cart:", responseData);
+     
     } catch (error) {
       console.error("Error adding item to the cart:", error);
+    } finally{
+      setLoading(false)
     }
   };
   
