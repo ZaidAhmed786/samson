@@ -116,11 +116,11 @@ const Customization = ({ product }) => {
     <div className={Styles.mainDiv}>
       <div className={Styles.horizentalDiv}>
         <div className={Styles.img_wrapper}>
-          <img src={product.img} alt="" width={"100%"} height={"100%"} />
+          <img src={product?.img} alt="" width={"100%"} height={"100%"} />
         </div>
         <div className={Styles.content_wrapper}>
           <div style={{ paddingLeft: "4%" }}>
-            <h1>{product.title}</h1>
+            <h1>{product?.title}</h1>
             <h2>$18.99 340 cal /slice, 8 slices</h2>
             <p>
               (1) Toping added |<span> view all</span>{" "}
