@@ -46,9 +46,9 @@ export default function Checkout() {
 
   useEffect(() => {
     console.log("userdata>>>", formData);
-  
+
     // console.log('cart itme data in check out >>>>', cartId)
-  }, [formData,cartItems]);
+  }, [formData, cartItems]);
   useEffect(() => {
     const fetchCartItems = async () => {
       try {
@@ -56,7 +56,7 @@ export default function Checkout() {
         const data = await response.json();
         if (data.status === "success") {
           setCartItems(data.data);
-          console.log('cart item fetched data >>', cartItems)
+          console.log("cart item fetched data >>", cartItems);
         }
       } catch (error) {
         console.error("Error fetching cart items:", error);
@@ -65,12 +65,14 @@ export default function Checkout() {
 
     fetchCartItems();
   }, []);
-
+  console.log("cartItems data >>", cartItems[cartItems.length - 1]?.totalAmount);
   const handleSubmit = async (e) => {
-    const selectedTip = addTip[selectedValue] ? parseInt(addTip[selectedValue].title) : 15;
+    const selectedTip = addTip[selectedValue]
+      ? parseInt(addTip[selectedValue].title)
+      : 15;
     const cartId = cartItems[cartItems.length - 1]?._id;
-    console.log('cart_id', cartId);    
-    console.log(cartId)
+    console.log("cart_id", cartId);
+    console.log(cartId);
     const orderData = {
       user: {
         firstName: formData.firstName,
@@ -96,18 +98,20 @@ export default function Checkout() {
         },
         body: JSON.stringify(orderData),
       });
-      
+
       const data = await response.json();
       if (data.status !== "success") {
-        throw new Error("Failed to submit order" , data);
+        throw new Error("Failed to submit order", data);
       } else {
         alert("Order submitted successfully!");
-        console.log('posted data >>> ', orderData)
-        router.push('/table');
+        console.log("posted data >>> ", orderData);
+        router.push("/table");
       }
     } catch (error) {
       console.error("Error submitting order:", error);
-      alert("Failed to submit order please check all details is fully collected ?");
+      alert(
+        "Failed to submit order please check all details is fully collected ?"
+      );
     }
   };
 
@@ -158,7 +162,7 @@ export default function Checkout() {
                 </div> */}
               </div>
             </div>
-            <form className={styles.formContainer} >
+            <form className={styles.formContainer}>
               <div>
                 <label htmlFor="firstName">First Name *</label>
                 <input
@@ -269,7 +273,7 @@ export default function Checkout() {
           <div className={styles.checkout_col2}>
             <SecondaryHeading title="MY ORDER" size="28.8px" />
 
-            <div className={styles.myOrderCard}>
+            {/* <div className={styles.myOrderCard}>
               <div
                 className={styles.myOrderItems}
                 onClick={() => setIsHide(!isHide)}
@@ -283,7 +287,7 @@ export default function Checkout() {
                   <div className="d-flex" style={{ marginTop: "27px" }}>
                     <div className={styles.summary_desc}>
                       <SecondaryHeading
-                        title="Large Epic Stuffed Crust Epic Stuffed Crust Fresh Spinach & Tomato Alfredo Pizza"
+                        title={"Large Epic Stuffed Crust Epic Stuffed Crust Fresh Spinach & Tomato Alfredo Pizza"}
                         size="14px"
                       />
                       <p>
@@ -297,13 +301,16 @@ export default function Checkout() {
                   <Link href="#">Edit Cart</Link>
                 </>
               )}
-            </div>
+            </div> */}
 
             {/* subTotal */}
             <div className={styles.subTotal}>
               <div className={styles.subTotalRow}>
                 <SecondaryHeading title="Sub Total" size="16px" />
-                <SecondaryHeading title="$26.99" size="16px" />
+                <SecondaryHeading
+                  title={cartItems[cartItems.length - 1].totalAmount}
+                  size="16px"
+                />
               </div>
               <div
                 className={styles.subTotalRow}
@@ -317,7 +324,10 @@ export default function Checkout() {
               </div>
               <div className={styles.subTotalRow}>
                 <SecondaryHeading title="ORDER TOTAL" size="30px" />
-                <SecondaryHeading title="$28.78" size="30px" />
+                <SecondaryHeading
+                  title={cartItems[cartItems.length - 1].totalAmount}
+                  size="30px"
+                />
               </div>
             </div>
 
@@ -328,7 +338,12 @@ export default function Checkout() {
                 in the <Link href="#">Privacy Policy.</Link>
               </label>
             </div>
-            <button className={styles.review_order__btn} onClick={()=> handleSubmit()}>REVIEW ORDER</button>
+            <button
+              className={styles.review_order__btn}
+              onClick={() => handleSubmit()}
+            >
+              REVIEW ORDER
+            </button>
           </div>
         </div>
       </div>
